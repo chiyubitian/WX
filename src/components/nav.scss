@@ -1,0 +1,59 @@
+@mixin posirelative() {
+    position: relative;
+}
+@mixin disinline() {
+    display: inline;
+}
+@mixin zindex($num) {
+    z-index: $num;
+}
+$font14 : 14px;
+$colorwhite : #fff;
+$coloractive : #F37327;
+$opacity80 : 0.8;
+$line-height:52px;
+.menu {
+    li {
+        @include disinline();
+        @include posirelative();
+        @include zindex(2);
+        a {
+            font-size: $font14;
+            color: $colorwhite;
+            opacity: $opacity80 ;
+            filter: alpha(opacity=80);
+            line-height: $line-height;
+            padding: 10px 15px;
+            margin-left: 4px;
+            &:hover{
+                color:$coloractive;
+            }
+        }
+        
+    }
+    .index{
+        a{
+            letter-spacing: 1em;
+        }
+    }
+    .current-cat{
+        a{
+            color: $coloractive;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        font-family: PingFangSC-Regular;
+        }
+    } 
+    
+    .login {
+		width: 340px;
+		float: right;
+		line-height: $line-height;
+		color: $colorwhite;
+        text-align: right;
+        a {
+            color: $colorwhite;
+            padding: 10px 5px;
+        }
+	}
+}

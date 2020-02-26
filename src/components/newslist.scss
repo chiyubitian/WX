@@ -1,0 +1,69 @@
+$font14 : 14px;
+$bgwhite : #FFFFFF;
+$colorrgba : rgba(31,56,88,0.60);
+@mixin textEllipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.newPosition-list {
+	overflow: hidden;
+	position: relative;
+	background: $bgwhite;
+	box-shadow: 0 0 15px 0 rgba(31,56,88,0.08);
+	border-radius: 3px;
+	float: left;
+	.more-positon {
+		position: relative;
+		z-index: 2;
+		height: 49px;
+		border-bottom: 1px solid rgba(31,56,88,0.06);
+		line-height: 49px;
+		padding: 0 14px;
+		background: $bgwhite;
+		font-size: $font14;
+		color: #000000;
+		a {
+			float: right;
+			font-size: $font14;
+			color: $colorrgba;
+			cursor: pointer;
+		}
+	}
+	.position-list {
+		position: absolute;
+		z-index: 1;
+		top: 50px;
+		width: 100%;
+		li {
+			overflow: hidden;
+			padding: 0 14px;
+			line-height: 50px;
+			.position {
+				float: left;
+				color: #3C99D8;
+				cursor: pointer;
+				font-size: $font14;
+				width: 400px;
+				@include textEllipsis;
+			}
+			.time {
+				font-style: normal;
+				float: right;
+				width: 70px;
+				text-align: right;
+				font-size: $font14;
+				color: $colorrgba;
+			}
+			.city {
+				float: right;
+				font-style: normal;
+				font-size: $font14;
+				color: rgba(0,0,0,0.60);
+				margin-right: 70px;
+				width: 202px;
+				@include textEllipsis;
+			}
+		}
+	}
+}

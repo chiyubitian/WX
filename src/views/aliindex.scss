@@ -1,0 +1,70 @@
+$widthP100 : 100%;
+$width1000 : 1000px;
+$fontlarge54 : 54px;
+$fontlarge34 : 34px;
+$colorwhite : #fff;
+$lineheigt56 : 56px;
+$lineheigt48 : 48px;
+@mixin overhide() {
+    overflow: hidden;
+}
+@mixin fontfamily() {
+    font-family: PingFangSC-Regular;
+}
+@mixin vcenter() {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+.index-main {
+	width: $widthP100;
+	@include overhide();
+    @include  fontfamily();
+    position: relative;
+    height: 478px;
+    .index-mid-box {
+        width: $width1000;
+        height: $widthP100;
+        margin-left: -$width1000/2;
+        @include vcenter();
+        .float-mid {
+            @include vcenter();
+            top: 50%;
+            margin-left: -245px;
+            margin-top: -145px;
+        }
+    }
+    .en-world {
+        font-family: Rufina-Bold;
+        font-size: $fontlarge54;
+        color:$colorwhite;
+        line-height: $lineheigt56;
+        &:last-of-type{
+            font-size: $fontlarge34;
+            margin-bottom: 38px;
+            line-height: $lineheigt56;
+        }
+    }
+}
+.newPosition{
+    .newPosition-content{
+        @include fontfamily();
+        .show-pic {
+            display: block;
+            cursor: pointer;
+            height: 140px;
+            background: #FFFFFF;
+            box-shadow: 0 0 15px 0 rgba(31,56,88,0.08);
+            border-radius: 3px;
+            text-align: center;
+            line-height: 140px;
+            img{
+                vertical-align: middle;
+            }
+        }
+        .pic-1 {
+            margin-bottom: 20px;
+        }
+    }
+    
+}
