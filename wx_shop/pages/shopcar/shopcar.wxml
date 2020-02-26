@@ -1,0 +1,60 @@
+<!--pages/shopcar/shopcar.wxml-->
+<view class="shop-car">
+    <view class="warp">
+        <view class="shop-area">
+            <block wx:for="{{shop_car_data}}" wx:key="*this">
+            <view class="item">
+                <view bindtap="select" data-_id="{{item._id}}" class="select">
+                    <image wx:if="{{item.sel}}" src="../../icon/icon/all@selected.png"></image>
+                    <image wx:else="{{item.sel}}" src="../../icon/icon/all.png"></image>
+                </view>
+                <view class="img">
+                    <image src="{{baseurl+item.imgPath}}"></image>
+                </view>
+                <view class="detail">
+                    <view class="info">
+                        <view class="name">{{item.name}}</view>
+                        <view class="meg">
+                            <text class="type">类型：{{item.typeName}}</text>
+                            <text class="price">价格：￥{{item.price}}</text>
+                            <text class="unit">份数：{{item.unit}}</text>
+                        </view>
+                    </view>
+
+                    <view class="count">
+                        <button bindtap="jian" data-_id="{{item._id}}" class="jian">-</button>
+                        <text class="num" data-num="{{item.num}}">{{item.num}}</text>
+                        <button bindtap="jia" data-_id="{{item._id}}" class="jia">+</button>
+                    </view>
+                </view>
+                <view class="sin-price">
+                    <text class="f">￥</text>
+                    <text data-price="{{item.price}}" class="price">{{item.price*item.num}}</text>
+                </view>
+                <view bindtap="del" data-_id="{{item._id}}" data-sel="{{item.sel}}" class="del">
+                    <button>删除</button>
+                </view>
+            </view>
+        </block>
+        </view>
+        <view class="footer">
+            <view bindtap="allSelect" data-all_sel="{{all_sel}}" class="all-select">
+                <image wx:if="{{all_sel}}" src="../../icon/icon/all@selected.png"></image>
+                <image wx:else="{{all_sel}}" src="../../icon/icon/all.png"></image>
+                <text class="all-noall">全选/不全选</text>
+            </view>
+            <view class="all-num">
+                <text class="all-meg">总数：</text>
+                <text data-num="{{item.num}}">{{all_num}}</text>
+            </view>
+            <view class="all-price">
+                <text class="all-meg">总价：</text>
+                <text class="f">￥</text>
+                <text data-price="{{item.price}}" class="price">{{all_price}}</text>
+            </view>
+            <view bindtap="buy" class="buy">
+                <button>结算</button>
+            </view>
+        </view>
+    </view>
+</view>

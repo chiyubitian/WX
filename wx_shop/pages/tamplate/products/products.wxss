@@ -1,0 +1,32 @@
+
+.products  .page-section-spacing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+.products .page-section-title{
+    color: #219c40;
+}
+.products .flex-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20rpx;
+    border-radius: 8rpx;
+    box-shadow: 0  0 10px  #181d1d9a;
+}
+.meg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 30rpx;
+}
+.name{
+    margin: 10rpx 0;
+    color: rgb(35, 39, 23)
+}
+.price{
+    margin: 10rpx 0;
+    color: rgb(11, 31, 15)
+}

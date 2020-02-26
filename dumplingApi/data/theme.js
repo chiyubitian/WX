@@ -1,0 +1,25 @@
+
+{    
+	"_id":1,
+	"type":'theme',
+	"size":"1",
+	"name":'美味水果世界',
+	"imgPath":"/static/img/1@theme.png",
+	"themetop":"/static/img/1@theme-head.png"
+}
+{ 
+	"_id":2,
+	"type":'theme',
+	"size":"1",
+	"name":'新品首发',
+	"imgPath":"/static/img/2@theme.png",
+	"themetop":"/static/img/2@theme-head.png"
+}
+{
+	"_id":3,
+	"type":'theme',
+	"size":"2",
+	"name":'做个干物女',
+	"imgPath":"/static/img/3@theme.png",
+	"themetop":"/static/img/3@theme-head.png"
+}

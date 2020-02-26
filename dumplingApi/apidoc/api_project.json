@@ -1,0 +1,1 @@
+{  "name": "example",  "version": "0.1.0",  "description": "apiDoc basic example",  "title": "Custom apiDoc browser title",  "url": "https://47.95.207.1/api/",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2018-12-18T23:58:35.301Z",    "url": "http://apidocjs.com",    "version": "0.17.6"  }}

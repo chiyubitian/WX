@@ -1,0 +1,24 @@
+/* pages/my/my.wxss */
+.page-body{
+    padding: 50rpx
+}
+.page-section{
+    width: 450rpx;
+    margin: 0 auto;
+}
+input {
+    width: 440rpx;
+    height: 50rpx;
+    border: 1px solid rgb(25, 24, 26);
+    border-radius: 2px;
+    margin: 30rpx 0;
+    font-size: 14px;
+}
+.weui-cell{
+    margin: 20rpx 0;
+}
+button{
+    background: rgba(44, 113, 116, 0.692);
+    color: rgba(230, 227, 221, 0.788);
+    margin: 40rpx 0;
+}

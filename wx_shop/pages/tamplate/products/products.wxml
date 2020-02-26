@@ -1,0 +1,22 @@
+<template name="products">
+    <view class="container">
+        <view class="page-body products">
+            <view class="page-section">
+                <view class="page-section-title">
+                    <text>热门推荐</text>
+                </view>
+                <view class="page-section-spacing ">
+                    <block wx:for="{{products}}" wx:key="*this">
+                        <view data-id="{{item._id}}" bindtap="toDetail" class="flex-item flex-item-V">
+                            <cover-image class="themimg" src="{{baseurl+item.imgPath}}"></cover-image>
+                            <view class="meg">
+                                <text class="name">名称:{{item.name}}</text>
+                                <text class="price">价格：￥{{item.price}}</text>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

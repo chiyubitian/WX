@@ -1,0 +1,90 @@
+/* pages/classfly/classfly.wxss */
+@import "../index/index.wxss";
+
+.detail .page-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.detail .cart{
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+    z-index: 10;
+    width: 60rpx;
+    height: 60rpx;
+}
+.detail .cart>image{
+    width: 100%;
+    height: 100%;
+}
+.detail .cart>.all-num{
+    position: absolute;
+    top: -5rpx;
+    right: -25rpx;
+    background: rgba(0, 255, 85, 0.774);
+    color: rgb(49, 48, 48);
+    border-radius: 50%;
+    font-size: 14px;
+    padding: 4rpx;
+}
+.detail .img{
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+}
+.detail .meg {
+    padding: 20rpx 30rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.detail .meg view {
+    margin: 20rpx 0;
+    width: 50%;
+}
+
+.detail .meg text {
+    font-size: 40rpx;
+}
+
+.detail .come-in-cars {
+    padding: 20rpx 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.detail .check-num {
+    padding:  18rpx 2rpx;
+    border-radius: 8rpx;
+    font-weight: 700;
+    font-size: 34rpx;
+    color: #067eae;
+    background-color: #f2f2f2;
+}
+
+.detail .num {
+    /* background: rgb(80, 25, 25); */
+    padding: 20rpx 30rpx;
+    color: #da4a07;
+    font-weight: 700;
+    font-size: 34rpx;
+}
+.detail .tab-title{
+    display: flex;
+
+}
+.detail .tab-title>view{
+    flex: 1;
+    text-align: center;
+    padding-bottom: 20rpx;
+    color: rgba(139, 139, 138, 0.753);
+    border-bottom: 2px solid transparent;
+}
+.detail .tab-title>view.active{
+    color: rgba(176, 178, 34, 0.938);
+    border-bottom: 2px solid rgb(176, 178, 34);
+}
