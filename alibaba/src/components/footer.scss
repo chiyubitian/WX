@@ -1,0 +1,22 @@
+$width1000: 1000px;
+$height44: 44px;
+$bbblack: #2C2F33;
+$bbwhite: #fff;
+$font-family:PingFangSC-Regular;
+@function margincenter(){
+    @return  0 auto;
+}
+.index-footer {
+	height: $height44;
+    background: $bbblack;
+    .footer-content {
+        font-family: $font-family;
+        width: $width1000;
+        margin: margincenter();
+        line-height: $height44;
+        text-align: right;
+        color: $bbwhite;
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+    }
+}
