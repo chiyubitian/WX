@@ -1,0 +1,3255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>详情页</title>
+	<link rel="stylesheet" href="../demo-font/iconfont.css">
+	<link rel="stylesheet" href="../taobao/iconfont.css">
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		img{
+			border:0;
+			display:block;
+		}
+		body{
+			color:#f6f6f6;
+		}
+		#leader{
+			width:100%;
+			height:30px;
+			background:#000;
+			border-bottom:1px solid #ededee;
+
+		}
+		#navtop{
+			width:1090px;
+			height:30px;
+			margin:0 auto;
+		}
+		.navtop-l{
+		width:183px;
+		height:30px;
+		float:left;
+		}
+		.navtop-l span{
+		color:#999;
+		font-size:12px;
+		line-height:30px;
+		}
+		.navtop-l a{
+			color:#999;
+			font-size:12px;
+			margin:0 0 0 10px;
+			text-decoration: none;
+	
+		}
+		.navtop-l a:hover{
+			color:white;
+		}
+		.navtop-l2{
+			width:78px;
+			height:30px;
+			padding:0px 0px 0px 30px;
+ 			float:left;
+ 			position:relative;
+		}
+		.navtop-l2 a{
+			color:#999;
+			font-size:12px;
+			line-height:30px;
+			text-decoration: none;
+		}
+		.outside img{
+			width:116px;
+			height:116px;
+			vertical-align: middle;
+			display: inline-block;
+		}
+		.navtop-l2 .outside{
+			width:128px;
+			height:167px;
+			position:absolute;
+			left:0;
+			top:35px;
+			left:-30px;
+			text-align:center;
+			border:1px solid orange;
+			padding:5px 5px 0px ;
+			display:none;
+		}
+		.navtop-l2:hover .outside{
+			display:block;
+		}
+		.outside strong{
+			width:116px;
+			height:44px;
+			font-size:12px;
+			color:#ff1e32;
+			display:block;
+			padding:4px 0px;
+			line-height:18px;
+			font-weight:400;
+			text-align:center;
+		}
+		#navtop ul{
+			width:602px;
+			height:32px;
+			float:right;
+			right:-3px;
+	
+		}
+		#navtop li{
+			float:left;
+			width:78px;
+			height:30px;
+			position:relative;
+		}
+		#navtop li a{
+			text-decoration: none;
+			font-size:12px;
+			color:#999;
+			padding:0px 10px 0px 8px;
+			line-height:32px;
+
+
+		}
+		#navtop li a:hover{
+			color:white;
+		}
+		
+		#navtop li .person{
+			width:80px;
+			height:32px;
+			box-sizing: border-box;
+			
+		}
+		#navtop li .person1{
+			position: relative;
+		}
+		#navtop li .person:hover{
+			background:white;
+		}	
+		#navtop li .person1:hover{
+			color:red;
+		}
+		#navtop li .person2{
+				width:119px;
+				height:272px;
+				background:white;
+				position:absolute;
+				left:-1px;
+				top:30px;
+				border-top:0;
+				padding:4px 15px 5px 10px;
+				box-sizing: border-box;
+				display:none;
+					}
+			.person1:hover .person2{
+				display:block;
+			}
+			#navtop .icon-fanhui4{
+				width:8px;
+				height:4px;
+				color:#999;
+			}
+			#navtop .my{
+				color:#000;
+				outline:0;
+				font-size:12px;
+   				display:block;
+		   		height:28px;
+
+			}
+		#navtop .my:hover{
+				color:red;
+		}
+
+		#navtop li .service{
+			width:80px;
+			height:32px;
+		}
+		#navtop li .service:hover{
+			background:white;
+		}
+		#navtop li .service1:hover{
+			color:red;
+		}
+		ul .ser{
+			position:relative;
+		}
+		ul .service2{
+			width:123px;
+			height:129px;
+			background:white;
+			position:absolute;
+			/*left:20px;*/
+			top:30px;
+			border-top:0;
+			padding:4px 15px 5px 0px;
+			box-sizing: border-box;
+			display:none;
+	}
+	.ser:hover .service2{
+	display:block;
+	}
+	#navtop .com{
+		color:#000;
+		outline:0;
+		font-weight:normal;
+		font-size:12px;
+	   display:block;
+	   height:28px;
+	}
+
+	.mom{
+	position: relative;
+}
+.mon .money1{
+	width:90px;
+	height:32px;
+	margin-left:10px;
+}
+.money:hover{
+	color:red;
+}
+ .money:hover{
+	color:red;
+}
+.mon .money2{
+	width:111px;
+	height:101px;
+	background:white;
+	position:absolute;
+	left:10px;
+	top:30px;
+	border-top:0;
+	padding:4px 10px 5px 10px;
+	box-sizing: border-box;
+	display:none;
+}
+.mon:hover .money2{
+	display:block;
+}
+.money2 .mo{
+	font-size:12px;
+	color:#000;
+}
+.ri{
+	position:relative;
+}
+ .right1:hover{
+	color:red;
+}
+.right1:hover{
+	color:red;
+}
+.right2{
+	width:103px;
+	height:73px;
+	background:white;
+	position:absolute;
+	left:10px;
+	top:30px;
+	border-top:0;
+	padding:4px 10px 5px 0px;
+	box-sizing: border-box;
+	display:none;
+}
+.ri:hover .right2{
+	display:block;
+}
+#logo{
+	width:100%;
+	height:100px;
+
+}
+.lo1{
+	width:1090px;
+	height:100px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.lo1 img{
+	width:225px;
+	margin-top:10px;
+	float:left;
+}
+.search{
+	width:510px;
+	height:40px;
+	border-radius:40px;
+	border:0;
+	margin-left:340px;
+	margin-top:25px;
+	background: url(../img/search.png) no-repeat 10px 15px;
+	border:1px solid #ff2337;
+}
+.search input{
+	width:410px;
+	height:24px;
+	border:none;
+	line-height:24px;
+	font-size:13px;
+	background:#ffffff;
+	margin-top:10px;
+	margin-left:27px;
+	float:left;
+	outline:0;
+}
+.search span{
+	width:60px;
+	height:40px;
+	background:#ff2337;
+	border-radius:40px;
+	float:right;
+}
+.icon-fangdajing{
+	position:relative;
+	top:10px;
+	left:20px;
+	color:white;
+}
+.lo1 ul{
+	width:461px;
+	height:22px;
+	line-height:22px;
+	margin-top:2px;
+	overflow:hidden;
+	list-style: none;
+	float:left;
+	margin-left:120px;
+}
+.lo1 li{
+	float:left;
+	margin-left:30px;
+}
+/*万能清浮动*/
+ul:after{
+	clear:both;
+	content:"";
+	display:block;
+	visibility: hidden;
+	height:0;
+	overflow:hidden;
+}
+.lo1 li a{
+	text-decoration: none;
+	font-size:12px;
+	color:#999;
+}
+.lo1 a:hover{
+	text-decoration: underline;
+}
+.market{
+	display:block;
+	width:106px;
+	height:36px;
+	background:#fff;
+	float:right;
+	line-height:36px;
+	border:2px solid #ff1e32;
+	font-size:14px;
+	color:#333;
+	margin-right:99px; 
+	margin-top:-40px;
+	border-radius:36px;
+	text-align:center;
+	text-decoration: none;
+}
+.market:hover{
+	color:red;
+}
+#nav-product{
+	width:100%;
+	height:40px;
+	border-bottom:1px solid #ccc;
+    position:relative;
+}
+#nav-product-l{
+	display:inline-block;
+	width:164px;
+	height:40px;
+	background:red;
+	border-bottom:1px solid #ff5160;
+	font-size:14px;
+	color:#fff;
+	line-height:40px;
+	text-align: center;
+	float:left;
+	margin-left:138px;
+}
+#nav-product-l span{
+	margin-left:23px;
+
+}
+#nav-product ul li{
+	list-style: none;
+}
+#nav-product ul{
+	width:880px;
+	height:40px;
+	float:left;
+	padding-left:25px;
+
+}
+.heng li{
+	width:70px;
+	height:40px;
+	list-style:none;
+	float:left;
+	overflow:hidden;
+	text-align: center;
+	line-height:40px;
+	padding:0px 10px;
+}
+.heng li a{
+	text-decoration: none;
+	color:#333;
+	font-size:15px;
+	font-weight: 700;
+
+}
+.heng li a:hover{
+	color:red;
+}
+#nav-product-l .pro-erji{
+	width:151px;
+	height:505px;
+	/*overflow: hidden;*/
+	/*margin-left:138px;*/
+	z-index: 999;
+	position:absolute;
+	padding:0;
+	display:none;
+	opacity: 1;
+}
+#nav-product-l:hover .pro-erji{
+	display: block;
+}
+#nav-product-l .pro-erji li{
+	list-style: none;
+	width:151px;
+	height:41px;
+	background:red;
+	line-height:41px;
+	padding:0 3px 0 10px;
+	border-bottom:1px solid #ff5160;
+    position:relative;
+    z-index: 999;
+}
+#nav-product-l .pro-erji a{
+	text-decoration: none;
+	color:white;
+	font-size:14px;
+	display:block;
+	padding:0 15px;
+	box-sizing: border-box;
+	text-align: center;
+}
+#nav-product-l .erji{
+	width:930px;
+	height:459px;
+	background:#fff;
+	border:1px solid #ff1a33;
+	color:#333;
+	position:absolute;
+	left:164px;
+	top:0px;
+	display:none;
+}
+#nav-product-l li:hover .erji{
+	display:block;
+}
+#nav-product-l .b1{
+	width:283px;
+	height:200px;
+	float:left;
+	margin-left:10px;
+}
+#nav-product-l .erji .b1 p{
+	width:275px;
+	height:32px;
+	font-size:14px;
+	font-weight:700;
+	line-height:32px;
+	border-bottom:1px solid #999;
+}
+#nav-product-l .box-inside{
+	width:283px;
+	height:163px;
+}
+#nav-product-l .box-inside a{
+	display:inline-block;
+	height:12px;
+	line-height:12px;
+	padding:0 5px;
+	font-size:12px;
+	color:#666;
+}
+#nav-product-l .erji .box-side1{
+	width:275px;
+	height:32px;
+	font-size:14px;
+	font-weight:700;
+	line-height:32px;
+	border-bottom:1px solid #999;
+	float:left;
+	margin-left:10px;
+}
+#nav-product-l .erji a:hover{
+	text-decoration:underline;
+}
+#nav-product li a:hover{
+	background:white;
+	color:red;
+}
+#nav-product-l .b2{
+	width:283px;
+	height:200px;
+	float:left;
+	margin-left:10px;
+}
+#nav-product-l .b3{
+	width:283px;
+	height:200px;
+	margin-left:10px;
+}
+#nav-product-l .b4{
+	width:283px;
+	height:200px;
+	float:left;
+	margin-left:10px;
+}
+#nav-product-l .b5{
+	width:283px;
+	height:45px;
+	margin-left:10px;
+}
+#nav-product-l fr.b6{
+	width:283px;
+	height:200px;
+	float:left;
+	margin-left:10px;
+}
+#content{
+	width:1090px;
+	height:758px;
+	margin:0 auto;
+
+}
+.con-top{
+	width:1090px;
+	height:69px;
+
+}
+.con-top-in{
+	width:1090px;
+	height:22px;
+	line-height:22px;
+	padding:12px 0 17px 0;
+	border-bottom:1px solid #ddd;
+	font-size:13px;
+	color:#999;	
+}
+.face{
+	width:80px;
+	height:18px;
+	line-height:18px;
+	border:1px solid #ccc;
+	margin-right:4px;
+	margin-top:;
+	display:inline-block;
+	text-align: center;
+}
+.face1{
+	width:96px;
+	height:18px;
+	line-height:18px;
+	border:1px solid #ccc;
+	margin-right:4px;
+	display:inline-block;
+	text-align: center;
+}
+.father{
+	width:93px;
+	height:18px;
+	line-height:18px;
+	border:1px solid #ccc;
+	margin-right:4px;
+	display:inline-block;
+	text-align: center;
+}
+.pa{
+	width:300px;
+	height:22px;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	color:#999;
+	vertical-align: middle
+}
+.con-body{
+	width:1090px;
+	height:719px;
+}	
+.con-body-l{
+	width:402px;
+	height:488px;
+	float:left;
+} 
+.picture{
+	width:400px;
+	height:400px;
+	border:1px solid #eee;
+	overflow: hidden;
+}
+.picture img{
+	width:400px;
+	height:400px;
+
+}
+.md{
+	width:330px;
+	height:70px;
+}
+.md ul{
+	display:inline-block;
+	width:400px;
+	height:90px;
+	border:1px solid #eee;
+	z-index: 999;
+	padding:1px 0;
+	text-decoration: none;
+	background-color:#fff;
+	float:left;
+}
+.md ul li{
+	width:80px;
+	height:80px;
+	float:left;
+	overflow: hidden;
+	margin-left:20px;
+}
+.md ul li img{
+	width:80px;
+	height:80px;
+}
+.con-body-r{
+	width:658px;
+	height:719px;
+	margin-left:30px;
+	float:left;
+}
+.con-body-r p img{
+	width:24px;
+	height:24px;
+	display:inline-block;
+	vertical-align: middle;
+}
+.con-body-r p span{
+	font-size:14px;
+	margin-left:6px;
+	color:#999;
+	font-weight: 400;
+	vertical-align: middle;
+}
+.con-body-r p a{
+	text-decoration: none;
+	font-size: 14px;
+    margin-left: 6px;
+    color: #999;
+    font-weight: 400;
+    vertical-align: middle;
+}
+.con-body-r p a:hover{
+	text-decoration: underline;
+}
+.con-body-r h1{
+	margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    color:#333;
+}
+.con-body-r h3{
+	margin-bottom: 11px;
+    color: #333;
+    line-height: 20px;
+    font-size: 13px;
+}
+.con-body-r .rmb{
+	width:658px;
+	height:157px;
+	background:#f9f9f9;
+	
+}
+.price{
+	width:658px;
+	height:48px;
+	
+}
+.price .cost{
+	font-size:12px;
+	color:#666;
+	float: left;
+    line-height: 26px;
+    margin: 8px 10px;
+    vertical-align: 4px;
+
+}
+.price-inside{
+	width:587px;
+	height:42px;
+	float:right;
+}
+.price-inside1{
+	width:658px;
+	height:40px;
+	float:left;
+}
+.bc{
+	width:573px;
+	height:20px;
+	line-height: 20px;
+    margin-left: 85px;
+	
+}
+.bc span{
+	display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #1e1e1e;
+    margin-top:-5px;
+}
+.bc img{
+	display: inline-block;
+	float:left;
+  /*  vertical-align: middle;
+    height: 17px;*/
+}
+.bc .tanhao{
+	color: #FF0000;
+	font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+}    
+.owner{
+	width:573px;
+	height:20px;
+	margin-left: 85px;
+}
+.owner span{
+	color: #737373;
+	display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+    margin:0;
+	margin-left:30px;
+}
+.more{
+	width:658px;
+	height:32px;
+
+}
+.more ul{
+	list-style: none;
+	overflow: hidden;
+    width: 495px;
+    height: 27px;
+    padding-bottom: 5px;
+    padding-right: 65px;
+}
+.more  li{
+	overflow: hidden;
+    float: left;
+    height: 20px;
+    width: 111px;
+    line-height: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #d9d9d9;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.nine{
+	width:573px;
+	height:20px;
+	margin-left:85px;
+}
+.nine span{
+	color: #323232;
+    font-size: 12px;
+    display: inline-block;
+    line-height: 19px;
+    height: 19px;
+    vertical-align: middle;
+}
+.nine a{
+	color: #51b8f1;
+	font-size: 12px;
+}
+.icon-youhuiquan-01{
+	color:red;
+}
+.pay{
+	width:685px;
+	height:27px;
+	padding-top: 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
+    
+}
+.baoshui{
+	width:232px;
+	height:18px;
+	margin-bottom: 10px;
+	float:left;
+}
+.shui{
+	display: inline-block;
+    padding: 0 4px;
+    color: #fff;
+    background-color: #e31436;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+}
+.postage{
+	width:658px;
+	height:24px;
+	
+}
+.postage p{
+	display:inline-block;
+	float: left;
+    line-height: 24px;
+    width: 75px;
+    color: #666;
+    vertical-align: middle;
+    font-size: 12px;
+    clear:both;
+    margin-left:10px;
+}
+.postage .to{
+	width:573px;
+	height:24px;
+	margin-left:75px;
+	/*float:left;*/
+	
+}
+.postage .to h6{
+	font-size:12px;
+	color:#333;
+	float:left;
+}
+select{
+	width:141px;
+	height:20px;
+	float:left;
+	color:#333;
+	border:0;
+	border:1px solid #333;
+	margin-left:5px;
+}
+.send{
+	width:658px;
+	height:109px;
+}
+.send p{
+	display:inline-block;
+	float: left;
+    line-height: 24px;
+    width: 75px;
+    color: #666;
+    vertical-align: middle;
+    font-size: 12px;
+    clear:both;
+    margin-left:10px;
+}
+.intro{
+	width:1090px;
+	height:54px;
+	clear:both;
+}
+.intro h1{
+	clear:both;
+	display:inline-block;
+	width:110px;
+	height:52px;
+	text-align: center;
+	line-height: 52px;
+}
+.detail1{
+	width:1100px;
+	height:195px;
+	border:1px solid #eaeaea;
+	padding:17px 10px 12px 10px;
+	clear:both;
+	box-sizing: border-box;
+	
+	
+}
+.detail1 ul{
+	list-style: none;
+	float:left;
+	margin-left:30px;
+}
+.detail1 li{
+	width: 138px;
+	height: 195px;
+	float:left;
+	margin-right:35px;
+}
+.detail1 li img{
+	width:110px;
+	height: 110px;
+	padding:0 0 0 10px;
+}
+.detail1 li a{
+	width: 138px;
+	height: 40px;
+	text-decoration: none;
+	font-size:12px;
+	color:#000;
+	overflow: hidden;
+}
+.send .place{
+	width: 658px;
+	height: 53px;
+	clear:both;
+
+}
+.send .place ul{
+	width:450px;
+	height: 53px;
+	
+	margin:10px 0 0 0;
+	margin-left:90px;
+	list-style: none;
+
+}
+.send .place li{
+	float:left;
+	padding-right:30px;
+	padding-top:15px;
+}
+.send .place img{
+	width: 28px;
+	height: 28px;
+}
+.send .place p{
+	font-size:12px;
+	color:#333;
+
+}
+.send .date{
+	width:548px;
+	height: 18px;
+	margin-top:35px;
+	clear:both;
+	margin-left:90px;
+}
+.send .date span{
+	
+	font-size:12px;
+	color:#333;
+}
+.much{
+	width: 652px;
+	height: 24px;
+	
+	margin-top:20px;
+}
+.much input{
+	width: 100px;
+	height: 22px;
+	border:0;
+	border:1px solid #ccc;
+	text-align: center;
+	margin-left:60px;
+}
+.speak{
+	width: 648px;
+	height: 36px;
+	margin-top:20px;
+	padding-top:10px;
+	box-sizing: border-box;
+	
+}
+.speak ul{
+list-style: none;
+margin-left:60px;
+height:36px;
+
+}
+.speak li{
+	float:left;
+	color:#333;
+	font-size:12px;
+	margin-right:10px;
+}
+.buy{
+	width: 658px;
+	height: 50px;
+	margin-top:20px;
+}
+.buy a{
+	width: 158px;
+	height: 46px;
+	border:2px solid #d41c44;
+	background-color: #ffeced;
+	color: #d31b44;
+	line-height: 46px;
+	font-size: 18px;
+    font-weight: bold;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	margin-right:20px;
+}
+.buy a:hover{
+	background-color:white;
+}
+.buy .second{
+	width: 180px;
+	height: 50px;
+	line-height: 50px;
+    color: #fff;
+    background-color: #e31436;
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.buy .second:hover{
+	background:rgba(210,0,0,0.7);
+}
+.buy .heart{
+	width: 69px;
+	height: 16px;
+	font-size:14px;
+	color:#333;
+	border:0;
+	background:white;
+}
+.icon-shoucang1{
+	color:red;
+}
+.buy .heart:hover{
+	text-decoration: underline;
+}
+#detail{
+	width: 100%;
+	height: 1683px;
+	clear:both;
+	margin-top:80px;
+
+}
+.detail-inside{
+	width: 1100px;
+	height: 1683px;
+	margin:0 auto;
+
+}
+.d-i-l{
+	width: 178px;
+	height: 1274px;
+	margin-bottom: 15px;
+    border: #eaeaea 1px solid;
+    float:left;
+
+}
+.d-i-l h4{
+	width: 158px;
+	height:24px;
+	font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    padding: 8px 10px;
+    border-bottom: 1px solid #eaeaea;
+}
+.d-i-l ul{
+	width: 178px;
+	height: 890px;
+	
+}
+.d-i-l li{
+	width: 158px;
+	height: 279px;
+	border-bottom:1px solid #eaeaea;
+	margin: 0 10px;
+    padding: 10px 0 16px;
+}
+.d-i-l li a{
+	
+	font-size:12px;
+    line-height: 20px;
+    color: #333;
+    text-decoration: none;
+}
+.d-i-l li .n1{
+	margin-top:10px;
+	font-size: 18px;
+    color: #d22146;
+    height: 24px;
+    line-height: 22px;
+    font-weight: bold;
+    display: inline-block;
+}
+.d-i-l li  del{
+	margin-left: 5px;
+    font-size: 14px;
+    color: #999;
+} 
+.d-i-r{
+	width:890px;
+	height:890px;
+	
+	float:left;
+	margin-left:20px;
+}
+.d-i-r-t{
+	width: 878px;
+	height: 40px;
+	background: #f8f8f8;
+    border-bottom: 1px solid #eaeaea;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 0;
+    font-weight: bold;
+    border-right: 1px solid #eaeaea;
+}
+.d-i-r-t1{
+	width: 888px;
+	height: 43px;
+	border-bottom: 1px solid #eaeaea;
+	font-size: 12px;
+    color: #333;
+
+}
+.d-i-r-out{
+	width: 426px;
+	height: 43px;
+	border-right: 1px solid #eaeaea;
+	display: inline-block;
+	padding-left: 10px;
+}
+ .d-i-r-out .d-i-r-t-p{
+	height: 43px;
+	display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #999;
+    line-height: 43px;
+}
+.d-i-r-out .d-i-r-t-f{
+	width: 294px;
+	height: 21px;
+	display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #333;
+    padding: 9px 0;
+	margin-left:60px;
+}
+
+#footer{
+	
+	width:100%;
+	height:364px;
+	clear:both;
+	margin-top:180px;
+}
+#footer .footer-inside{
+	width:1100px;
+	height:564px;
+	margin:0 auto;
+
+}
+.footer-top{
+	width:1100px;
+	height:48px;
+}
+.footer-top ul{
+	width:1100px;
+	height:48px;
+	list-style: none;
+
+}
+.footer-top .kuang{
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    float: left;
+    margin-right: 12px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(214, 214, 214);
+    color:#333;
+}
+.footer-top li{
+	float: left;
+    width: 233px;
+    margin-left: 42px;
+    margin-top:20px;
+
+}
+.footer-top li strong{
+	font-size: 18px;
+    font-weight: 700;
+    color:#333;
+}
+.footer-top li span{
+	    font-size: 14px;
+	    display: block;
+	    color:#333;
+}
+.footer-center{
+	width:1100px;
+	height:263px;
+	clear:both;
+	padding:60px 0 90px;
+}
+.footer-in{
+	width:258px;
+	height:128px;
+	float:left;
+
+}
+.footer-in span{
+	font-size:14px;
+	display: inline-block;
+    vertical-align: middle;
+}
+.icon-xinlangweibo{
+	font-size:24px;
+	color:red;
+}
+.icon-weixin2{
+	font-size:24px;
+	color:green;
+}
+.icon-quora{
+	font-size:24px;
+	color:cyan;
+}
+.footer-in em{
+	font-size: 18px;
+    font-weight: 400;
+}
+.footer-in  a{
+	color:#333;
+	font-size:14px;
+	text-decoration: none;
+}
+ .list-1{
+	width:100px;
+	height:128px;
+	float:left;
+	margin-left:30px;
+}
+.list-1 ul{
+	list-style: none;
+}
+.list-1 p{
+	font-size:18px;
+	color:#333;
+	margin:4px 0 10px;
+}
+.list-1 li{
+	font-size:12px;
+	color:#333;
+	padding-bottom:10px;
+}
+.footer-right{
+	width:108px;
+	height:128px;
+	float:right;
+	background:url(../img/ewm.png) no-repeat;
+	margin-right:20px;
+}
+.footer-right p{
+	font-size:14px;
+	color:#333;
+	margin-top:108px;
+}
+#bottom{
+	width:100%;
+	height:153px;
+	background:#333;
+	padding:20px 0;
+	text-align:center;
+}
+#bottom .box{
+	width:1100px;
+	height:153px;
+	margin:0 auto;
+
+}
+#bottom nav{
+ 			height:14px;
+ 			line-height:14px;
+ 			overflow: hidden;
+ 			margin-left:85px;
+ 		}
+ #bottom section{
+ 			float:left;
+ 			padding:0 15px;
+ 		} 
+#bottom a{
+			text-decoration:none;
+			color:#666666;
+			font-size:12px;
+		}
+		#bottom a:hover{
+			color:#999999;
+		}
+		#bottom span{
+			font-size:12px;
+			color:#999999;
+			float:left;
+			margin-top:15px;
+			margin-left:40px;	
+		}
+		#bottom .d1 span{
+			margin-left:20px;
+		}
+		#bottom .box5{
+			width:986px;
+			margin-top:14px;
+		}
+		#bottom img{
+			display: inline-block;
+		}
+</style>
+</head>
+<body>
+	<!-- 导航栏 -->
+	<div id="leader">
+	<!-- 导航栏左 -->
+		<nav id="navtop">
+			<div class="navtop-l">
+				<span>考拉欢迎你！</span>
+				<a href="javascript:;" >登录</a>
+				<span>|</span>
+				<a href="javascript:;" >免费注册</a>
+            </div>
+    <!-- 导航栏左2 -->
+			<div class="navtop-l2">
+				<a href="javascript:;">手机考拉</a>
+				<span class="outside">
+					<img src="../img/erweima.png" alt="">
+					<strong>下载APP
+					<br>
+					领1000元新人礼包
+					</strong>	
+				</span>
+			</div>
+<!-- 导航栏 -->
+	<ul style="list-style: none;">
+				<li>
+					<a href="javascript:;">每日签到</a>
+					<!-- <span>|</span> -->
+				</li>
+				<li>
+					<a href="javascript:;">我的订单</a>
+				<!-- 	<span>|</span> -->
+				</li>
+				<li class="per">
+					<div class="person">
+						<a href="javascript:;" class="person1">个人中心</a>
+						<!-- <i class="iconfont icon-fanhui4
+						"></i> -->
+						<div class="person2">
+							<a href="javascript:;" class="my">我的优惠券</a>
+							<a href="javascript:;" class="my">我的红包</a>
+							<a href="javascript:;" class="my">我的考拉豆</a>
+							<a href="javascript:;" class="my">账号管理</a>
+							<a href="javascript:;" class="my">我的实名认证</a>
+							<a href="javascript:;" class="my">我的发票抬头</a>
+							<a href="javascript:;" class="my">我收藏的商品</a>
+							<a href="javascript:;" class="my">我关注的品牌</a>
+							<a href="javascript:;" class="my">售后管理</a>
+						</div>
+					</div>	
+					
+				</li>
+				<li class="ser">
+					<div class="service">
+						<a href="javascript:;" class="service1">客户服务</a>
+						<i class="iconfont "></i>
+					</div>
+					<div class="service2">
+						<a href="javascript:;" class="my"><i class="iconfont icon-kefuyouxian "></i>联系客服</a>
+						<a href="javascript:;" class="my"><i class=" icon-kefu iconfont"></i>帮助中心</a>
+						<a href="javascript:;" class="my"><i class=" icon-tushu iconfont"></i>知识产权保护</a>
+						<a href="javascript:;" class="my"><i class="icon-gonggao iconfont "></i>规则中心</a>
+							
+					</div>
+
+				</li>
+				<li class="mon">
+					<div class="money">
+						<a href="javascript" class="money1">充值中心</a>
+					</div>
+					<div class="money2">
+						<a href="javascript:;" class="my">话费流量 </a>
+						<a href="javascript:;" class="my">游戏充值</a>
+						<a  href="javascript:;" class="my">APPStore充值卡</a>
+					</div>
+				</li>
+				<li class="ri">
+					<div class="right">
+						<a href="javascript:;" class="right1">消费者权益</a>
+					</div>
+					<div class="right2">
+						<a href="javascript:;" class="my">消费者告知书</a>
+						<a href="javascript:;" class="my">消费投诉公示</a>
+					</div>
+				</li>
+				<li class="more">
+					<div class="more1">
+						<a href="javascript:;">更多</a>
+					</div>
+					<div class="more2"></div>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- logo -->
+	<div id="logo">
+		<div class="lo1">
+			<img src="../img/logo1.png" alt="">
+			<div class="search">
+				<input type="text" placeholder="ck内裤男士">
+				<span>
+					<i class="iconfont icon-fangdajing"></i>
+				</span>
+			</div>
+			<ul>
+				<li>
+				 	<a href="javascript:;">面膜</a>
+				</li>
+				<li>
+					<a href="javascript:;">口红</a>
+				</li>
+				<li>
+					<a href="javascript:;">减肥</a>
+				</li>
+				<li>
+					<a href="javascript:;" style="color:red;">全球工厂店</a>
+				</li>
+				<li>
+					<a href="javascript:;">运动鞋</a>
+				</li>
+				<li>
+					<a href="javascript:;">项链</a>
+				</li>
+				<li>
+					<a href="javascript:;">女包</a>
+				</li>
+			</ul>
+			<a href="javascript:;" class="market">
+				<i class="iconfont icon-gouwuche" style="color:red;"></i>
+				购物车
+			</a>
+		</div>
+  	</div>
+  	<!-- 商品导航栏 -->
+  	<div id="nav-product">
+		<div id="nav-product-l">
+			<i class="icon-shangpinfenlei iconfont"></i>
+			<span>所有分类</span>
+			<ul class="pro-erji">
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont icon-kouhong"></i>
+						美容彩妆
+						<i class="iconfont icon-fanhui2"></i>
+					</a>
+					<!-- 二级菜单 -->
+					<div class="erji">
+					<!-- 护肤标题 -->
+						<div class="b1">
+							<p >
+								<a href="javascript:;" ></a>
+								护肤
+							</p>
+						<!-- 护肤的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">洁面</a>
+								<a href="javascript:;">卸妆</a>
+								<a href="javascript:;" style="color:red;">爽肤水</a>
+								<a href="javascript:;" style="color:red;">面霜</a>
+								<a href="javascript:;">眼部护理</a>
+								<a href="javascript:;" style="color:red;">精华</a>
+								<a href="javascript:;" style="color:red;">乳液/凝胶</a>
+								<a href="javascript:;">手/足护理</a>
+								<a href="javascript:;">身体护理</a>
+								<a href="javascript:;">唇部护理</a>
+								<a href="javascript:;" style="color:red;">护肤套装</a>
+								<a href="javascript:;">精油芳疗</a>
+								<a href="javascript:;">面部护肤</a>
+								<a href="javascript:;" style="color:red;">男士护肤</a>
+							</div>
+						</div>
+						
+						<!-- 面膜标题 -->
+						<div class="b2">
+							<p class="box-side1">
+								<a href="javascript:;"></a>
+								面膜
+							</p>
+							<!-- 面膜的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">美迪惠尔</a>
+								<a href="javascript:;">JMsolution</a>
+								<a href="javascript:;" style="color:red;">RAY</a>
+								<a href="javascript:;" >Dr.Jart+</a>
+								<a href="javascript:;">JAYJUN</a>
+								<a href="javascript:;" >春雨</a>
+								<a href="javascript:;" >SNP</a>
+								<a href="javascript:;" style="color:red;">佑天兰</a>
+								<a href="javascript:;">香蒲丽</a>
+								<a href="javascript:;">森田药妆</a>
+								<a href="javascript:;" style="color:red;">肌美精</a>
+								<a href="javascript:;">丽得姿</a>
+								<a href="javascript:;">其他面膜</a>
+							</div>
+						</div>
+						<!-- 彩妆 -->
+						<div class="b3">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								彩妆
+							</p>
+						<!-- 彩妆的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">BB霜/CC霜</a>
+								<a href="javascript:;">唇膏/唇彩</a>
+								<a href="javascript:;" >隔离/妆前</a>
+								<a href="javascript:;" >粉底</a>
+								<a href="javascript:;">粉饼/散粉</a>
+								<a href="javascript:;" style="color:red;">美甲</a>
+								<a href="javascript:;" style="color:red;">眼线</a>
+								<a href="javascript:;">眉笔</a>
+								<a href="javascript:;" style="color:red;">睫毛膏</a>
+								<a href="javascript:;" >眼影</a>
+								<a href="javascript:;">腮红</a>
+								<a href="javascript:;">遮瑕</a>
+								<a href="javascript:;" >高光/修颜</a>
+								<a href="javascript:;" style="color:red;">香水</a>
+								<a href="javascript:;" >化妆工具</a>
+								<a href="javascript:;" >彩妆工具</a>
+							</div>
+
+						</div>
+						<!-- 防晒修复 -->
+						<div class="b4">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								防晒修复
+							</p>
+						<!-- 彩妆的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" >安耐晒</a>
+								<a href="javascript:;">娜丽丝</a>
+								<a href="javascript:;" >RE:CIPE</a>
+								<a href="javascript:;" >碧柔</a>
+								<a href="javascript:;" style="color:red;">水宝宝</a>
+								<a href="javascript:;" >香蕉船</a>
+								<a href="javascript:;" >Ultrasun</a>
+								<a href="javascript:;">苏菲娜</a>
+								<a href="javascript:;">高丝</a>
+								<a href="javascript:;" >其他防晒</a>
+							</div>
+						</div>
+						<!-- 香水 -->
+						<div class="b5" style="margin-top:1px;">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								香水
+							</p>
+						<!--香水的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">女士香水</a>
+								<a href="javascript:;">男士香水</a>
+								<a href="javascript:;" >香水套装</a>
+							</div>
+						</div>	
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont icon-muyingwanju
+						"></i>
+						母婴儿童
+						<i class="iconfont icon-fanhui2"></i>
+					</a>
+					<div class="erji" style="top:-47px;">
+					<!-- 母婴儿童 -->
+						<div class="b1">
+							<p >
+								<a href="javascript:;" ></a>
+								奶粉
+							</p>
+						<!-- 护肤的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">爱他美</a>
+								<a href="javascript:;" style="color:red;">牛栏</a>
+								<a href="javascript:;" style="color:red;">a2</a>
+								<a href="javascript:;" style="color:red;">喜宝</a>
+								<a href="javascript:;" style="color:red;">贝拉米</a>
+								<a href="javascript:;" style="color:red;">惠氏</a>
+								<a href="javascript:;" style="color:red;">美素佳儿</a>
+								<a href="javascript:;">Hero Baby</a>
+								<a href="javascript:;" style="color:red;">雅培</a>
+								<a href="javascript:;">美赞臣</a>
+								<a href="javascript:;" >贝儿</a>
+								<a href="javascript:;">雀巢</a>
+								<a href="javascript:;" style="color:red;">合生元</a>
+								<a href="javascript:;" >满趣健</a>
+								<a href="javascript:;" style="color:red;">Pre段</a>
+								<a href="javascript:;" style="color:red;">1段</a>
+								<a href="javascript:;" style="color:red;">2段</a>
+								<a href="javascript:;" >5段</a>
+								<a href="javascript:;" >6段</a>
+							</div>
+						</div>
+						
+						<!-- 纸尿裤/拉拉裤标题 -->
+						<div class="b2">
+							<p class="box-side1">
+								<a href="javascript:;"></a>
+								纸尿裤/拉拉裤
+							</p>
+							<!-- 纸尿裤/拉拉裤的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">花王</a>
+								<a href="javascript:;" style="color:red;">尤妮佳</a>
+								<a href="javascript:;" style="color:red;">大王</a>
+								<a href="javascript:;" style="color:red;">好奇</a>
+								<a href="javascript:;">帮宝适</a>
+								<a href="javascript:;" >妈咪宝贝</a>
+								<a href="javascript:;" >班博</a>
+								<a href="javascript:;" >丽贝乐</a>
+								<a href="javascript:;">妮飘</a>
+								<a href="javascript:;"姆明一族</a>
+								
+							</div>
+						</div>
+						<!-- 营养辅食 -->
+						<div class="b3">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								营养辅食
+							</p>
+						<!-- 营养辅食的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">辅食泥 </a>
+								<a href="javascript:;" style="color:red;">米粉米糊</a>
+								<a href="javascript:;" style="color:red;">泡芙</a>
+								<a href="javascript:;" >溶溶豆</a>
+								<a href="javascript:;">营养品</a>
+								<a href="javascript:;" >饼干</a>
+								<a href="javascript:;" >肉松面仔</a>
+								<a href="javascript:;">调味品</a>
+								<a href="javascript:;" >其他辅食</a>
+								<a href="javascript:;" >其他零食</a>
+								
+							</div>
+
+						</div>
+						<!-- 宝宝用品/玩具图书修复 -->
+						<div class="b4">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								宝宝用品/玩具图书
+							</p>
+						<!-- 宝宝用品/玩具图书的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">洗漱护肤</a>
+								<a href="javascript:;" style="color:red;">护理</a>
+								<a href="javascript:;" style="color:red;">喂养</a>
+								<a href="javascript:;" >出行</a>
+								<a href="javascript:;" >清洁消毒</a>
+								<a href="javascript:;" >图书绘本</a>
+								<a href="javascript:;" >积木拼插</a>
+								<a href="javascript:;">早教益智</a>
+								<a href="javascript:;">爬行学步</a>
+								<a href="javascript:;" >其他玩具</a>
+								<a href="javascript:;" >宝宝家居</a>
+								<a href="javascript:;" >小家电</a>
+							</div>
+						</div>
+						<!-- 童装童鞋 -->
+						<div class="b5" style="margin-top:1px;">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								童装童鞋
+							</p>
+						<!--童装童鞋的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">连体爬服</a>
+								<a href="javascript:;">宝宝套装/衬衫/T恤</a>
+								<a href="javascript:;" >宝宝裤子</a>
+							</div>
+						</div>
+						<!-- 孕妈必备 -->
+						<div class="b6" style="margin-top:1px;">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								孕妈必备
+							</p>
+						<!--孕妈必备的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">孕妈洗护</a>
+								<a href="javascript:;">孕期营养</a>
+								<a href="javascript:;" >产前产后用品</a>
+							</div>
+						</div>		
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont icon-yaopin"></i>
+						营养保健
+						<i class="iconfont icon-fanhui2"></i>
+					</a>
+					<div class="erji" style="top:-87px;">
+					<!-- 女性健康 -->
+						<div class="b1" style="height:225px" >
+							<p >
+								<a href="javascript:;" ></a>
+								女性健康
+							</p>
+						<!-- 女性健康的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">胶原蛋白</a>
+								<a href="javascript:;" style="color:red;">葡萄籽</a>
+								<a href="javascript:;" style="color:red;">白藜芦醇</a>
+								<a href="javascript:;" style="color:red;">酵素</a>
+								<a href="javascript:;" >铁元</a>
+								<a href="javascript:;" >蔓越莓</a>
+								<a href="javascript:;" style="color:red;">美白丸</a>
+								<a href="javascript:;">维生素C</a>
+								<a href="javascript:;" >维生素E</a>
+								<a href="javascript:;">燕窝</a>
+								<a href="javascript:;" >复合维矿</a>
+								<a href="javascript:;" style="color:red;">早更年期</a>
+								<a href="javascript:;" >孕产营养</a>
+								<a href="javascript:;" >美容养颜</a>
+								<a href="javascript:;" style="color:red;">减肥瘦身</a>
+								<a href="javascript:;" >排毒通便</a>
+								<a href="javascript:;" style="color:red;">补血补气</a>
+								<a href="javascript:;" style="color:red;">调节内分泌</a>
+								<a href="javascript:;" >提高免疫力</a>
+							</div>
+						</div>
+						
+						<!-- 男士必备标题 -->
+						<div class="b2">
+							<p class="box-side1">
+								<a href="javascript:;"></a>
+								男士必备
+							</p>
+							<!-- 男士必备的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" >增肌粉</a>
+								<a href="javascript:;" >番茄红素</a>
+								<a href="javascript:;" style="color:red;">玛咖</a>
+								<a href="javascript:;" style="color:red;">护肝片</a>
+								<a href="javascript:;" style="color:red;">叶黄素</a>
+								<a href="javascript:;" >复合维矿</a>
+								<a href="javascript:;" >提高精力</a>
+								<a href="javascript:;" style="color:red;">缓解疲劳</a>
+								<a href="javascript:;">解酒护肝</a>
+								<a href="javascript:;">改善视力</a>
+								<a href="javascript:;">舒缓压力</a>
+								<a href="javascript:;" style="color:red;">男士备孕</a>
+								<a href="javascript:;">关节养护</a>
+								<a href="javascript:;">清肺润喉</a>
+								<a href="javascript:;" style="color:red;">护发防脱</a>
+							</div>
+						</div>
+						<!-- 关爱爸妈 -->
+						<div class="b3">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								关爱爸妈
+							</p>
+						<!-- 关爱爸妈的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">钙片 </a>
+								<a href="javascript:;" style="color:red;">维骨力</a>
+								<a href="javascript:;" style="color:red;">鱼油/卵磷脂</a>
+								<a href="javascript:;" >辅酶Q10</a>
+								<a href="javascript:;" style="color:red;">参类滋补</a>
+								<a href="javascript:;" >银杏</a>
+								<a href="javascript:;" >蛋白粉</a>
+								<a href="javascript:;">蜂胶</a>
+								<a href="javascript:;" style="color:red;">血脂血压</a>
+								<a href="javascript:;" style="color:red;">改善睡眠</a>
+							</div>
+
+						</div>
+						<!-- 滋补养生 -->
+						<div class="b4">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								 滋补养生
+							</p>
+						<!--  滋补养生的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">参类</a>
+								<a href="javascript:;" style="color:red;">蜂蜜</a>
+								<a href="javascript:;" >黑糖/红糖</a>
+								<a href="javascript:;" style="color:red;">养生茶</a>
+								<a href="javascript:;" >灵芝/石斛</a>
+								<a href="javascript:;" >滋补膏方</a>
+								<a href="javascript:;" style="color:red;">燕窝</a>
+								<a href="javascript:;">枸杞/黑枸杞</a>
+								<a href="javascript:;">阿胶</a>
+								<a href="javascript:;" >润肺养胃</a>
+								<a href="javascript:;" >补肾明目</a>
+								<a href="javascript:;" >美容养颜</a>
+								<a href="javascript:;" >提神醒脑</a>
+								<a href="javascript:;" >滋阴调胃</a>
+								<a href="javascript:;" >补血调经</a>
+
+							</div>
+						</div>
+						<!-- 运动营养 -->
+						<div class="b5" style="margin-top:1px;">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								运动营养
+							</p>
+						<!--童装童鞋的菜单 -->
+						</div>
+						<!-- 日常护理必备 -->
+						<div class="b6" style="margin-top:1px;">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								日常护理
+							</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont icon-shumashouji"></i>
+						数码家电
+						<i class="iconfont icon-fanhui2"></i>
+					</a>
+					<div class="erji" style="top:-129px;">
+					<!-- 数码家电 -->
+							<div class="b1" style="height:153px">
+							<p >
+								<a href="javascript:;" ></a>
+								手机/配件
+							</p>
+						<!-- 手机/配件的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">苹果</a>
+								<a href="javascript:;" style="color:red;">华为</a>
+								<a href="javascript:;" >小米</a>
+								<a href="javascript:;" style="color:red;">OPPO</a>
+								<a href="javascript:;" >vivo</a>
+								<a href="javascript:;" >三星</a>
+								<a href="javascript:;" >数据线</a>
+								<a href="javascript:;">手机壳</a>
+								<a href="javascript:;" >手机贴膜</a>
+							</div>
+						</div>
+						
+						<!-- 智能影音标题 -->
+						<div class="b2" style="height:153px">
+							<p class="box-side1">
+								<a href="javascript:;"></a>
+								智能影音
+							</p>
+							<!-- 智能影音的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">Beats</a>
+								<a href="javascript:;" style="color:red;">BOSE</a>
+								<a href="javascript:;" style="color:red;">JBL</a>
+								<a href="javascript:;" style="color:red;">耳机/耳麦</a>
+								<a href="javascript:;">音箱/音响</a>
+								<a href="javascript:;" >微单</a>
+								<a href="javascript:;" >拍立得</a>
+								<a href="javascript:;" >智能设备</a>
+								<a href="javascript:;" style="color:red;">小米</a>
+								<a href="javascript:;" style="color:red;">儿童手表</a>
+								
+							</div>
+						</div>
+						<!-- 生活电器 -->
+						<div class="b3" style="height:153px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								生活电器
+							</p>
+						<!-- 生活电器的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">戴森</a>
+								<a href="javascript:;" >电风扇</a>
+								<a href="javascript:;" >除湿机</a>
+								<a href="javascript:;" style="color:red;">空气净化器</a>
+								<a href="javascript:;" style="color:red;">扫地机器人</a>
+								<a href="javascript:;" >吸尘器/除螨</a>
+								<a href="javascript:;" >加湿器</a>
+								<a href="javascript:;">挂烫机/电熨斗</a>
+								<a href="javascript:;">洗衣机</a>
+							</div>
+						</div>
+						<!-- 个护健康 -->
+						<div class="b4" style="height:153px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								个护健康
+							</p>
+						<!--个护健康的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">电吹风/风筒 </a>
+								<a href="javascript:;" style="color:red;">电动牙刷</a>
+								<a href="javascript:;" style="color:red;">剃须刀</a>
+								<a href="javascript:;" >卷/直发器</a>
+								<a href="javascript:;">剃/脱毛器</a>
+								<a href="javascript:;" >鼻毛修剪器</a>
+								<a href="javascript:;" >理发器</a>
+								<a href="javascript:;">按摩梳</a>
+								<a href="javascript:;" >按摩仪</a>
+							</div>
+
+						</div>
+						
+						<!-- 厨房电器 -->
+						<div class="b5" style="margin-top:1px;">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								厨房电器
+							</p>
+						<!--厨房电器的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">电水壶/热水瓶/饮水机</a>
+								<a href="javascript:;">咖啡机/咖啡壶/</a>
+								<a href="javascript:;" >原汁机/榨汁机</a>
+								<a href="javascript:;" >电饭煲</a>
+								<a href="javascript:;" >搅拌/料理机</a>
+								<a href="javascript:;" >面包机</a>
+								<a href="javascript:;" >净水器</a>
+								<a href="javascript:;" >电压力锅</a>
+								<a href="javascript:;" >烤箱</a>
+							</div>
+						</div>
+						<!-- 办公外设 -->
+						<div class="b6" style="margin-top:1px;">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								办公外设
+							</p>
+						<!--办公外设的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">电脑/平板电脑</a>
+								<a href="javascript:;">凌美</a>
+								<a href="javascript:;" >kindle</a>
+								<a href="javascript:;" style="color:red;">笔类</a>
+								<a href="javascript:;">智能手表</a>
+								<a href="javascript:;" >电子书</a>
+								<a href="javascript:;" style="color:red;">照片打印机</a>
+								<a href="javascript:;">办公文具</a>
+								<a href="javascript:;" >键盘</a>
+								<a href="javascript:;" >本册</a>
+								<a href="javascript:;" >投影机</a>
+
+							</div>
+						</div>		
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont icon-neiyi"></i>
+						个人洗护
+						<i class="iconfont icon-fanhui2"></i>
+					</a>
+					<div class="erji" style="top:-169px;">
+						<div class="b1" style="height:225px" >
+							<p >
+								<a href="javascript:;" ></a>
+								女性健康
+							</p>
+						<!-- 女性健康的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">胶原蛋白</a>
+								<a href="javascript:;" style="color:red;">葡萄籽</a>
+								<a href="javascript:;" style="color:red;">白藜芦醇</a>
+								<a href="javascript:;" style="color:red;">酵素</a>
+								<a href="javascript:;" >铁元</a>
+								<a href="javascript:;" >蔓越莓</a>
+								<a href="javascript:;" style="color:red;">美白丸</a>
+								<a href="javascript:;">维生素C</a>
+								<a href="javascript:;" >维生素E</a>
+								<a href="javascript:;">燕窝</a>
+								<a href="javascript:;" >复合维矿</a>
+								<a href="javascript:;" style="color:red;">早更年期</a>
+								<a href="javascript:;" >孕产营养</a>
+								<a href="javascript:;" >美容养颜</a>
+								<a href="javascript:;" style="color:red;">减肥瘦身</a>
+								<a href="javascript:;" >排毒通便</a>
+								<a href="javascript:;" style="color:red;">补血补气</a>
+								<a href="javascript:;" style="color:red;">调节内分泌</a>
+								<a href="javascript:;" >提高免疫力</a>
+							</div>
+						</div>
+						
+						<!-- 男士必备标题 -->
+						<div class="b2">
+							<p class="box-side1">
+								<a href="javascript:;"></a>
+								男士必备
+							</p>
+							<!-- 男士必备的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" >增肌粉</a>
+								<a href="javascript:;" >番茄红素</a>
+								<a href="javascript:;" style="color:red;">玛咖</a>
+								<a href="javascript:;" style="color:red;">护肝片</a>
+								<a href="javascript:;" style="color:red;">叶黄素</a>
+								<a href="javascript:;" >复合维矿</a>
+								<a href="javascript:;" >提高精力</a>
+								<a href="javascript:;" style="color:red;">缓解疲劳</a>
+								<a href="javascript:;">解酒护肝</a>
+								<a href="javascript:;">改善视力</a>
+								<a href="javascript:;">舒缓压力</a>
+								<a href="javascript:;" style="color:red;">男士备孕</a>
+								<a href="javascript:;">关节养护</a>
+								<a href="javascript:;">清肺润喉</a>
+								<a href="javascript:;" style="color:red;">护发防脱</a>
+							</div>
+						</div>
+						<!-- 关爱爸妈 -->
+						<div class="b3">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								关爱爸妈
+							</p>
+						<!-- 关爱爸妈的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">钙片 </a>
+								<a href="javascript:;" style="color:red;">维骨力</a>
+								<a href="javascript:;" style="color:red;">鱼油/卵磷脂</a>
+								<a href="javascript:;" >辅酶Q10</a>
+								<a href="javascript:;" style="color:red;">参类滋补</a>
+								<a href="javascript:;" >银杏</a>
+								<a href="javascript:;" >蛋白粉</a>
+								<a href="javascript:;">蜂胶</a>
+								<a href="javascript:;" style="color:red;">血脂血压</a>
+								<a href="javascript:;" style="color:red;">改善睡眠</a>
+							</div>
+
+						</div>
+						<!-- 滋补养生 -->
+						<div class="b4">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								 滋补养生
+							</p>
+						<!--  滋补养生的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">参类</a>
+								<a href="javascript:;" style="color:red;">蜂蜜</a>
+								<a href="javascript:;" >黑糖/红糖</a>
+								<a href="javascript:;" style="color:red;">养生茶</a>
+								<a href="javascript:;" >灵芝/石斛</a>
+								<a href="javascript:;" >滋补膏方</a>
+								<a href="javascript:;" style="color:red;">燕窝</a>
+								<a href="javascript:;">枸杞/黑枸杞</a>
+								<a href="javascript:;">阿胶</a>
+								<a href="javascript:;" >润肺养胃</a>
+								<a href="javascript:;" >补肾明目</a>
+								<a href="javascript:;" >美容养颜</a>
+								<a href="javascript:;" >提神醒脑</a>
+								<a href="javascript:;" >滋阴调胃</a>
+								<a href="javascript:;" >补血调经</a>
+
+							</div>
+						</div>
+						<!-- 运动营养 -->
+						<div class="b5" style="margin-top:1px;">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								运动营养
+							</p>
+						<!--童装童鞋的菜单 -->
+						</div>
+						<!-- 日常护理必备 -->
+						<div class="b6" style="margin-top:1px;">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								日常护理
+							</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont icon-yundong"></i>
+						服饰鞋靴
+						<i class="iconfont icon-fanhui2"></i>
+					</a>
+					<div class="erji" style="top:-211px;">
+					<!-- 时尚新女性 -->
+						<div class="b1" style="height:230px;">
+							<p >
+								<a href="javascript:;" ></a>
+								时尚新女性
+							</p>
+						<!-- 时尚新女性的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">连衣裙</a>
+								<a href="javascript:;" style="color:red;">女士T恤</a>
+								<a href="javascript:;" >女士卫衣</a>
+								<a href="javascript:;" style="color:red;">雪纺/蕾丝衫</a>
+								<a href="javascript:;" >女士毛针织衫</a>
+								<a href="javascript:;" style="color:red;">女士风衣</a>
+								<a href="javascript:;" style="color:red;">女士短外套</a>
+								<a href="javascript:;">女士牛仔裤</a>
+								<a href="javascript:;" style="color:red;">女士休闲裤</a>
+								<a href="javascript:;" style="color:red;">半身裙</a>
+								<a href="javascript:;" >女士家居服</a>
+								<a href="javascript:;" style="color:red;">丝袜/打底袜</a>
+								<a href="javascript:;" style="color:red;">塑身美体</a>
+								<a href="javascript:;" style="color:red;">女士凉鞋</a>
+								<a href="javascript:;" style="color:red;">女士单鞋</a>
+								<a href="javascript:;" style="color:red;">高跟鞋</a>
+								<a href="javascript:;" style="color:red;">女士运动/帆布鞋</a>
+							</div>
+						</div>
+						
+						<!-- 潮流新男性标题 -->
+						<div class="b2">
+							<p class="box-side1">
+								<a href="javascript:;"></a>
+								潮流新男性
+							</p>
+							<!-- 潮流新男性的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">男士T恤</a>
+								<a href="javascript:;" style="color:red;">男士衬衫</a>
+								<a href="javascript:;" style="color:red;">男士POLO衫</a>
+								<a href="javascript:;" style="color:red;">男士卫衣</a>
+								<a href="javascript:;">男士毛衣/针织</a>
+								<a href="javascript:;" >男士外套</a>
+								<a href="javascript:;" >男士牛仔裤</a>
+								<a href="javascript:;" >男士休闲裤</a>
+								<a href="javascript:;">男士短裤</a>
+								<a href="javascript:;"男士休闲鞋</a>
+								<a href="javascript:;"男士运动/帆布鞋</a>
+								<a href="javascript:;"商务鞋</a>
+								<a href="javascript:;"男士凉鞋</a>	
+							</div>
+						</div>
+						<!-- 软萌婴童 -->
+						<div class="b3">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								软萌婴童
+							</p>
+						<!-- 软萌婴童的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" >儿童裙子 </a>
+								<a href="javascript:;" >儿童连体衣</a>
+								<a href="javascript:;" >儿童套装</a>
+								<a href="javascript:;" style="color:red;">儿童外套</a>
+								<a href="javascript:;">儿童裤子</a>
+								<a href="javascript:;" style="color:red;">儿童T恤</a>
+								<a href="javascript:;" >学步鞋</a>
+								<a href="javascript:;">儿童凉鞋</a>
+								<a href="javascript:;" >儿童休闲鞋</a>
+								<a href="javascript:;" >儿童卫衣</a>
+								<a href="javascript:;" >儿童家居服</a>
+								
+							</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont icon-huwai"></i>
+						户外运动
+						<i class="iconfont icon-fanhui2"></i>
+					</a>
+					<div class="erji" style="top:-246px;">
+					<!-- 户外运动 -->
+							<div class="b1" style="height:153px">
+							<p >
+								<a href="javascript:;" ></a>
+								运动鞋
+							</p>
+						<!-- 运动鞋的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">跑步鞋</a>
+								<a href="javascript:;" style="color:red;">休闲鞋</a>
+								<a href="javascript:;" >篮球鞋</a>
+								<a href="javascript:;" style="color:red;">NIKE</a>
+								<a href="javascript:;" >阿迪达斯</a>
+								<a href="javascript:;" >ASICS</a>
+								<a href="javascript:;" >美津浓</a>
+								<a href="javascript:;">SKORA</a>
+								<a href="javascript:;" >Under Armour</a>
+							</div>
+						</div>
+						
+						<!-- 运动服装标题 -->
+						<div class="b2" style="height:153px">
+							<p class="box-side1">
+								<a href="javascript:;"></a>
+								运动服装
+							</p>
+							<!-- 运动服装的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">运动T恤</a>
+								<a href="javascript:;" style="color:red;">运动卫衣</a>
+								<a href="javascript:;" style="color:red;">运动裤</a>
+								<a href="javascript:;" style="color:red;">更多商品</a>
+								<a href="javascript:;">音箱/音响</a>
+								<a href="javascript:;" >NIKE</a>
+								<a href="javascript:;" >阿迪达斯</a>
+							
+								
+							</div>
+						</div>
+						<!-- 户外鞋靴 -->
+						<div class="b3" style="height:153px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								户外鞋靴
+							</p>
+						<!--户外鞋靴的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">登山鞋</a>
+								<a href="javascript:;" >徒步鞋</a>
+								<a href="javascript:;" >工装靴</a>
+								<a href="javascript:;" style="color:red;">溯溪鞋</a>
+								<a href="javascript:;" style="color:red;">越野跑鞋</a>
+								<a href="javascript:;" >LOWA</a>
+								<a href="javascript:;" >CRISPI</a>
+								<a href="javascript:;">Bestard</a>
+								<a href="javascript:;">Keen</a>
+							</div>
+						</div>
+						<!-- 户外服装 -->
+						<div class="b4" style="height:153px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								户外服装
+							</p>
+						<!--户外服装的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">速干T恤 </a>
+								<a href="javascript:;" style="color:red;">卫衣衬衣</a>
+								<a href="javascript:;" style="color:red;">皮肤风衣</a>
+								<a href="javascript:;" >冲锋衣裤</a>
+								<a href="javascript:;">户外裤</a>
+								<a href="javascript:;" > 功能内衣</a>
+								<a href="javascript:;" >帽子/皮带</a>
+								<a href="javascript:;">土拨鼠</a>
+								<a href="javascript:;" >巴塔</a>
+								<a href="javascript:;" >棉服</a>
+								<a href="javascript:;" >围巾/围脖</a>
+								<a href="javascript:;" >其他户外服饰</a>
+							</div>
+
+						</div>
+						
+						<!-- 户外装备 -->
+						<div class="b5" style="margin-top:1px;">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								户外装备
+							</p>
+						<!--户外装备的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">登山包</a>
+								<a href="javascript:;">休闲包</a>
+								<a href="javascript:;" >越野跑包</a>
+								<a href="javascript:;" >腰包</a>
+								<a href="javascript:;" >头巾</a>
+								<a href="javascript:;" >露营装备</a>
+								<a href="javascript:;" >佳明</a>
+								<a href="javascript:;" >格里高利</a>
+								<a href="javascript:;" >维氏</a>
+							</div>
+						</div>
+						<!-- 更多分类 -->
+						<div class="b6" style="margin-top:1px;">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								更多分类
+							</p>
+						<!--更多分类的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">汽车机油</a>
+								<a href="javascript:;">渔具</a>
+								<a href="javascript:;" >壳牌</a>
+								<a href="javascript:;" style="color:red;">智能穿戴</a>
+								<a href="javascript:;">速尔跑步机</a>
+								<a href="javascript:;" >运动相机</a>
+								<a href="javascript:;" style="color:red;">运动健身</a>
+								<a href="javascript:;">其他汽车用品</a>
+								<a href="javascript:;" >游泳</a>
+								<a href="javascript:;" >嘉实多</a>
+							</div>
+						</div>		
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont icon-zuanshi"></i>
+						手表配饰
+						<i class="iconfont icon-fanhui2"></i>
+					</a>
+					<div class="erji" style="top:-293px;">
+							<div class="b1" style="height:153px">
+							<!-- 手表配饰 -->
+							<p >
+								<a href="javascript:;" ></a>
+								腕表
+							</p>
+						<!-- 腕表的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">瑞士名表</a>
+								<a href="javascript:;" style="color:red;">经典国表</a>
+								<a href="javascript:;" >欧美腕表</a>
+								<a href="javascript:;" style="color:red;">日韩腕表</a>
+								<a href="javascript:;" >钟表配件</a>
+								<a href="javascript:;" >欧米茄</a>
+								<a href="javascript:;" > 浪琴</a>
+								<a href="javascript:;">DW</a>
+								<a href="javascript:;" >ADEXE</a>
+								<a href="javascript:;" >美度</a>
+								<a href="javascript:;" >Swatch</a>
+								<a href="javascript:;" >西欧</a>
+							</div>
+						</div>
+						
+						<!-- 大牌眼镜标题 -->
+						<div class="b2" style="height:173px">
+							<p class="box-side1">
+								<a href="javascript:;"></a>
+								大牌眼镜
+							</p>
+							<!-- 大牌眼镜的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">太阳眼镜</a>
+								<a href="javascript:;" style="color:red;">Ray·Ban 雷朋</a>
+								<a href="javascript:;" style="color:red;">GUCCI</a>
+								<a href="javascript:;" style="color:red;">Dior 迪奥</a>
+								<a href="javascript:;">BURBERRY</a>
+								<a href="javascript:;" >PRADA</a>
+								<a href="javascript:;" >TOM FORD</a>
+								<a href="javascript:;" >miu miu</a>
+								<a href="javascript:;" >BOLON 暴龙</a>
+								<a href="javascript:;" >MOLSION 陌森</a>
+								<a href="javascript:;" >光学镜架/镜片</a>
+								<a href="javascript:;" >烟具/配件</a>
+								
+							</div>
+						</div>
+						<!-- 潮流饰品 -->
+						<div class="b3" style="height:153px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								潮流饰品
+							</p>
+						<!--潮流饰品的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">项链</a>
+								<a href="javascript:;" >手链/手镯</a>
+								<a href="javascript:;" >耳饰</a>
+								<a href="javascript:;" style="color:red;">串珠</a>
+								<a href="javascript:;" style="color:red;">时尚戒指</a>
+								<a href="javascript:;" >项坠/吊坠</a>
+								<a href="javascript:;" >Chocker</a>
+								<a href="javascript:;">施华洛世奇</a>
+								<a href="javascript:;">潘多拉</a>
+								<a href="javascript:;">apm</a>
+								<a href="javascript:;">时尚发饰</a>
+								<a href="javascript:;">胸针</a>
+								<a href="javascript:;">钥匙扣</a>
+								<a href="javascript:;">饰品套装</a>
+							</div>
+						</div>
+						<!-- 黄金珠宝 -->
+						<div class="b4" style="height:153px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								黄金珠宝
+							</p>
+						<!--黄金珠宝的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">周生生 </a>
+								<a href="javascript:;" style="color:red;">周大福</a>
+								<a href="javascript:;" style="color:red;">六福珠宝</a>
+								<a href="javascript:;" >黄金项链</a>
+								<a href="javascript:;">黄金手链</a>
+								<a href="javascript:;" > 黄金转运珠</a>
+								<a href="javascript:;" >黄金耳饰</a>
+								<a href="javascript:;">K金</a>
+								<a href="javascript:;" >铂金</a>
+								<a href="javascript:;" >钻石</a>
+								<a href="javascript:;" >天然珍珠</a>
+								<a href="javascript:;" >彩宝</a>
+								<a href="javascript:;" >水晶玛瑙</a>
+								<a href="javascript:;" >翡翠玉石</a>
+								<a href="javascript:;" >银饰</a>
+							</div>
+
+						</div>
+						
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont icon-xiebao"></i>
+						轻奢
+						<i class="iconfont icon-fanhui2"></i>
+					</a>
+					<!-- 轻奢包袋 -->
+					<div class="erji" style="top:-333px;">
+							<div class="b1" style="height:153px">
+							<!-- 轻奢包袋 -->
+								<p >
+									<a href="javascript:;" ></a>
+								轻奢包袋
+								</p>
+						<!--轻奢包袋的菜单 -->
+								<div class="box-inside">
+								<a href="javascript:;" style="color:red;">MICHAEL KORS 迈克高仕</a>
+								<a href="javascript:;" style="color:red;">FURLA 芙拉</a>
+								<a href="javascript:;" >COACH 蔻驰</a>
+								<a href="javascript:;" style="color:red;">COCCINELLE</a>
+								<a href="javascript:;" >PINKO 品高</a>
+								<a href="javascript:;" >LONGCHAMP 珑骧</a>
+								<a href="javascript:;" > MARC JACOBS 马克雅克布</a>
+								<a href="javascript:;">Rebecca Minkoff</a>
+								<a href="javascript:;" >Tory Burch</a>
+							</div>
+						</div>
+						<!-- 重奢名包标题 -->
+						<div class="b2" style="height:173px">
+							<p class="box-side1">
+								<a href="javascript:;"></a>
+								重奢名包
+							</p>
+							<!-- 重奢名包的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">GUCCI 古驰</a>
+								<a href="javascript:;" style="color:red;">BURBERRY 博柏利</a>
+								<a href="javascript:;" style="color:red;">FENDI 芬迪</a>
+								<a href="javascript:;" style="color:red;">PRADA 普拉达</a>
+								<a href="javascript:;">CÉLINE 思琳</a>
+								<a href="javascript:;" >SAINT LAURENT PARIS </a>
+								<a href="javascript:;" >Chloé 蔻依</a>
+								<a href="javascript:;" >MARNI 玛尼</a>
+							</div>
+						</div>
+						<!-- 服饰鞋靴 -->
+						<div class="b3" style="height:153px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								服饰鞋靴
+							</p>
+						<!--服饰鞋靴的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">KENZO 高田贤三</a>
+								<a href="javascript:;" >VERSACE 范思哲</a>
+								<a href="javascript:;" >GUCCI 古驰</a>
+						    </div>
+						</div>
+						<!-- 功能箱包 -->
+						<div class="b4" style="height:133px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								功能箱包
+							</p>
+						<!--功能箱包的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">Samsonite 新秀丽 </a>
+								<a href="javascript:;" style="color:red;">RIMOWA</a>
+								<a href="javascript:;" style="color:red;">旅行大师</a>
+								<a href="javascript:;" >TUMI 途明</a>
+							</div>
+					  </div>
+					  <div class="b5">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								腰带专区
+							</p>
+						<!--腰带专区的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">GUCCI 古驰</a>
+								<a href="javascript:;"> Ferragamo 菲拉格慕</a>
+								<a href="javascript:;" >MONTBLANC 万宝龙</a>
+								<a href="javascript:;" > Zegna 杰尼亚</a>
+								<a href="javascript:;" >COACH 蔻驰</a>
+								<a href="javascript:;" >VERSACE 范思哲</a>
+							</div>
+						</div>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont icon-jiafangjiashi"></i>
+						家居生活
+						<i class="iconfont icon-fanhui2"></i>
+					</a>
+					<div class="erji" style="top:-375px;">
+						<div class="b1" style="height:153px">
+							<!-- 杯壶滤水 -->
+								<p >
+									<a href="javascript:;" ></a>
+								杯壶滤水
+								</p>
+						<!--杯壶滤水的菜单 -->
+								<div class="box-inside">
+								<a href="javascript:;" style="color:red;">杯子/水壶</a>
+								<a href="javascript:;" style="color:red;">滤水滤芯</a>
+								<a href="javascript:;" >茶具</a>
+								<a href="javascript:;" style="color:red;">酒具</a>
+								<a href="javascript:;" >咖啡器皿</a>
+								<a href="javascript:;" >膳魔师</a>
+								<a href="javascript:;" > 碧然德</a>
+								<a href="javascript:;">象印</a>
+								<a href="javascript:;" >ASVEL 阿司倍鹭</a>
+							</div>
+						</div>
+						<!-- 厨房餐具标题 -->
+						<div class="b2" style="height:173px">
+							<p class="box-side1">
+								<a href="javascript:;"></a>
+								厨房餐具
+							</p>
+							<!-- 厨房餐具的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">锅具</a>
+								<a href="javascript:;" style="color:red;">刀具</a>
+								<a href="javascript:;" style="color:red;">餐具</a>
+								<a href="javascript:;" style="color:red;">厨房小工具</a>
+								<a href="javascript:;">保鲜工具</a>
+								<a href="javascript:;" >厨房储物</a>
+								<a href="javascript:;" >韦诺森</a>
+								<a href="javascript:;" >双立人</a>
+								<a href="javascript:;" >康宁</a>
+							</div>
+						</div>
+						<!-- 家纺布艺 -->
+						<div class="b3" style="height:153px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								家纺布艺
+							</p>
+						<!--家纺布艺的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">床垫</a>
+								<a href="javascript:;" >枕头/枕芯</a>
+								<a href="javascript:;" >被子</a>
+								<a href="javascript:;" >床品套件</a>
+								<a href="javascript:;" >毛毯/蚊帐</a>
+								<a href="javascript:;" >家居鞋服</a>
+								<a href="javascript:;" >LOVO</a>
+								<a href="javascript:;" >博洋家纺</a>
+								<a href="javascript:;" >芭蕾丽丝</a>
+
+						    </div>
+						</div>
+						<!-- 家具家装 -->
+						<div class="b4" style="height:133px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								家具家装
+							</p>
+						<!--家具家装的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">家具 </a>
+								<a href="javascript:;" style="color:red;">家装建材</a>
+								<a href="javascript:;" style="color:red;">灯饰照明</a>
+								<a href="javascript:;" >家装家饰</a>
+								<a href="javascript:;" >阳台/户外家具</a>
+								<a href="javascript:;" >浴室卫浴</a>
+								<a href="javascript:;" >五金工具</a>
+								<a href="javascript:;" >顾家家居</a>
+								<a href="javascript:;" >黑白调</a>
+								<a href="javascript:;" >KOHLER 科勒</a>
+								<a href="javascript:;" >雅兰床垫</a>
+
+							</div>
+					  </div>
+					  <div class="b5">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								家居清洁
+							</p>
+						<!--家居清洁的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">家庭清洁</a>
+								<a href="javascript:;"> 除臭芳香</a>
+								<a href="javascript:;" >衣物清洁/护理</a>
+								<a href="javascript:;" > 纸品/湿巾</a>
+								<a href="javascript:;" >驱蚊驱虫</a>
+								<a href="javascript:;" >清洁工具</a>
+								<a href="javascript:;" >P&G 宝洁</a>
+								<a href="javascript:;" >THE LAUNDRESS</a>
+								<a href="javascript:;" >BAD AIR SPONGE</a>
+							</div>
+						</div>
+							<div class="b6" style="margin-top:1px;">
+								<p class="box-side1">
+									<a href="javascript:;" ></a>
+								日用百货
+								</p>
+						<!--日用百货的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">日用收纳</a>
+								<a href="javascript:;">保暖工具</a>
+								<a href="javascript:;" >洗衣晾晒</a>
+								<a href="javascript:;" style="color:red;">个人用品</a>
+								<a href="javascript:;">礼物/文创</a>
+								<a href="javascript:;" >蕉下</a>
+								<a href="javascript:;" style="color:red;">Tenma 天马</a>
+								<a href="javascript:;">MUJI </a>
+								<a href="javascript:;" >thisworks</a>	
+							</div>		
+						</div>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont icon-shipin"></i>
+						环球美食
+						<i class="iconfont icon-fanhui2"></i>
+					</a>
+					<div class="erji" style="top:-415px;">
+							<div class="b1" style="height:153px">
+							<!-- 乳品/咖啡/麦片/冲饮 -->
+								<p >
+									<a href="javascript:;" ></a>
+								乳品/咖啡/麦片/冲饮
+								</p>
+						<!--乳品/咖啡/麦片/冲饮的菜单 -->
+								<div class="box-inside">
+								<a href="javascript:;" style="color:red;">成人奶粉</a>
+								<a href="javascript:;" style="color:red;">奶片</a>
+								<a href="javascript:;" >进口牛奶</a>
+								<a href="javascript:;" style="color:red;">酸奶</a>
+								<a href="javascript:;" >其他乳品</a>
+								<a href="javascript:;" >麦片</a>
+								<a href="javascript:;" > 五谷冲饮</a>
+								<a href="javascript:;">热可可</a>
+								<a href="javascript:;" >其他冲饮</a>
+								<a href="javascript:;" >速溶咖啡</a>
+								<a href="javascript:;" >胶囊咖啡</a>
+								<a href="javascript:;" >咖啡伴侣</a>
+								<a href="javascript:;" >咖啡粉</a>
+							</div>
+						</div>
+						<!-- 人气热门标题 -->
+						<div class="b2" style="height:173px">
+							<p class="box-side1">
+								<a href="javascript:;"></a>
+								人气热门
+							</p>
+							<!-- 人气热门的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">德运</a>
+								<a href="javascript:;" style="color:red;">丸太拉面</a>
+								<a href="javascript:;" style="color:red;">UCC咖啡</a>
+								<a href="javascript:;" style="color:red;">轩尼诗</a>
+								<a href="javascript:;">成人奶粉</a>
+								<a href="javascript:;" >可乐</a>
+								<a href="javascript:;" >歌帝梵</a>
+								<a href="javascript:;" >卡乐比</a>
+								<a href="javascript:;" >巴黎水</a>
+							</div>
+						</div>
+						<!-- 休闲零食 -->
+						<div class="b3" style="height:153px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								休闲零食
+							</p>
+						<!--休闲零食的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">饼干糕点</a>
+								<a href="javascript:;" >坚果</a>
+								<a href="javascript:;" >糕点</a>
+								<a href="javascript:;" >蜜饯果干</a>
+								<a href="javascript:;" >糖果巧克力</a>
+								<a href="javascript:;" >果冻布丁</a>
+								<a href="javascript:;" >肉脯干</a>
+								<a href="javascript:;" >其他零食</a>
+								<a href="javascript:;" >薯片/膨化</a>
+						    </div>
+						</div>
+						<!-- 茶/酒/饮料 -->
+						<div class="b4" style="height:133px">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+								茶/酒/饮料
+							</p>
+						<!--茶/酒/饮料的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">葡萄酒 </a>
+								<a href="javascript:;" style="color:red;">洋酒</a>
+								<a href="javascript:;" style="color:red;">白酒</a>
+								<a href="javascript:;" >啤酒</a>
+								<a href="javascript:;" >品质水饮</a>
+								<a href="javascript:;" >碳酸饮料</a>
+								<a href="javascript:;" >果蔬汁</a>
+								<a href="javascript:;" >花草茶</a>
+								<a href="javascript:;" >茶饮</a>
+								<a href="javascript:;" >果酒</a>
+							</div>
+					  </div>
+					  <div class="b5">
+							<p class="box-side1">
+								<a href="javascript:;" ></a>
+							   水果生鲜
+							</p>
+						<!--水果生鲜的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">新鲜水果</a>
+								<a href="javascript:;"> 水产海鲜</a>
+								<a href="javascript:;" >肉禽蛋</a>
+								<a href="javascript:;" >红虾白虾</a>
+								<a href="javascript:;" >牛油果</a>
+								<a href="javascript:;" >鳕鱼</a>
+								<a href="javascript:;" >榴莲</a>
+								<a href="javascript:;" >三文鱼</a>
+								<a href="javascript:;" >橙子</a>
+								<a href="javascript:;" >海参鲍鱼</a>
+							</div>
+						</div>
+							<div class="b6" style="margin-top:1px;">
+								<p class="box-side1">
+									<a href="javascript:;" ></a>
+								粮油副食
+								</p>
+						<!--粮油副食的菜单 -->
+							<div class="box-inside">
+								<a href="javascript:;" style="color:red;">调味品/料理</a>
+								<a href="javascript:;">果酱/酱料</a>
+								<a href="javascript:;" >食用油/橄榄油</a>
+								<a href="javascript:;" style="color:red;">泡面</a>
+								<a href="javascript:;">方便速食</a>
+								<a href="javascript:;" >方便菜</a>
+								<a href="javascript:;" style="color:red;">米面杂粮</a>
+								<a href="javascript:;">南北干货 </a>
+								<a href="javascript:;" >端午粽子</a>	
+							</div>		
+					</div>
+				</li>
+			</ul>
+		</div>
+		<ul class="heng">
+			<li>
+				<a href="javascript">首页</a>		
+			</li>
+			<li>
+				<a href="javascript">今日限时购</a>
+			</li>
+			<li>
+				<a href="javascript">每日上新</a>
+			</li>
+			<li>
+				<a href="javascript">国家馆</a>
+			</li>
+			<li>
+				<a href="javascript">海外旗舰店</a>
+			</li>
+			<li>
+				<a href="javascript">工厂店</a>
+			</li>
+			<li>
+				<a href="javascript">品质奶粉</a>
+			</li>
+			<li>
+				<a href="javascript">人气面膜</a>
+			</li>
+			<li>
+				<a href="javascript">礼品卡</a>
+			</li>
+		</ul>
+  	</div>
+  	
+	<!-- 详情页 -->
+	<div id="content">
+	<!-- 头部 -->
+		<div class="con-top">
+			<div class="con-top-in">
+				<span>美容护肤</span>
+				<span>&nbsp;>&nbsp;</span>
+				<div class="face">面部护肤
+					<i class="iconfont icon-fanhui4"></i>
+				</div>
+				<span>&nbsp;>&nbsp;</span>
+				<div class="face1">面膜/面膜粉
+					<i class="iconfont icon-fanhui4"></i>
+				</div>
+				<span>&nbsp;>&nbsp;</span>
+				<div class="father">爸爸的礼物
+					<i class="iconfont icon-fanhui4"></i>
+				</div>
+				<span>&nbsp;>&nbsp;</span>
+				<span class="pa">Papa recipe 春雨 蜂蜜补水保湿面膜 25克/片 10片装 当红爆款</span>
+			</div>
+		</div>
+		<!-- 主体 -->
+		<div class="con-body">
+			<div class="con-body-l">
+				<div class="picture">
+					<img src="../img/cy.jpg" alt=""  id="p1">
+					<img src="../img/cy1.jpg" alt="" id="p2">
+					<img src="../img/cy4.jpg" alt="" id="p3">
+					<img src="../img/cy5.jpg" alt="" id="p4">
+				</div>
+				<div class="md">
+					<ul>
+						<li>
+							<a href="#p1">
+								<img src="../img/cy.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#p2">
+								<img src="../img/cy1.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#p3">
+								<img src="../img/cy4.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#p4">
+								<img src="../img/cy5.jpg" alt="">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="con-body-r">
+				<p>
+					<img src="../img/hg.png" alt="">
+					<span>韩国</span>
+					<span>|</span>
+					<a href="javascript:;">Papa recipe 爸爸的礼物</a>
+				</p>
+				<h1>Papa recipe 春雨 蜂蜜补水保湿面膜 25克/片 10片装 当红爆款</h1>
+				<h3>【新老包装随机发货】干皮超爱秋冬必备！一位医生爸爸推出的连敏感肌肤、孕妇都可以用的护肤品!含有一箭双雕的复合精华（CLOD COMPLEX），无论是温和性还是滋润程度，都让你惊喜到感叹！让你滋润到挤出水！</h3>
+				<div class="rmb">
+					<div class="price">
+						<span class="cost">售价</span>
+						<div class="price-inside">
+							<span style="font-size: 26px;color: #e31436;font-weight: bold;margin: 8px 10px;">¥88.00</span>
+							<span style="display: inline-block;margin-left: 5px;background-color: #f68587;height: 18px;line-height: 18px;padding: 0 5px;color: #fff; font-size: 12px;vertical-align: 5px;border-radius: 2px;" >特价</span>
+							<span style="vertical-align: 4px;font-size: 12px; color: #999; margin-left: 14px;margin-bottom: 8px;">参考价  ¥</span>
+							<span style="color:#999;font-size:12px;">129.00</span>
+						</div>
+						<div class="price-inside1">
+							<div class="bc">
+								<img src="../img/blackcard.png" alt="" style="width:45px;height:17px;">
+								<span >黑卡会员预计可 </span>
+								<i class="tanhao">省¥3.52</i>
+							</div>
+							<div class="owner">
+								<span>含会员96折</span>
+								<span style="color:#4a90e2;">立即开卡</span>
+							</div>
+							<div class="more">
+								<span style="margin-left: 10px;font-size: 12px;display: inline-block;width: 75px; color: #666;  vertical-align: middle; float:left;">更多组合</span>
+								<ul>
+									<li>
+										<span style="border-color:#e31436;color:#e02036;font-weight: bold;">1件装 | 单件88元</span>
+									</li>
+									<li>
+										<span>2件装 | 单件88元</span>
+									</li>
+								</ul>
+							</div>
+							<div class="nine">
+								<i class="iconfont icon-youhuiquan-01"></i>
+								<span>先领无门槛9折优惠券，再下单</span>
+								<a href="javascript:;">点击领取</a>
+							</div>
+						</div>
+						
+					</div>	
+					
+				</div>、
+				<div class="pay">
+					<span style="margin-left: 10px;font-size: 12px;display: inline-block; width: 75px;color: #666;vertical-align: middle;float:left;">税费</span>
+					<div class="baoshui">
+						<span class="shui">包税</span>
+						<span style="display: inline-block;margin-left: 5px; font-size: 12px;color:#e31436">售价已包含税费，无需另付税费</span>
+					</div>
+				</div>
+				<div class="postage">
+					<p >运费</p>
+					<div class="to">
+						<h6>至</h6>
+						<select>
+							<option style="font-size:12px">北京/东城区</option>
+							<option style="font-size:12px">上海</option>
+							<option style="font-size:12px">西安</option>
+							<option style="font-size:12px">香港</option>
+							<option style="font-size:12px">上海</option>
+
+						</select>>
+							
+					</div>
+				</div>
+				<div class="send">
+					<p >服务</p>
+					<span style="font-size: 12px;color:#333;">本商品由 自营保税仓 发货</span>
+					<div class="place">
+						<ul>
+							<li>
+								<img src="../img/papa.jpg" alt="">
+								<p>正品货源</p>
+							</li>
+							
+							<li>
+								<img src="../img/fj.png" alt="">
+								<p>自营保税仓发货</p>
+							</li>
+
+							<li>
+								<img src="../img/ditu.png" alt="">
+								<p>北京市</p>
+							</li>
+						</ul>
+					</div>
+					<div class="date">
+						
+							<span>24:00</span>
+							<span style="font-weight:bold;">6月14日(周五)</span>
+							<span>送达</span>
+						
+					</div>
+					<div class="much">
+						<span style="color: #666;font-size:12px;">数量</span>
+						<input type="number" >
+					</div>
+					<div class="speak">
+						<span style="font-size:12px;color:#333;float:left;">说明</span>
+						<ul>
+							<li>
+								<i class="iconfont icon-yibangding"></i>
+								会员96折
+							</li>
+							<li>
+								<i class="iconfont icon-yibangding"></i>
+								正品保障
+							</li>
+							<li>
+								<i class="iconfont icon-yibangding"></i>
+								支持7天无忧退货
+							</li>
+						</ul>
+					</div>
+					<div class="buy">
+						<a href="javascript:;">立即购买</a>
+						<a href="javascript:;" class="second">
+							<i class="iconfont icon-gouwuche"></i>
+							加入购物车
+						</a>
+						<a href="javascript:;" class="heart">
+							<i class="iconfont icon-shoucang1"></i>
+						收藏</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="intro">
+				<h1 style="color:#000;font-size: font-weight: bold;text-align: center; font-size: 16px;">相关推荐</h1>
+			</div>
+			<div class="detail1">
+				<ul>
+					<li>
+						<img src="../img/two.jpg" alt="">
+						<a href="javascript::">【自营】JMsolution 急救补水针剂面膜 10片装*2盒</a>
+					</li>
+					<li>
+						<img src="../img/chun.jpg" alt="">
+						<a href="javascript::">Papa recipe 春雨 黑麦卢卡蜂蜜黑炭面膜 10片装 蜂蜜混搭活性炭</a>
+					</li>
+					<li>
+						<img src="../img/three.jpg" alt="">
+						<a href="javascript::">【自营】JMsolution 急救补水针剂面膜 35毫升/片 10片装</a>
+					</li>
+					<li>
+						<img src="../img/" alt="">
+						<a href="javascript::">【92元两盒】JMsolution水光蜂蜜面膜、水光针剂急救补水面膜10片/盒</a>
+					</li>
+					<li>
+						<img src="../img/bai.jpg" alt="">
+						<a href="javascript::">Papa recipe 春雨 蜂蜜亮白滋润面膜 10片装 给肌肤下场及时雨</a>
+					</li>
+					<li>
+						<img src="../img/10.jpg" alt="">
+						<a href="javascript::">Papa recipe 春雨 蜂蜜补水保湿面膜 25克/片 10片装*2</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="detail">
+			<div class="detail-inside">
+				<div class="d-i-l">
+					<h4>看了又看</h4>
+					<ul>
+						<li>
+							<img src="../img/double1.jpg" alt="">
+							<a href="javascript:;" style="	font-size:12px;height:40px">【自营】JMsolution 急救补水针剂面膜 10片装*2盒</a>
+							<p class="n1">¥124</p>
+							<del>¥392</del>
+							<a href="javascript:;" style="text-decoration: none;color:#999;font-size:12px;display:block;">38233 人已评价</a>
+						</li>
+						<li>
+							<img src="../img/double1.jpg" alt="">
+							<a href="javascript:;" style="	font-size:12px;height:40px">【自营】JMsolution 急救补水针剂面膜 10片装*2盒</a>
+							<p class="n1">¥124</p>
+							<del>¥392</del>
+							<a href="javascript:;" style="text-decoration: none;color:#999;font-size:12px;display:block;">38233 人已评价</a>
+						</li>
+						<li>
+							<img src="../img/double1.jpg" alt="">
+							<a href="javascript:;" style="	font-size:12px;height:40px">【自营】JMsolution 急救补水针剂面膜 10片装*2盒</a>
+							<p class="n1">¥124</p>
+							<del>¥392</del>
+							<a href="javascript:;" style="text-decoration: none;color:#999;font-size:12px;display:block;">38233 人已评价</a>
+						</li>
+						<li>
+							<img src="../img/double1.jpg" alt="">
+							<a href="javascript:;" style="	font-size:12px;height:40px">【自营】JMsolution 急救补水针剂面膜 10片装*2盒</a>
+							<p class="n1">¥124</p>
+							<del>¥392</del>
+							<a href="javascript:;" style="text-decoration: none;color:#999;font-size:12px;display:block;">38233 人已评价</a>
+						</li>
+						<!-- <li>
+							<img src="../img/double1.jpg" alt="">
+							<a href="javascript:;" style="	font-size:12px;height:40px">【自营】JMsolution 急救补水针剂面膜 10片装*2盒</a>
+							<p class="n1">¥124</p>
+							<del>¥392</del>
+							<a href="javascript:;" style="text-decoration: none;color:#999;font-size:12px;display:block;">38233 人已评价</a>
+						</li>
+						<li>
+							<img src="../img/double1.jpg" alt="">
+							<a href="javascript:;" style="	font-size:12px;height:40px">【自营】JMsolution 急救补水针剂面膜 10片装*2盒</a>
+							<p class="n1">¥124</p>
+							<del>¥392</del>
+							<a href="javascript:;" style="text-decoration: none;color:#999;font-size:12px;display:block;">38233 人已评价</a>
+						</li> -->
+					</ul>
+				</div>
+				<div class="d-i-r">
+					<div class="d-i-r-t">关键属性</div>
+					<div class="d-i-r-t1">
+						<div class="d-i-r-out">
+							<div class="d-i-r-t-p">功能</div>
+							<div class="d-i-r-t-f">滋润补水保湿</div>
+						</div>
+						<div class="d-i-r-out">
+							<div class="d-i-r-t-p">适合肤质</div>
+							<div class="d-i-r-t-f">任何肤质</div>
+						</div>
+					</div>
+					<div class="d-i-r-t1">
+						<div class="d-i-r-out">
+							<div class="d-i-r-t-p">产品类型</div>
+							<div class="d-i-r-t-f">贴式片</div>
+						</div>
+				</div>
+				<div class="d-i-r">
+					<div class="d-i-r-t">其他属性</div>
+					<div class="d-i-r-t1">
+						<div class="d-i-r-out">
+							<div class="d-i-r-t-p">质地</div>
+							<div class="d-i-r-t-f">其他</div>
+						</div>
+						<div class="d-i-r-out">
+							<div class="d-i-r-t-p">适合人群</div>
+							<div class="d-i-r-t-f">所有人群</div>
+						</div>
+					</div>
+					<div class="d-i-r-t1">
+						<div class="d-i-r-out">
+							<div class="d-i-r-t-p">适合补位</div>
+							<div class="d-i-r-t-f">面部</div>
+						</div>
+						<div class="d-i-r-out">
+							<div class="d-i-r-t-p">品名</div>
+							<div class="d-i-r-t-f"> 蜂蜜补水保湿面膜</div>
+						</div>
+					</div>
+					<img src="../img/papa1.jpg" alt="">
+					<img src="../img/xinxi.jpg" alt="">
+			</div>
+		</div>
+		<div id="footer">
+	<div class="footer-inside">
+		<div class="footer-top">
+			<ul>
+				<li>
+					<div class="kuang">正</div>
+					<strong>正品承诺</strong>
+					<span>正品保障 假一赔十</span>
+				</li>
+				<li>
+					<div class="kuang">低</div>
+					<strong>低价保障</strong>
+					<span>缩减中间环节 确保低价</span>
+				</li>
+				<li>
+					<div class="kuang">退</div>
+					<strong>30天无忧退货</strong>
+					<span>国内退货 售后无忧</span>
+				</li>
+				<li>
+					<div class="kuang">邮</div>
+					<strong>满88包邮</strong>
+					<span>部分特殊商品除外</span>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-center">
+				<div class="footer-in">
+					<img src="../img/logo2.png" alt="">
+					<span style="color:#000">关注我们</span>
+					<i class="iconfont icon-xinlangweibo"></i>
+					<i class="iconfont icon-weixin2"></i>
+					<i class="iconfont icon-quora"></i>
+				</div>
+				<div class="list-1">
+					<p>考拉保障</p>
+					<ul>
+						<li>假一赔十</li>
+						<li>廉正监督</li>
+					</ul>
+				</div>
+				<div class="list-1">
+					<p>新手指南</p>
+					<ul>
+						<li>购物流程</li>
+						<li>支付方式</li>
+						<li>通关税费</li>
+						<li>常见问题</li>
+					</ul>
+				</div>
+				<div class="list-1">
+					<p>售后服务</p>
+					<ul>
+						<li>退货政策</li>
+						<li>退货流程</li>
+						<li>退款说明</li>
+						<li>联系客服</li>
+					</ul>
+				</div>
+				<div class="list-1">
+					<p>物流配送</p>
+					<ul>
+						<li>配送方式</li>
+						<li>配送服务</li>
+						<li>运费标准</li>
+						<li>物流跟踪</li>
+					</ul>
+				</div>
+				<div class="list-1">
+					<p>关于我们</p>
+					<ul>
+						<li>联系我们</li>
+						<li>招商合作</li>
+						<li>销售联盟</li>
+						<li>CEO邮箱</li>
+					</ul>
+				</div>
+			<div class="footer-right">
+				<p>扫描下载手机版</p>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<div id="bottom">
+	<div class="box">
+		<nav>
+				<section>
+					<a href="javascript" title="About NetEase">About NetEase</a>
+				</section>
+				<section>
+					<a href="javascript" title="公司简介">公司简介</a>
+				</section>
+				<section>
+					<a href="javascript" title="联系方法">联系方法</a>
+				</section>
+				<section>
+					<a href="javascript" title="友情链接 title=""">友情链接</a>
+				</section>
+				<section>
+					<a href="javascript" title="招聘信息">招聘信息</a>
+				</section>
+				<section>
+					<a href="javascript" title="客户服务">客户服务</a>
+				</section>
+				<section>
+					<a href="javascript" title="隐私政策">隐私政策</a>
+				</section>
+				<section>
+					<a href="javascript" title="网络营销">网络营销</a>
+				</section>
+				<section>
+					<a href="javascript" title="网易劳拉">网易劳拉</a>
+				</section>
+			</nav>
+			<div style="overflow: hidden;">
+			<span>网络文化经营许可证：浙网文[2016]0155-055号</span>
+			<span>增值电信业务经营许可证：浙B2-20160288</span>
+			<span>自营经营者信息</span>
+			<span>（浙）网械平台备字[2018]第00007号</span>
+			</div>
+			<div style="overflow: hidden;" class="d1">
+				<a href="javascript:;" style="float:left;margin-top:10px;margin-left:34px;"><img src="/img/5.png" alt="" class="img"></a>
+				<a href="javascript"><span>浙公网安备 33010802002216号</span></a>
+				<span>网易公司版权所有©1997-2019</span>
+				<a href="javascript"><span>互联网药品信息服务资格证书编号（浙）-2017-0027</span></a>
+				<span>浙ICP备16011229号-6</span>
+			</div>
+			<div class="box5">
+				<img src="../img/cx.png" alt="" style="width:78px;height:32px; " >
+				<img src="../img/11.png" alt="" style="width:78px;height:32px;">
+				<img src="../img/55.gif" alt="" style="width:25px;height:27px;" >
+			</div>
+		
+	</div>
+</div>
+</body>
+</html>
+
+				

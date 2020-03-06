@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="../demo-font/iconfont.css">
+	<link rel="stylesheet" href="../taobao/iconfont.css">
+	<style>
+
+		*{
+			margin:0;
+			padding:0;
+		}
+		#header{
+			width:100%;
+			height:100px;
+			border-bottom:1px solid #e8e8ea;
+		}
+		#header .box{
+			width:971px;
+			height:100px;
+			margin:0 auto;
+		}
+		.box .p1{
+			float:left;
+			margin-top:18px;
+		}
+		.box .p2{
+			float:right;
+			margin-right:16px;
+		}
+		#enroll{
+			width:100%;
+			height:600px;
+			background:#f8f8f8;	
+		}
+		#enroll .box1{
+			width:1000px;
+			height:600px;
+			margin:0 auto;
+
+		}
+		.box1 .p3{
+			float:left;
+			clear:both;
+			margin-top:100px;
+			margin-left:16px;
+		}
+		/*登录框*/
+		#enroll h1{
+			width:352px;
+			height:54px;
+			background:#f8f8f8;
+			text-align:center;
+			float:right;
+			margin-right:30px;
+			margin-top:100px;
+			border:1px solid #e4e4e4;
+		}
+		#enroll a{
+			text-decoration: none;
+			font-size:18px;
+			font-weight:bolder;
+			color:red;
+			margin-left:10px;
+			
+		}
+		#enroll span{
+			color:#e4e4e4;
+			font-weight:normal;
+		}
+		#enroll #box2{
+			width:350px;
+			height:254px;
+			background:#ffffff;
+			overflow:hidden;
+			float:right;
+			margin-right:30px;
+		}
+		#phone{
+			width:350px;
+			height:254px;
+			background:white;	
+		}
+		#phone a{
+			display:block;
+		}
+		#email{
+			width:350px;
+			height:254px;
+			background:white;
+		}
+		/*第一个input*/
+		#phone  .in1{
+			width:270px;
+			height:36px;
+			border:0;
+			border:1px solid #d5d5d5;
+			border-radius:5px;
+			background:url(../img/1.png) no-repeat 12px 8px;
+			text-indent:40px;
+			margin-top:15px;
+			font-size:16px;
+			outline:0;
+		}
+		/*第二个input*/
+		#phone .no1{
+			width:270px;
+			height:36px;
+			border:1px solid #d5d5d5;
+			border-radius:5px;
+			margin-top:17px;
+		}
+		#phone .in2,.in3{
+			height:36px;
+			/*float:left;*/
+			border:none;
+			outline:0;
+			box-sizing: border-box;
+		}
+		#phone .in2{
+			width:180px;
+			height:35px;
+			text-indent:2em;
+			font-size:16px;
+			/*margin-right:23px;*/
+			outline:0;
+		}
+		#phone .no2{
+			margin-top:15px;
+		}
+		.box3 .in3{
+			width:90px;
+			height:36px;
+			background:#eeeeee;
+			line-height:36px;
+			font-size:12px;
+			outline:0;
+		}
+		/*登录*/
+		#phone  .in4{
+			width:270px;
+			height:36px;
+			border:0;
+			color:white;
+			background:#e31436;
+			font-size:16px;
+			border-radius:5px;
+			margin-top:17px;
+			display:block;
+			outline:0;
+		}
+		#email .no2{
+			margin-top:15px;
+		}
+		#email  .in4{
+			width:270px;
+			height:36px;
+			border:0;
+			color:white;
+			background:#e31436;
+			font-size:16px;
+			border-radius:5px;
+			margin-top:17px;
+			display:block;
+			outline:0;
+		}
+		#email .in5{
+			width:270px;
+			height:36px;
+			background:url(../img/email.png) no-repeat 12px
+			8px;
+			border:none;
+			border:1px solid #d5d5d5;
+			border-radius:5px;
+			text-indent:40px;
+			margin-top:10px;
+			font-size:16px;
+			outline:0;
+		}
+		#email .in6{
+			width:270px;
+			height:36px;
+			background:url(../img/3.png) no-repeat 12px
+			8px;
+			border:none;
+			border:1px solid #d5d5d5;
+			border-radius:5px;
+			text-indent:40px;
+			margin-top:20px;
+			font-size:16px;
+			outline:0;
+		}
+		/*底部框*/
+		.bottom{
+			width:350px;
+			height:40px;
+			background:#f8f8f8;
+			border-top:1px solid #dddddd;
+			/*margin-top:274px;*/
+		}
+		#bottom li{
+			
+			/*float:left;*/
+		}
+
+ 		#footer{
+ 			width:100%;
+ 			height:256px;	
+ 		}
+ 		#footer .box4{
+ 			width:986px;
+ 			height:148px;
+ 			margin:0 auto;
+ 			margin-top:40px; 		
+ 		}
+ 		#footer nav{
+ 			height:14px;
+ 			line-height:14px;
+ 			overflow: hidden;
+ 		}
+ 		#footer section{
+ 			float:left;
+ 			padding:0 22px;
+ 			border-right:1px solid #666666;
+ 		} 
+		#footer a{
+			text-decoration:none;
+			color:#666666;
+			font-size:14px;
+		}
+		#footer a:hover{
+			color:#999999;
+		}
+		#footer span{
+			font-size:12px;
+			color:#999999;
+			float:left;
+			margin-top:15px;
+			margin-left:40px;	
+		}
+		#footer .d1 span{
+			margin-left:20px;
+		}
+		#footer .box5{
+			width:986px;
+			margin-top:14px;
+		}
+	</style>
+</head>
+<body>
+<!-- 头部 -->
+	<div id="header">
+		<div class="box">
+			<img src="../img/logo.png" alt="" class="p1">
+			<img src="../img/zp.jpg" alt="" class="p2">
+		</div>
+	</div>
+<!-- 登录 -->
+	<div id="enroll">
+		<div class="box1">
+			<img src="../img/yuanzhuang.png" alt="" class="p3" >
+			<h1>
+				<a href="#phone">手机号登录</a>
+				<span>|</span>
+				<a href="#email" style="color:black;padding-left:20px">邮箱登录</a>
+			</h1>
+			<div id="box2">
+		<!-- 手机登录 -->
+				<div id="phone">
+					<a href="javascript:;" style="text-decoration: none; color:#666;font-size:12px;float:right;font-weight:normal;">
+						<img src="../img/3.png" alt="" >
+					使用密码验证登录</a>
+					<input type="text" placeholder="请输入手机号" class="in1">
+					<p class="no1">
+						<input type="text" placeholder="请输入短信验证码" class="in2">
+						<input type="submit" value="获取验证码" class="in3">
+					</p>
+					<input type="submit" value="登录" class="in4">
+					<p class="no2">
+						<input type="checkbox" name="ty" checked="checked" style="color:#666;font-size:12px;">10天免登录
+						<a href="javascript:;" style="text-decoration: none;color:#999999;font-size:12px;float:right">遇到问题?</a>
+					</p>
+					<div style="font-size:12px;color:#999999;display:inline-block;">登录即代表您已同意<a href="javascript:;" style="font-size:12px;color:#999999;margin-top:-17px;margin-left:120px">“隐私权相关政策”</a></div>
+				</div>
+			<!-- 邮箱登录 -->
+				<div id="email">
+					<input type="text" placeholder="网易邮箱账号" class="in5">
+					<input type="password" placeholder="密码" class="in6">
+					<input type="submit" value="登录" class="in4">
+					<p class="no2">
+						<input type="checkbox" name="ty" checked="checked" style="color:#666;font-size:12px;">10天免登录
+						<a href="javascript:;" style="text-decoration: none;color:#999999;font-size:12px;float:right">遇到问题?</a>
+					</p>
+				<div style="font-size:12px;color:#999999;margin-top:20px;">登录即代表您已同意<a href="javascript:;" style="font-size:12px;color:#999999;">“隐私权相关政策”</a></div>
+				</div>
+			<section class="bottom">
+				<ul style="list-style: none;">
+					<li>
+						<i class="iconfont icon-weixin"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-zhifubao"></i>		
+					</li>
+					<li>
+						<i class="iconfont icon-xinlangweibo"></i>
+					</li>
+					<li>
+						<i class="iconfont icon-qq"></i>
+					</li>
+				</ul>
+			</section>	
+		</div>
+	</div>
+</div>
+<!-- 底部 -->
+	<div id="footer">
+		<div class="box4">
+			<!-- 导航栏 -->
+			<nav>
+				<section>
+					<a href="javascript">About NetEase</a>
+				</section>
+				<section>
+					<a href="javascript">公司简介</a>
+				</section>
+				<section>
+					<a href="javascript">联系方法</a>
+				</section>
+				<section>
+					<a href="javascript">友情链接</a>
+				</section>
+				<section>
+					<a href="javascript">招聘信息</a>
+				</section>
+				<section>
+					<a href="javascript">客户服务</a>
+				</section>
+				<section>
+					<a href="javascript">隐私政策</a>
+				</section>
+				<section>
+					<a href="javascript">网络营销</a>
+				</section>
+				<section>
+					<a href="javascript">网易劳拉</a>
+				</section>
+			</nav>
+			<div style="overflow: hidden;">
+				<span>网络文化经营许可证：浙网文[2016]0155-055号</span>
+				<span>增值电信业务经营许可证：浙B2-20160288</span>
+				<span>自营经营者信息</span>
+				<span>（浙）网械平台备字[2018]第00007号</span>
+			</div>
+			<div style="overflow: hidden;" class="d1">
+				<a href="javascript:;" style="float:left;margin-top:10px;margin-left:34px;"><img src="../img/5.png" alt="" class="img"></a>
+				<a href="javascript"><span>浙公网安备 33010802002216号</span></a>
+				<span>网易公司版权所有©1997-2019</span>
+				<a href="javascript"><span>互联网药品信息服务资格证书编号（浙）-2017-0027</span></a>
+				<span>浙ICP备16011229号-6</span>
+			</div>
+			<div class="box5">
+				<img src="../img/11.png" alt="" style="width:78px;height:32px;padding-left: 443px;">
+				<img src="../img/55.gif" alt="" style="width:25px;height:27px;" >
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册页面</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#header{
+			width:100%;
+			height:100px;
+			border-bottom:1px solid #e8e8ea;
+		}
+		#header .box{
+			width:971px;
+			height:100px;
+			margin:0 auto;
+		}
+		.box .p1{
+			float:left;
+			margin-top:18px;
+		}
+		.box .p2{
+			float:right;
+			margin-right:16px;
+		}
+		#zhuce{
+			width:100%;
+			height:600px;
+			background:#f8f8f8;
+		}
+		#zhuce .box1{
+			width:1000px;
+			height:600px;
+			margin:0 auto;
+		}
+		.box1 .p3{
+			float:left;
+			margin-top:100px;
+			margin-left:16px;
+		}
+		/*注册框*/
+		.box1 .box2{
+			width:350px;
+			height:53px;
+			background:#f8f8f8;
+			float:right;
+			margin-top:127px;
+			margin-right:23px;
+			border-bottom:1px solid #dddddd;
+		}
+		.box2 span{
+			color:#e86236;
+			font-weight:bold;
+			font-size:16px;
+			padding-left:40px;
+			line-height:53px;
+		}
+		.box2 .z1{
+			color:#000;
+			font-size:12px;
+			padding-right:40px;
+			padding-left:104px;
+			line-height:53px;
+		}
+		.box2 a{
+			text-decoration:none;
+			color:#94b8f2;
+		}
+		.box2 a:hover{
+			text-decoration: underline;
+		}
+		.box1 .box3{
+			width:350px;
+			height:291px;
+			background:#fff;
+			float:right;
+			margin-right:23px;
+		}
+		
+		.box3  .in1{
+			width:270px;
+			height:36px;
+			border:0;
+			border:1px solid #d5d5d5;
+			border-radius:5px;
+			background:url(../img/1.png) no-repeat 12px 8px;
+			text-indent:40px;
+			margin-top:40px;
+			margin-left:40px;
+			font-size:16px;
+			outline:0;
+		}
+		.box3 p{
+			width:270px;
+			height:36px;
+			border:1px solid #d5d5d5;
+			border-radius:5px;
+			margin-top:17px;
+			margin-left:40px;
+		}
+		.box3 .in2,.in3{
+			height:36px;
+			float:left;
+			border:none;
+			outline:0;
+			box-sizing: border-box;
+		}
+		.box3 .in2{
+			width:180px;
+			height:35px;
+			text-indent:2em;
+			font-size:16px;
+			outline:0;
+		}
+		.box3 .in3{
+			width:90px;
+			height:36px;
+			background:#eeeeee;
+			line-height:36px;
+			font-size:12px;
+			outline:0;
+		}
+		.box3  .in4{
+			width:270px;
+			height:36px;
+			border:0;
+			border:1px solid #d5d5d5;
+			border-radius:5px;
+			background:url(../img/3.png) no-repeat 12px 8px;
+			text-indent:40px;
+			margin-top:17px;
+			margin-left:40px;
+			font-size:16px;
+			outline:0;
+		}
+		.box3  .in5{
+			width:270px;
+			height:36px;
+			border:0;
+			color:white;
+			background:#e31436;
+			font-size:16px;
+			border-radius:5px;
+			margin-top:17px;
+			margin-left:40px;
+			display:block;
+			outline:0;
+		}
+		.box3  .in6{
+			border:0;
+			margin-top:17px;
+			margin-left:40px;
+			
+		}
+ 		.box3 span{
+ 			font-size:14px;
+ 			color:#999999;
+ 		}
+ 		.box3 span a{
+ 			text-decoration: none;
+ 			color:#999999;
+ 		}
+ 		#footer{
+ 			width:100%;
+ 			height:256px;	
+ 		}
+ 		#footer .box4{
+ 			width:986px;
+ 			height:148px;
+ 			margin:0 auto;
+ 			margin-top:40px; 		
+ 		}
+ 		#footer nav{
+ 			height:14px;
+ 			line-height:14px;
+ 			overflow: hidden;
+ 		}
+ 		#footer section{
+ 			float:left;
+ 			padding:0 22px;
+ 			border-right:1px solid #666666;
+ 		} 
+		#footer a{
+			text-decoration:none;
+			color:#666666;
+			font-size:14px;
+		}
+		#footer a:hover{
+			color:#999999;
+		}
+		#footer span{
+			font-size:12px;
+			color:#999999;
+			float:left;
+			margin-top:15px;
+			margin-left:40px;	
+		}
+		#footer .d1 span{
+			margin-left:20px;
+		}
+		#footer .box5{
+			width:986px;
+			margin-top:14px;
+		}
+	</style>
+</head>
+<body>
+<!-- 头部 -->
+	<div id="header">
+		<div class="box">
+			<img src="../img/logo.png" alt="" class="p1">
+			<img src="../img/zp.jpg" alt="" class="p2">
+		</div>
+	</div>
+<!-- 注册 -->
+	<div id="zhuce">
+		<div class="box1">
+			<img src="../img/yuanzhuang.png" alt="" class="p3"> 
+			<div class="box2">
+				<span>欢迎注册</span>
+				<span class="z1">已有账号?
+					<a href="javascript:;">去登录></a>
+				</span>
+			</div>
+			<div class="box3">
+					<input type="text" placeholder="请输入手机号" class="in1">
+					<p>
+						<input type="text" placeholder="请输入短信验证码" class="in2">
+						<input type="submit" value="获取验证码" class="in3">
+					</p>
+					<input type="password" placeholder="请输入密码" class="in4">
+					<input type="submit" value="注册" class="in5">
+					<input type="checkbox" name="ty" checked="checked" class="in6">
+					<span>我同意《<a href="">服务条款</a>》和《<a href="">网易隐私协议</a>》</span></a>
+			</div>
+		</div>
+	</div>
+<!-- 底部 -->
+	<div id="footer">
+		<div class="box4">
+			<!-- 导航栏 -->
+			<nav>
+				<section>
+					<a href="javascript" title="About NetEase">About NetEase</a>
+				</section>
+				<section>
+					<a href="javascript" title="公司简介">公司简介</a>
+				</section>
+				<section>
+					<a href="javascript" title="联系方法">联系方法</a>
+				</section>
+				<section>
+					<a href="javascript" title="友情链接 ">友情链接</a>
+				</section>
+				<section>
+					<a href="javascript" title="招聘信息">招聘信息</a>
+				</section>
+				<section>
+					<a href="javascript" title="客户服务">客户服务</a>
+				</section>
+				<section>
+					<a href="javascript" title="隐私政策">隐私政策</a>
+				</section>
+				<section>
+					<a href="javascript" title="网络营销">网络营销</a>
+				</section>
+				<section>
+					<a href="javascript" title="网易劳拉">网易劳拉</a>
+				</section>
+			</nav>
+			<div style="overflow: hidden;">
+			<span>网络文化经营许可证：浙网文[2016]0155-055号</span>
+			<span>增值电信业务经营许可证：浙B2-20160288</span>
+			<span>自营经营者信息</span>
+			<span>（浙）网械平台备字[2018]第00007号</span>
+			</div>
+			<div style="overflow: hidden;" class="d1">
+				<a href="javascript:;" style="float:left;margin-top:10px;margin-left:34px;"><img src="../img/5.png" alt="" class="img"></a>
+				<a href="javascript"><span>浙公网安备 33010802002216号</span></a>
+				<span>网易公司版权所有©1997-2019</span>
+				<a href="javascript"><span>互联网药品信息服务资格证书编号（浙）-2017-0027</span></a>
+				<span>浙ICP备16011229号-6</span>
+			</div>
+			<div class="box5">
+				<img src="../img/11.png" alt="" style="width:78px;height:32px;padding-left: 443px;">
+				<img src="../img/55.gif" alt="" style="width:25px;height:27px;" >
+			</div>
+		</div>
+	</div>
+</body>
+</html>
