@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>最简单的轮播效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+	     #wrap{
+		    position: relative;
+		    width:202px;
+		    height: 119px;
+		    overflow: hidden;
+		}
+		#wrap img{
+			position: absolute;
+			width: 202px;
+			height: 119px;
+			top: 0;
+			left: 0;
+			/*display: none;*/
+			opacity: 0;    
+		}
+		#wrap .on{
+		    /*display: block;*/
+		    transition: 2s;
+		    opacity: 1;
+		}
+		.btn {
+		    position: absolute;
+		    bottom: 20px;
+		    left: 50%;
+		    margin-left: -44px;
+		}
+		.btn span{
+		    float: left;
+		    width: 8px;
+		    height: 8px;
+		    border:2px solid rgba(255,255,255,0.4);
+		    border-radius: 5px;
+		    margin-right: 10px;
+		}
+		.btn .active{
+		    background: pink;
+		    cursor: pointer;
+		}
+		.left,.right{
+		    display: block;
+		    width: 37px;
+		    height: 53px;
+		    position: absolute;
+		    top: 50%;
+		    margin-top: -27px;
+		    cursor: pointer;
+		}
+		.left{
+		    position: absolute;
+		    top: 41px;
+		    width: 33px;
+	   		height: 70px;
+		    overflow: hidden;
+		    line-height: 90px;
+		    font-size: 0;
+		    background-image: url(../img/home_sprite_1507.png);
+		    background-repeat: no-repeat;
+		    background-color: #000;
+		    background-position: 0 -70px;
+		    z-index: 20;
+		    cursor: pointer;
+		    opacity: 0.2;
+		    left: -46px;
+		    transition: 1s;
+		}
+		.right{
+		    position: absolute;
+		    top: 41px;
+		    width: 33px;
+	    	height: 70px;
+		    overflow: hidden;
+		    line-height: 90px;
+		    font-size: 0;
+		    background-image: url(../img/home_sprite_1507.png);
+		    background-repeat: no-repeat;
+		    background-color: #000;
+		    background-position: -33px -70px;
+		    z-index: 20;
+		    cursor: pointer;
+		    opacity: 0.2;
+		    right:-46px;
+		    transition: 1s;
+		}
+		#wrap:hover .left{
+			left: 0;
+		}
+		#wrap:hover .right{
+			right: 0;
+		}
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <img src="../img/202x119_djj_0429-1556607914.jpg" alt="" class="on">
+    <img src="../img/212860112632174_1_o.jpg" alt="">
+    <img src="../img/A_04-1550570687.jpg" alt="">
+    <img src="../img/A_04-1550570687.jpg" alt="">
+    <div class="btn">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <i class="left" id="prev"></i>
+    <i class="right" id="next"></i>
+</div>
+<script>
+    window.onload = function () {
+    var oWrap = document.getElementById('wrap');
+    var aImg = oWrap.getElementsByTagName('img');
+    var aBtn = oWrap.getElementsByTagName('span');
+    var oPrev = document.getElementById('prev');
+    var oNext = document.getElementById('next');
+    var iNow =0;
+
+    function tab(){
+        for (var i =0;i<aBtn.length;i++){//清空所有按钮选中样式以及图片显示样式
+            aBtn[i].className='';
+            aImg[i].className='';
+        }
+        aBtn[iNow].className='active';//设置当前按钮选中样式以及当前图片透明度
+        aImg[iNow].className='on';
+    }
+
+    setInterval( function () {//每两秒循环变换下一张图片
+            iNow++;
+            if (iNow==aBtn.length)iNow=0;
+           tab();
+    },2000);
+
+    for (var i =0;i<aBtn.length;i++){
+        aBtn[i].index=i;//为按钮添加自定义属性（索引）目的是使图片和按钮相对应
+        //按钮
+        aBtn[i].onmouseover= function () {
+            iNow=this.index; //是按钮所控制显示的图片与左右箭头控制显示的图片相对应
+            tab();
+        }
+        //下一个箭头
+        oNext.onclick = function () {
+            iNow++;
+            if (iNow==aImg.length)iNow=0;
+            tab();
+        }
+        //上一个箭头
+        oPrev.onclick = function () {
+            iNow--;
+            if (iNow==-1)iNow=aImg.length-1;
+            tab();
+        }
+
+    }
+
+}
+</script>
+</body>
+</html>

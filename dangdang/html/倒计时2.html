@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		.time span{
+			font-size: 26px;
+			color: rgba(255,0,0)
+		}
+	</style>
+</head>
+<body>
+	<div class="content3">
+		<div class="time">
+			<span id="d"></span>
+			<span id="h"></span>
+			<span id="m"></span>
+			<span id="s"></span>
+		</div>
+	</div>
+</body>
+</body>
+<script>
+function FreshTime(){
+	var endtime=new Date("2019/6/25,00:00:00");//结束时间
+	var nowtime = new Date();//当前时间
+	var lefttime=parseInt((endtime.getTime()-nowtime.getTime())/1000); 
+	d=parseInt(lefttime/3600/24);
+	h=parseInt((lefttime/3600)%24);
+	m=parseInt((lefttime/60)%60);
+	s=parseInt(lefttime%60);
+    document.getElementById("d").innerHTML=d;
+	document.getElementById("h").innerHTML=h+":";
+	document.getElementById("m").innerHTML=m+":";
+	document.getElementById("s").innerHTML=s;
+	if(lefttime<=0){
+		 document.getElementById("LeftTime").innerHTML="团购已结束";
+		clearInterval(sh);
+	}
+}
+FreshTime()
+var sh;
+sh=setInterval(FreshTime,1000);
+</script>
+</html>
