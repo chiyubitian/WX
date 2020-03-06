@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>zhuce</title>
+	<link rel="stylesheet" href="../css/demo-font/iconfont.css">
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		ol,ul{
+			list-style: none;
+		}
+		/*头部*/
+		.header{
+			width: 100%;
+			background: #FBFBFB;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+			box-shadow: 0 1px .5px rgba(0,0,0,1);
+
+		}
+		/*居中*/
+		.header .center{
+			width: 1190px;
+			height: 80px;
+			margin: 0 auto;
+			/*overflow: hidden;*/
+		}
+		/*1号店logo*/
+		.header .logo{
+			float: left;
+			width: 144px;
+			height: 35px;
+			background: url(../img/1号店注册/注册1号店.png) no-repeat -76px -24px;
+			margin-top: 22px; 
+		}
+		/*右侧登录、帮助中心*/
+		.header .yc{
+			float: right;
+			margin-top: 22px
+		}
+		.header .yc .dl{
+			float: left;
+			margin-right: 30px;
+		}
+		.header .yc .dl span{
+			font-size: 14px;
+			color:rgba(0,0,0,.4);
+			margin-right: 10px;
+		}
+		.header .yc a{
+			font-size: 12px;
+			color: #0065CB;
+		}
+		.header .yc a:hover{
+			color:rgba(255,0,0,.6)
+		}
+		.header .yc .help{
+			width: 99px;
+			float: left;
+			position: relative;
+		}
+		.header .yc .xq{
+			float: left;
+			width: 20px;
+			height: 20px;
+			background: url(../img/1号店注册/注册1号店.png) no-repeat -1179px -17px;
+			margin-right: 5px;
+			margin-top: 2px;
+		}
+		.header .yc span{
+			font-size: 14px
+		}
+		.header .yc i{
+			font-size: 2px;
+			color: rgba(0,0,0,.5);
+			border:.5px solid rgba(0,0,0,.1);
+			
+		}
+		.header .yc .help .xl{
+			width: 99px;
+			position: absolute;
+			top: 20px;
+			left: 0;
+			border: .5px solid rgba(0,0,0,.2);
+			border-top:none;
+			background: rgba(255,255,255,.9);
+			z-index: 3;
+			display: none;
+		}
+		.header .yc .help span a{
+			color: rgba(0,0,0,.8);
+		}
+		.header .yc .help:hover i,.header .yc .help:hover span a{
+			color:rgba(255,0,0,.6);
+		}
+		.header .yc .help:hover .xl{
+			display: block;
+		}
+		.header .yc .help .xl li{
+			padding: 5px 0;
+			padding-left: 15px;
+			border-bottom: .5px solid rgba(0,0,0,.3)
+		}
+		/*主部*/
+		.mainbody{
+			width: 100%;
+			background: #FBFBFB;
+		}
+		/*居中*/
+		.mainbody .center{
+			width: 1190px;
+			height: 450px;
+			margin: 0 auto;
+			border: .1px solid transparent;
+			/*overflow: hidden;*/
+		}
+		/*省钱、省力、省时间*/
+		.mainbody .sss{
+			float: left;
+			width: 323px;
+			height: 267px;
+			background: url(../img/1号店登录/1号店登录.png) no-repeat -326px -159px;
+			margin: 70px 0 0 200px;
+
+		}
+		/*登录页*/
+		.mainbody .jqk{
+			width: 402px;
+			height: 409px;
+			float: right;
+			margin-right: 100px;
+			margin-top: 20px;
+			overflow: hidden;
+		}
+		.mainbody .dly{
+			width: 402px;
+			height: 409px;
+			background: rgba(255,255,255,.8);
+			position: relative;
+		}
+		.mainbody .dly:after{
+			content: "";
+			display: block;;
+			clear: both;
+			height: 0;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.mainbody form{
+			width: 329px;
+			margin:0 auto;
+		}
+		.mainbody h4{
+			float: left;
+			font-weight: 500;
+			font-size: 16px;
+			font-family: "微软雅黑";
+			margin-top: 50px;
+			margin-bottom: 5px;
+			color: rgba(0,0,0,.8);
+		}
+		.mainbody a:first-of-type{
+			float: right;
+			margin-top: 50px;
+			color: #0065CB;
+			font-size: 12px;
+		}
+		.mainbody a:first-of-type:hover{
+			color:rgba(255,0,0,.8);
+		}
+		.mainbody input:not([type="submit"]){
+			width: 328px;
+			height: 50px;
+			outline: none;
+			font-size: 14px;
+			text-indent: 4em;
+			border:none;
+			border:.5px solid rgba(0,0,0,.1);
+			border-radius: 5px;
+			background-color: #FBFBFB;
+			margin-bottom: 10px;
+		}
+		.mainbody input:not([type="submit"]):hover{
+			border:.5px solid rgba(234,0,0,.8);
+		}
+		.mainbody input[type="text"]{
+			background-image: url(../img/1号店登录图标/1号店登录_MarkMan_03.png);
+			background-repeat: no-repeat;
+			background-position: 5% center;
+		}
+		.mainbody input[type="password"]{
+			background-image: url(../img/1号店登录图标/1号店登录_MarkMan_06.png),url(../img/1号店登录图标/1号店登录_MarkMan_08.png);
+			background-repeat: no-repeat,no-repeat;
+			background-position: 5% center,90% center;
+
+		}
+		.mainbody label:nth-of-type(1){
+			font-size: 12px;
+			cursor: pointer;
+		}
+		.mainbody label:nth-of-type(1) input{
+			float: left;
+			width: 14px;
+			height: 14px;
+			background: #FBFBFB;
+			margin: 2px 5px 10px 0;
+		}
+		.mainbody label:nth-of-type(1) p{
+			float: left;
+			color: rgba(0,0,0,.6);
+		}
+		.mainbody form a:nth-of-type(2){
+			font-size: 12px;
+			float: right;
+			color: rgba(0,0,0,.6);
+		}
+		.mainbody input:nth-of-type(3){
+			width: 328px;
+			height: 50px;
+			background: #FE3B3B;
+			outline: none;
+			color: rgba(255,255,255,.85);
+			margin-bottom: 15px;
+			font-size: 18px;
+			letter-spacing: 10px;
+			cursor: pointer;
+		}
+		.mainbody input:nth-of-type(3):hover{
+			color: rgba(255,255,255,.96);
+			box-shadow: 0 0 4px 1px rgba(0,0,0,.6)
+		}						
+		.mainbody form a:nth-of-type(3){
+			font-size: 14px;
+			color: rgba(0,0,0,.6);
+		}
+		.mainbody form .tb{
+			margin-top: 20px;
+			float: left;
+		}
+		.mainbody form .tb:after{
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.mainbody form .tb div{
+			width: 35px;
+			height: 35px;
+			float: left;
+			margin-right: 15px;
+			cursor: pointer;
+		}
+		.mainbody form .qq{
+			background: url(../img/1号店登录/1号店登录.png) no-repeat -808px -443px;
+		}
+		.mainbody form .jd{
+			background: url(../img/1号店登录/1号店登录.png) no-repeat -860px -443px;
+		}
+		.mainbody form .wx{
+			background: url(../img/1号店登录/1号店登录.png) no-repeat -910px -443px;
+		}
+		.mainbody form .xl{
+			background: url(../img/1号店登录/1号店登录.png) no-repeat -964px -443px;
+		}
+		.mainbody label:last-of-type{
+			float: right;
+			margin-top: 30px;
+			color: rgba(0,0,0,.6);
+			font-size: 14px;
+			
+		}
+		.mainbody label:last-of-type select{
+			width: 15px;
+			height: 15px;
+		}
+		.dly img{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		/*二维码登录*/
+		.ewmdl{
+			box-sizing: border-box;
+			width: 402px;
+			height: 409px;
+			background: rgba(255,255,255,.8);
+			overflow: hidden;
+			position: relative;
+		}
+		.ewmdl	p{
+			margin-top: 30px;
+			text-align: center;
+			font-size: 16px;
+			font-weight: 600;
+		}
+		.ewmdl	p span{
+			color: rgba(213,0,0,.9);
+		}
+		.ewmdl .ewm{
+			width: 180px;
+			height: 180px;
+			background: url(../img/1号店登录图标/ewm.png) no-repeat;
+			margin: 15px auto;
+			cursor: pointer;
+		}
+		.ewmdl p:last-of-type{
+			display: block;
+			text-align: center;
+			font-size: 12px;
+			color: rgba(0,0,0,.7);
+		}
+		.ewmdl img{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		/*尾部*/
+		.footer{
+			width: 100%;
+			background: #FBFBFB;
+		}
+		/*居中*/
+		.footer .center{
+			width: 1190px;
+			height: 60px;
+			margin: 0 auto;
+			overflow: hidden;
+			font-size: 10px;
+		}
+		.footer .center .jz{
+			width: 330px;
+			margin: 0 auto;
+
+		}
+		.footer .center ul{
+
+			width: 295px;
+			margin: 10px auto;
+		}
+		.footer .center ul:after{
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.footer .center ul li{
+			float: left;
+		}
+		.footer .center ul li span{
+			margin: 0 6px;
+		}
+		.footer .center p{
+			
+		}
+	</style>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="header">
+		<!-- 居中 -->
+		<div class="center">
+			<!-- 1号店logo -->
+			<div class="logo">
+				
+			</div>
+			<!-- 右侧登录、帮助中心 -->
+			<div class="yc">
+				<div class="dl">
+					<span>您好，欢迎光临1号店！</span>
+					<a href="1号店注册.html" target="blank" title="">请注册</a>
+				</div>
+				<div class="help">
+					<div class="xq">
+					</div>
+					<span><a href="javascript:;" title="">帮助中心</a></span>
+					<i class="iconfont icon-triangle-down"></i>
+					<div class="xl">
+						<nav>
+							<ul>
+								<li><a href="javascript:;" title="">包裹跟踪</a></li>
+								<li><a href="javascript:;" title="">常见问题</a></li><li><a href="javascript:;" title="">在线退换货</a></li><li><a href="javascript:;" title="">在线投诉</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 主部 -->
+	<div class="mainbody">
+		<!-- 居中 -->
+		<div class="center">
+			<div class="sss">
+			</div>
+			<div class="jqk">
+				<div id="dn" class="dly">
+				<form action="1号店注册_submit" method="get" accept-charset="utf-8">
+				<h4>1号店用户注册</h4>
+				<a href="javascript:;" title="">注册新账号</a>
+				<input type="text" name="" value="" placeholder="邮箱/手机/用户名" required="">
+				<input type="password" name="" value="" placeholder="密码" required="">
+				<label>
+					<input type="checkbox" name="" value="" required="">
+					<p>自动登录</p>
+				</label>
+				<a href="javascript:;" title="">忘记密码？</a>
+				<input type="submit" name="" value="登录">
+				<a href="javascript:;" title="">更多合作网站账号登录</a>
+				<div class="tb">
+					<div class="qq"></div>
+					<div class="jd"></div>
+					<div class="wx"></div>
+					<div class="xl"></div>
+				</div>
+				<label for="">
+				更多合作网站
+				<select name="">
+					<option value=""></option>
+					
+				</select></label>
+				<a href="#ewm" title=""><img src="../img/1号店登录图标/1.png" alt="二维码"></a>
+				</form>
+			</div>
+			<!-- 二维码登录 -->
+			<div id="ewm" class="ewmdl">
+				<p>用<span>1号店APP</span>登录</p>
+				<div class="ewm">
+				</div>
+				<p>刷新二维码</p>
+				<a href="#dn" title=""><img src="../img/1号店登录图标/2.png" alt="电脑"></a>
+			</div>
+			</div>
+		</div>
+	</div>
+	<!-- 尾部 -->
+	<div class="footer">
+		<!-- 居中 -->
+		<div class="center">
+			<div class="jz">
+			<ul>
+				<li>沪ICP备16050468号<span>|</span></li>
+				<li>沪B2-20170039<span>|</span></li>
+				<li>营业执照</li>
+			</ul>
+			<p>Copyright&copy; 1号店超市2007-2018，AllRights Reserved</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

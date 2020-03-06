@@ -1,0 +1,2747 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="../css/demo-font/fonts/iconfont.css">
+	<link rel="stylesheet" href="../css/demo-font/iconfont.css">
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ol,ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		body{
+			background:rgba(245,245,245);
+		}
+		/*头部-顶部*/
+		.header-top{
+			width: 100%;
+			background:  rgba(244,244,244,1);
+		}
+		/*居中*/
+		.header-top .center{
+			width:1070px;
+			height: 30px;
+			margin: 0 auto;
+			/*overflow: hidden;*/
+		}
+		/*左侧*/
+		.header-top .l{
+			float: left;
+			position: relative;
+		}
+		.header-top .l i{
+			display: inline-block;
+			vertical-align: middle;
+			width: 13px;
+			height: 15px;
+			margin-right: 5px;
+			color: rgba(255,0,0,.9);
+		}
+		.header-top .l p{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 12px;
+			line-height: 30px;
+		}
+		.header-top .l p a{
+			color: rgba(102,102,102);
+		} 
+		.header-top .l a{
+			color: rgba(0,0,0,.8);
+		}
+		.header-top .l a:hover{
+			color: rgba(255,0,0,.7);
+		}
+		/*下拉菜单*/
+		.header-top .l .xlcd{
+			width: 722px;
+			height: 0;
+			background: rgba(255,255,255,.95);
+			position: absolute;
+			left: 0;
+			top: 100%;
+			z-index: 6;
+			overflow: hidden;
+			transition: 2s;
+		}
+		/*.header-top .l:hover .xlcd{
+			height: 407px;
+		}*/
+		/*搜索城市*/
+		.header-top .l .ss-city{
+			box-sizing: border-box;
+			width: 720px;
+			height: 45px;
+			padding: 10px 10px 0 20px;
+		}
+		.header-top .l .ss-city *{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		.header-top .l h5{
+			float: left;
+			margin-right: 10px
+		}
+		/*搜索框*/
+		.header-top .l .ss-city input{
+			width: 150px;
+			height: 28px;
+			outline: none;
+			text-indent: 2.5em;
+			border:1px ridge rgb(0,0,0,.3);
+		}
+		.header-top .l .ss-city span{
+			position: relative;
+			left: -150px;
+		}
+		.header-top .l .ss-city span a{
+			color: rgba(0,0,0,.3);
+		}
+		/*关闭按钮*/
+		.header-top .l .ss-city i{
+			float: right;
+			padding: 5px;
+			background: rgba(0,0,0,.05);
+			color: rgba(0,0,0,.5);
+			font-size: 14px;
+			cursor: pointer;
+		}
+		.header-top .l .ss-city i:hover{
+			background: rgba(0,0,0,.3);
+			color: rgba(0,0,0,.8);
+			font-weight: 650;
+		}
+		.header-top .l .ss-city i:active{
+			border:1px inset rgba(0,0,0,.3);
+			box-shadow: inset 0 0 3px rgba(0,0,0,.5);
+		}
+		/*热门城市*/
+		.header-top .l .rm-city{
+			box-sizing: border-box;
+			width: 720px;
+			height: 68px;
+			padding: 10px 0 0 20px;
+			border-bottom: 1px solid rgba(0,0,0,.15);
+		}
+		.header-top .l .rm-city ul{
+			float: left;
+			width: 610px;
+		}
+		.header-top .l .rm-city li{
+			float: left;
+			font-size: 14px; 
+			margin: 0 15px 8px 0;
+		}
+		/*按字母查找*/
+		.header-top .l .zm-search{
+			box-sizing: border-box;
+			width: 680px;
+			height: 37px;
+			padding-top: 10px;
+			margin: 0 auto;
+		}
+		.header-top .l .zm-search ul{
+			float: left;
+		}
+		.header-top .l .zm-search li{
+			float: left;
+			width: 20px;
+			height: 20px;
+			background: rgba(0,0,0,.1);
+			margin: 0 5px 5px 0;
+			text-align: center;
+			font-size:10px;
+			cursor: pointer;
+		}
+		.header-top .l .zm-search li a{
+			padding: 5px
+		}
+		.header-top .l .zm-search li:hover{
+			background: rgba(221,23,0,.8);
+		}
+		.header-top .l .zm-search li:hover a{
+			color: rgba(255,255,255);
+		}
+		/*具体城市*/
+		.header-top .l .jt-city{
+			box-sizing: border-box;
+			width: 720px;
+			height: 235px;
+			padding: 10px 0 10px 20px;
+			margin: 0 auto;
+			overflow-y: scroll;
+		}
+		.header-top .l .jt-city nav>ul{
+			font-size: 18px;
+			color: rgba(0,0,0,.4);
+		}
+		.header-top .l .jt-city nav>ul:after{
+			content: "";
+			display: block;
+			clear: both;
+			height: 0;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.header-top .l .jt-city nav>ul span{
+			float: left;
+			margin: 12px 10px 0 0;
+		}
+		.header-top .l .jt-city .lb ul{
+			float: left;
+			width: 653px;
+			padding: 10px 0;
+		}
+		.header-top .l .jt-city .lb div:after{
+			content: "";
+			display: block;
+			clear: both;
+			height: 0;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.header-top .l .jt-city .lb ul:after{
+			content: "";
+			display: block;
+			clear: both;
+			height: 0;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.header-top .l .jt-city .lb li{
+			float: left;
+			height: 30px;
+			font-size: 13px;
+			line-height: 20px;
+			margin-right: 25px;
+		}
+		/*右侧*/
+		.header-top .r{
+			float: right;
+		}
+		.header-top .r ul::after{
+			content: "";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			height: 0;
+			overflow: hidden;
+		}
+		.header-top .r li{
+			float: left;
+			line-height: 30px;
+			font-size: 12px;
+			margin: 0 10px;
+			color: rgba(170,170,170);
+		}
+		.header-top .r li:first-of-type a{
+			color: rgba(255,64,64);
+		}
+		.header-top .r li:nth-of-type(2) a{
+			color: rgba(170,170,170);
+		}
+		.header-top .r li a{
+			color: rgba(51,51,51);
+		}
+		.header-top .r li:hover i,.header-top .r li:hover a{
+			color: rgba(255,0,0,.7);
+		}
+		.header-top .r li span{
+			color: rgba(102,102,102);
+		}
+		/*头部*/
+		.header{
+			width: 100%;
+			background:rgba(255,255,255);
+			border-bottom: 2px solid rgba(255,0,0,.8)
+		}
+		/*居中*/
+		.header .center{
+			width:1070px;
+			height: 181px;
+			margin: 0 auto;
+			/*overflow: hidden;*/
+		}
+		/*1号店图标*/
+		.header .logo-1hd{
+			float: left;
+			width: 286px;
+			height: 141px;
+			background: url(../img/1号店首页/1号店.png) no-repeat -136px -32px;
+			cursor: pointer;
+		}
+		.header .logo-1hd:after{
+			content: "";
+			display: block;
+			width: 50px;
+			height: 100px;
+			background: rgba(255,255,255);
+			transform: rotate(-30deg);
+			filter: blur(8px);
+			-webkit-animation: 10s gd infinite;
+			-o-animation: 10s gd infinite;
+			animation: 8s gd infinite;
+
+		}
+		@keyframes gd{
+			0%{
+				transform: translate(-50px,0)rotate(-30deg);
+				opacity: .4;
+			}
+			20%{
+				transform: translate(350px,0)rotate(-30deg);
+				opacity: .8;
+			}
+			100%{
+				transform: translate(350px,0)rotate(-30deg);
+				opacity: .8;
+			}
+		}
+		/*搜索框、购物车及导航区*/
+		.header .search{
+			float: left;
+			width: 784px;
+			height: 141px;
+		}
+		/*位置*/
+		.header .wz{
+			margin-top: 50px;
+			margin-left: 120px;
+		}
+		/*搜索框*/
+		.header .ss{
+			float: left;
+			position: relative;
+		}
+		.header .ss input{			
+			width: 513px;
+			height: 44px;
+			background: rgba(250,250,250);
+			font-size: 16px;
+			outline: none;
+			border-radius: 22px;
+			border:2px solid rgba(0,0,0,.1);
+			text-indent: 2em;
+
+		}
+		/*下拉菜单*/
+		.header .ss .xld{
+			width: 400px;
+			background: rgba(255,255,255,.95);
+			border: .3px solid rgba(0,0,0,.3);
+			position: absolute;
+			left: 30px;
+			top: 48px;
+			display: none;
+			z-index: 5;
+			transition: 1.5s;
+		}
+		.header .ss input:hover{
+			border-color: rgba(255,0,0,.5);
+		}
+		.header .ss input:focus+.xld{
+			display: block;
+		}
+		.header .ss .xld .l{
+			float: left;
+			width: 200px;
+		}
+		.header .ss .xld h5{
+			font-size: 14px;
+			font-weight: normal;
+			margin:10px 5px; 
+		}
+		.header .ss .xld h5 a{
+			color: rgba(0,0,0,.8);
+		}
+		.header .ss .xld h5 a:hover{
+			color: rgba(231,0,0,.8);
+		}
+		.header .ss .xld .l ul::after{
+			content: "";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			height: 0;
+			overflow: hidden;
+		}
+		.header .ss .xld .r{
+			float: left;
+			width: 200px;
+			background: rgba(255,255,255,.96);
+		}
+		.header .ss .xld .r ul:after{
+			content: "";
+			display: block;
+			clear: both;
+			height: 0;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.header .ss .xld .r ul li{
+			float: left;
+			border:1px solid rgba(0,0,0,.4);
+			text-align: center;
+			background: rgba(255,255,255,.8);
+			font-size: 10px;
+			margin: 5px 10px
+			
+		}
+		.header .ss .xld .r ul li:hover{
+			background: rgba(255,255,255,1);
+			border:1px solid rgba(255,64,64,.8);
+		}
+		.header .ss .xld .r ul li a{
+			color: rgba(0,0,0,.8);
+			
+		}
+		.header .ss .xld .r ul li a:hover{
+			color: rgba(231,0,0,.8);
+			
+		}
+		.header .ss span a{
+			display: inline-block;
+			font-size: 26px;
+			position: absolute;
+			left: 90%;
+			top: 8px;
+			color: rgba(0,0,0,.8);
+		}
+		/*购物车*/
+		.header .gwc{
+			float: left;
+			width: 124px;
+			height: 44px;
+			background: rgba(250,250,250);
+			font-size: 18px;
+			border-radius: 22px;
+			border:2px solid rgba(0,0,0,.1);
+			text-align: center;
+			line-height: 44px;
+			margin-left: 15px;
+			cursor: pointer;
+		}
+		.header .gwc:hover{
+			background: rgba(0,0,0,.6);
+		}
+		.header .gwc:active{
+			border: 1px ridge rgba(0,0,0,.8);
+			box-shadow: 0 3px 5px 1px rgba(0,0,0,.7);
+		}
+		.header .gwc:hover i,.header .gwc:hover a{
+			color: rgba(255,255,255);
+			text-shadow: 0 5px 5px rgb(21,21,32)
+		}
+		.header .gwc i{
+
+		}
+		.header .gwc span a{
+			color: rgba(0,0,0,.8);
+		}
+		/*导航区*/
+		.header .search .dh ul{
+			float: left;
+			margin-left: 30px;
+			margin-top: 10px;
+		}
+		.header .search .dh li{
+			float: left;
+			font-size: 14px;
+			margin-right: 10px;
+		}
+		.header .search .dh li a{
+			color: rgba(0,0,0,.4);
+		}
+		.header .search .dh li a:hover{
+			color: rgba(0,0,0,.8);
+		}
+		/*下拉导航区*/
+		.header .nav{
+			float: left;
+			width: 100%;
+			height: 40px;
+			position: relative;
+		}
+		/*全部类目*/
+		.header .nav .list{
+			float: left;
+			width: 140px;
+			height: 40px;
+			background-color: rgba(255,64,64);
+			font-size: 16px;
+			color: rgba(255,255,255,.95);
+			text-align: center;
+
+		}
+		.header .nav .list i,.header .nav .list span{
+			line-height: 40px;
+			cursor: pointer;
+		}
+		.header .nav .list:hover i,.header .nav .list:hover span{
+			text-shadow: .5px .5px  rgba(200,200,200);
+		}
+		.header .nav .list:hover .xld{
+			height: 400px;
+			opacity: 1;
+			z-index: 5;
+		}
+		.header .nav .list i:last-of-type{
+			font-size: 8px;
+		}
+		/*下拉菜单*/
+		.header .nav .list .xld{
+			position: absolute;
+			left: 0;
+			top: 100%;
+			width: 1070px;
+			height: 0px;
+			background: rgba(255,255,255,.9);
+			border:.5px solid rgba(234,0,0,.8);
+			border-top: 2px solid rgba(234,0,0,.8); 
+			text-align: left;
+			transition: 2s;
+			overflow: hidden;
+			opacity: .1;
+			z-index: 5;
+		}
+		.header .nav .list .xld ul{
+			float: left;
+			width: 131px;
+			height: 162px;
+			margin:30px 20px 0 20px;
+		}
+		.header .nav .list .xld ul:after{
+			content: "";
+			display: block;
+			clear: both;
+			height: 0;
+			display: none;
+			overflow: hidden;
+		}
+		.header .nav .list .xld ul h4{
+			color: rgba(0,0,0,.8);
+			font-size: 14px;
+			font-weight:700;
+			margin-bottom: 5px;
+		}
+		.header .nav .list .xld ul li{
+			font-size: 12px;
+			margin:6px 0;
+		}
+		.header .nav .list .xld .l{
+			float: left;
+			margin-right: 10px
+		}
+		.header .nav .list .xld .r{
+			float: left;
+		}
+		.header .nav .list .xld li a{
+			color: rgba(0,0,0,.9);
+		}
+		.header .nav .list .xld li a:hover{
+			font-size: 12.1px;
+			color: rgba(231,0,0,.9);
+		}
+		/*右侧导航区*/
+		.header .nav .r-nav{
+			float: left;
+		}
+		.header .nav .r-nav ul:after{
+			content: "";
+			display: block;
+			clear: both;
+			height: 0;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.header .nav .r-nav ul li{
+			float: left;
+			margin-left: 30px;
+			line-height: 40px;
+		}
+		
+		.header .nav .r-nav ul li a{
+			color: rgba(0,0,0,.8);
+			font-weight: 530;
+			font-size: 16px;
+			padding: 4px 3px;
+		}
+		.header .nav .r-nav ul li a:hover{
+			color: rgba(213,0,0,.8);
+			font-size: 16.2px;
+			text-shadow: 0 1px 2px rgb(212,32,23);
+			border-bottom: 2px solid rgba(0,0,0,.8);
+		}
+		/*商品介绍*/
+		.spjs{
+			width: 100%;
+		}
+		.spjs .center{
+			width: 1200px;
+			height: 680px;
+			background: rgba(255,255,255);
+			margin: 0 auto;
+		}
+		.spjs .nav{
+			height: 40px;
+		}
+		.spjs .nav ul::after{
+			content: "";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			height: 0;
+			overflow: hidden;
+		}
+		.spjs .nav li{
+			float: left;
+			font-size: 12px;
+			line-height: 40px;
+
+		}
+		.spjs .nav li a{
+			color: rgba(0,0,0,.8);
+			margin: 0 10px;
+			padding-bottom: 3px;
+		}
+		.spjs .nav li a:hover{
+			font-size: 12.1px;
+			color: rgba(213,0,0,.8);
+			border-bottom: 2px solid rgba(213,0,0,.8);
+		}
+		/*左部*/
+		.spjs .l{
+			float: left;
+			width: 400px;
+			height: 480px;
+			margin-right: 20px;
+			overflow: hidden;
+		}
+		/*展示区*/
+		.spjs .l .zsq{
+			box-sizing: border-box;
+			width: 400px;
+			height: 400px;
+			margin-bottom: 20px;
+			border: .5px solid rgba(0,0,0,.2);
+		}
+		/*样式种类*/
+		.spjs .l .item{
+			position: relative;
+		}
+		.spjs .l .item ul{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-around;
+		}
+		/*项目*/
+		.spjs .l .item li{
+			box-sizing: border-box;
+			float: left;
+			width: 60px;
+			height: 60px;
+			padding: 5px;
+		}
+		/*二级*/
+		.spjs .l .item li .ej{
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			left: 0;
+			top: -420px;
+			transition: 1s;
+
+		}
+		.spjs .l .item li:not(:first-of-type) .ej{
+			display: none;
+		}			
+
+		.spjs .l .item li:hover{
+			border: 2px solid rgba(0,0,0,.6);
+			cursor: pointer;
+		}
+		.spjs .l .item li:not(:first-of-type):hover .ej{
+			display: block;
+
+		}
+		.spjs .l .ej img{
+			margin: 20px;
+		}
+		/*中部*/
+		.spjs .main{
+			float: left;
+			width: 580px;
+			height: 530px;
+			margin-right: 20px;
+		}
+		.spjs .main h3{
+			font-size: 16px;
+		}
+		/*价格 、好评*/
+		.spjs .main .p-h{
+
+		}
+		.spjs .main .price{
+			height: 48px;
+			background: rgba(253,229,224);
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+
+		}
+		.spjs .main .price span{
+			font-size: 24px;
+			font-weight: 600;
+			color: rgba(255,0,0,.7);
+		} 
+		.spjs .main .price span:first-of-type{
+			font-size: 12px;
+			color: rgba(0,0,0,.8);
+			margin: 0 30px 0 10px;
+		} 
+		.spjs .main .p-h .hp{
+			height: 31px;
+			background: rgba(255,244,242);
+			font-size: 12px;
+			line-height: 31px;
+			margin-bottom: 20px;
+		}
+		.spjs .main .p-h .hp p{
+			margin-left: 65px
+		}
+		.spjs .main .p-h .hp span{
+			color: rgba(255,131,151);
+
+		}
+		/*分类*/
+		.spjs .main .classfly{
+			height: 163px;
+			padding: 10px;
+			border-top: 1px solid rgba(0,0,0,.4);
+			border-bottom: 1px solid rgba(0,0,0,.4)
+		}
+		.spjs .main .classfly h4{
+			float: left;
+			font-size: 14px;
+			color: rgba(0,0,0,.6);
+			margin-top: 20px;
+			margin-right: 10px;
+		}
+		.spjs .main .classfly ul{
+			float: left;
+			width: 480px;
+		}
+		.spjs .main .classfly li{
+			float: left;
+			border: 1px solid rgba(0,0,0,.3);
+			width: 88px;
+			height: 42px;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+			margin: 0 5px 5px 0;
+			cursor: pointer;
+		}
+		.spjs .main .classfly li:hover{
+			border: 1px solid rgba(255,0,0,.5);
+		}
+		.spjs .main .classfly li a{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+			color: rgba(0,0,0,.9);
+		}
+		.spjs .main .classfly li img{
+			margin-right: 10px;
+		}
+		.spjs .main .classfly li span{
+			font-size: 14px;
+		}
+		.spjs .main .classfly p{
+			float: left;
+			font-size: 14px;
+			border: 1px solid rgba(255,0,0,.8);
+			padding: 3px 2px;
+			margin-top: 20px;	
+		}
+		/*送货至*/
+		.spjs .main .shz{
+			/*height: 52px;*/
+		}
+		.spjs .main .shz:after{
+			content: "";
+			display: block;
+			clear: both;
+			height: 0;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.spjs .main .shz h4{
+			float: left;
+			font-size: 14px;
+			font-weight: 400;
+			margin-top: 15px;
+			margin-left: 10px;
+		}
+		.spjs .main .shz select{
+			float: left;
+			width: 121px;
+			height: 26px;
+			margin-left: 25px;
+			margin-top: 15px;
+			outline: none;
+		}
+		.spjs .main .shz p:first-of-type{
+			float: left;
+			font-size: 14px;
+			margin-top: 25px;
+			margin-left: 20px;
+		}
+		.spjs .main .shz p:last-of-type{
+			float: left;
+			font-size: 14px;
+			margin-top: 5px;
+			margin-left: 80px;
+		}
+		.spjs .main .shz span{
+			font-weight: 600;
+		}
+		/*加入购物车*/
+		.spjs .main .jgwc{
+			height: 50px;
+			margin-top: 30px;
+			overflow: hidden;
+		}
+		.spjs .main .jgwc input{
+			box-sizing: border-box;
+			float: left;
+			width: 70px;
+			height: 48px;
+			border: 1px solid rgba(0,0,0,.5);
+			outline: none;
+			margin-left: 80px;
+			text-align: center;
+			font-size: 30px;
+			font-weight: 800;
+			color: rgba(255,0,0);
+		}
+		.spjs .main .jgwc .gwc{
+			float: left;
+			width: 138px;
+			height: 48px;
+			background: rgba(255,92,77);
+			border-radius:2px;
+			text-align: center;
+			line-height: 48px;
+			font-size: 20px;
+			color: rgba(255,255,255);
+			margin-left: 10px;
+			cursor: pointer;
+			
+		}
+		.spjs .main .jgwc a:last-of-type{
+			font-size: 14px;
+			float: left;
+			margin-top: 30px;
+			margin-left: 10px;
+			color: rgba(0,0,212);
+		}
+		/*右部*/
+		.spjs .r{
+			float: left;
+			width: 180px;
+			height: 597px;
+		}
+		.spjs .hyp{
+			width: 180px;
+			height: 30px;
+			box-sizing: border-box;
+			border: 1px solid rgba(0,0,0,.1);
+			background: rgba(0,0,0,.03);
+			text-align: center;
+		}
+		.spjs .hyp span{
+			font-size: 12px;
+			color: rgba(0,0,0,.95);
+			margin-right: 20px;
+			line-height: 30px;
+		}
+		.spjs .hyp span:last-of-type{
+			font-size: 12px;
+			color: rgba(0,0,0,.4);
+		}
+		.spjs .hyp i{
+			
+		}
+		.spjs .list{
+			
+		}
+		.spjs .list li{
+			box-sizing: border-box;
+			width: 180px;
+			height: 190px;
+			cursor: pointer;
+		}
+		.spjs .list .img{
+			margin: 10px auto;
+			width: 120px;
+			height: 120px;
+			
+		}
+		.spjs .list .img1{
+			background: url(../img/1号店详情/xqy.png) no-repeat -1125px -295px;
+		}
+		.spjs .list .img2{
+			background: url(../img/1号店详情/xqy.png) no-repeat -1125px -482px;
+		}
+		.spjs .list .img3{
+			background: url(../img/1号店详情/xqy.png) no-repeat -1125px -648px;
+		}
+		.spjs .list p{
+			width: 130px;
+			font-size: 14px;
+			color: rgba(0,0,0,.95);
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			margin: 10px auto;
+		}
+		.spjs .list span{
+			display: block;
+			font-size: 14px;
+			color: rgba(255,0,0,.95);
+			text-align: center;
+		}
+		/*底部*/
+		.footer{
+			width: 100%;
+			background-color: rgba(255,255,255);
+		}
+		.footer .center{
+			width: 1070px;
+			margin: 20px auto
+
+		}
+		/*正品保障、满86包邮、售后无忧、准时送达*/
+		.footer .zmsz{
+			height: 172px;
+			border-bottom: 1px solid rgb(0,0,0,.1);
+		}
+		.footer .zmsz ul{
+			height: 172px;
+			display: flex;
+			align-items:center;
+			justify-content: space-around;
+		}
+		.footer .zmsz ul:after{
+			content: "";
+			display: block;
+			clear: both;
+			height: 0;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.footer .zmsz li{
+			float: left;
+			width: 205px;
+			height: 66px;
+			float: left;
+			display: flex;
+			align-items: center;	
+		}
+		.footer .zmsz li .hp{
+			float: left;
+		}
+		.footer .zmsz li .img{
+			float: left;
+			width: 66px;
+			height: 66px;
+			background: url(../img/1号店首页/1号店.png) no-repeat -140px -8672px;
+			margin-right: 20px;
+		}
+		.footer .zmsz li .img2{
+			background: url(../img/1号店首页/1号店.png) no-repeat -426px -8672px;
+		}
+		.footer .zmsz li .img3{
+			background: url(../img/1号店首页/1号店.png) no-repeat -712px -8672px;
+		}
+		.footer .zmsz li .img4{
+			background: url(../img/1号店首页/1号店.png) no-repeat -998px -8672px;
+		}
+		.footer .zmsz li h4{
+			font-weight: 600;
+			font-size:16px;
+			margin: 5px 0;
+		}
+		.footer .zmsz li p{
+			font-weight: 400;
+			font-size: 14px;
+			color: rgba(0,0,0,.4);
+			margin: 5px 0;
+		}
+		/*新手入门、支付方式、配送服务、售后保障*/
+		.footer .xzps{
+			height: 192px;
+			display: flex;
+			justify-content: space-around;
+		}
+		/*新手入门*/
+		.footer .xzps .xs{
+			float: left;
+		}
+		.footer .xzps .xs li a{
+			font-size: 12px;
+			font-weight: 400;
+			color: rgba(0,0,0,.5);
+			line-height: 25px;
+		}
+		.footer .xzps .xs li a:hover{
+			color: rgba(233,32,2,.9);
+		}
+		.footer .xzps h4{
+			font-size: 14px;
+			font-weight: 600;
+			color: rgba(0,0,0,.7);
+			margin: 20px 0 10px 0;
+		}
+		.footer .xzps .APP{
+			float: left;
+		}
+		.footer .xzps .APP .pic{
+			width: 90px;
+			height: 90px;
+			background: url(../img/1号店首页/1号店.png) no-repeat -937px -8822px;
+			cursor: pointer;
+		}
+		.footer .xzps .APP .pic2{
+			background: url(../img/1号店首页/1号店.png) no-repeat -1080px -8824px;
+		}
+		.footer .xzps .wx{
+			
+		}
+		/*Copyright*/
+		.footer .copy{
+			height: 127px;
+		}
+		.footer .copy ul:after{
+			content: "";
+			display: block;
+			clear: both;
+			height: 0;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.footer .copy li{
+			float: left;
+			font-size: 12px;
+			padding: 0 6px;
+		}
+		.footer .copy li:not(:last-of-type){
+			border-right: 1px solid rgba(51,51,51,.7)
+		}
+		.footer .copy li a{
+			color: rgba(51,51,51);
+		}
+		.footer .copy li a:hover{
+			color: rgba(233,32,2,.9);
+		}
+		.footer .copy p{
+			font-size: 12px;
+			color: rgba(51,51,51);
+			text-align: center;
+			line-height: 50px;
+		}
+		.footer .copy .logo{
+			display: flex;
+			justify-content: center;
+		}
+		.footer .copy .pic{
+			float: left;
+			width: 90px;
+			height: 30px;
+			background: url(../img/1号店首页/1号店.png) no-repeat -419px -9040px;
+			margin-right: 10px;
+		}
+		.footer .copy .gh{
+			float: left;
+			width: 20px;
+			height: 20px;
+			background: url(../img/1号店首页/1号店.png) no-repeat -910px -9040px;
+		}
+		.footer .copy .pic2{
+			background: url(../img/1号店首页/1号店.png) no-repeat -519px -9040px;
+		}
+		.footer .copy .pic3{
+			background: url(../img/1号店首页/1号店.png) no-repeat -619px -9040px;
+		}
+		.footer .copy .pic4{
+			background: url(../img/1号店首页/1号店.png) no-repeat -719px -9040px;
+		}
+		.footer .copy .pic5{
+			background: url(../img/1号店首页/1号店.png) no-repeat -819px -9040px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 头部-顶部 -->
+	<div class="header-top">
+		<!-- 居中 -->
+		<div class="center">
+			<!-- 左侧 -->
+			<div class="l">
+				<i class="iconfont icon-iconhuidaoshouye"></i>
+				<p>
+					<a href="1号店index.html" title="">1号店首页</a>
+				</p>
+				<!-- 下拉菜单 -->
+				<div class="xlcd">
+					<!-- 搜索城市 -->
+					<div class="ss-city">
+						<h5>搜索城市:</h5> 
+						<input type="text" name="" value="" placeholder="请输入城市名称">
+						<span><a href="javascript:;" title="" class="iconfont icon-fangdajing"></a></span>
+						<i class="iconfont icon-guanbi-01"></i>
+					</div>
+					<!-- 热门城市 -->
+					<div class="rm-city">
+						<h5>热门城市:</h5>
+						<nav>
+							<ul>
+								<li><a href="javascript:;" title="">上海市</a></li>
+								<li><a href="javascript:;" title="">北京市</a></li>
+								<li><a href="javascript:;" title="">广州市</a></li>
+								<li><a href="javascript:;" title="">深圳市</a></li>
+								<li><a href="javascript:;" title="">南京市</a></li>
+								<li><a href="javascript:;" title="">杭州市</a></li>
+								<li><a href="javascript:;" title="">武汉市</a></li>
+								<li><a href="javascript:;" title="">成都市</a></li>
+								<li><a href="javascript:;" title="">重庆市</a></li>
+								<li><a href="javascript:;" title="">苏州市</a></li>
+								<li><a href="javascript:;" title="">天津市</a></li>
+								<li><a href="javascript:;" title="">合肥市</a></li>
+								<li><a href="javascript:;" title="">温州市</a></li>
+								<li><a href="javascript:;" title="">无锡市</a></li>
+								<li><a href="javascript:;" title="">宁波市</a></li>
+								<li><a href="javascript:;" title="">常州市</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- 按字母查找 -->
+					<div class="zm-search">
+						<h5>按字母查找:</h5>
+						<nav>
+							<ul>
+								<li><a href="#A" title="">A</a></li>
+								<li><a href="#B" title="">B</a></li>
+								<li><a href="#C" title="">C</a></li>
+								<li><a href="#D" title="">D</a></li>
+								<li><a href="#E" title="">E</a></li>
+								<li><a href="#F" title="">F</a></li>
+								<li><a href="#G" title="">G</a></li>
+								<li><a href="#H" title="">H</a></li>
+								<li><a href="#J" title="">J</a></li>
+								<li><a href="#K" title="">K</a></li>
+								<li><a href="#L" title="">L</a></li>
+								<li><a href="#M" title="">M</a></li>
+								<li><a href="#N" title="">N</a></li>
+								<li><a href="#P" title="">P</a></li>
+								<li><a href="#Q" title="">Q</a></li>
+								<li><a href="#R" title="">R</a></li>
+								<li><a href="#S" title="">S</a></li>
+								<li><a href="#T" title="">T</a></li>
+								<li><a href="#W" title="">W</a></li>
+								<li><a href="#X" title="">X</a></li>
+								<li><a href="#Y" title="">Y</a></li>
+								<li><a href="#Z" title="">Z</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- 具体城市 -->
+					<div class="jt-city">
+						<nav>
+							<ul>
+								<span>A</span>
+								<li class="lb">
+									<div id="A">
+										<ul>
+											<li><a href="javascript:;" title="">阿勒泰地区</a></li>
+											<li><a href="javascript:;" title="">安顺市</a></li>
+											<li><a href="javascript:;" title="">安庆市</a></li>
+											<li><a href="javascript:;" title="">鞍山市</a></li>
+											<li><a href="javascript:;" title="">阿坝州</a></li>
+											<li><a href="javascript:;" title="">阿克苏地区</a></li>
+											<li><a href="javascript:;" title="">安康市</a></li>
+											<li><a href="javascript:;" title="">阿拉善盟</a></li>
+											<li><a href="javascript:;" title="">阿里地区</a></li>
+											<li><a href="javascript:;" title="">安阳市</a></li>
+											<li><a href="javascript:;" title="">阿拉尔市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>B</span>
+								<li class="lb">
+									<div id="B">
+										<ul>
+											<li><a href="javascript:;" title="">北京</a></li>
+											<li><a href="javascript:;" title="">滨州市</a></li>
+											<li><a href="javascript:;" title="">博尔塔拉州</a></li>
+											<li><a href="javascript:;" title="">毕节市</a></li>
+											<li><a href="javascript:;" title="">蚌埠市</a></li>
+											<li><a href="javascript:;" title="">巴音郭楞州</a></li>
+											<li><a href="javascript:;" title="">保山市</a></li>
+											<li><a href="javascript:;" title="">本溪市</a></li>
+											<li><a href="javascript:;" title="">白沙县</a></li>
+											<li><a href="javascript:;" title="">白城市</a></li>
+											<li><a href="javascript:;" title="">保亭县</a></li>
+											<li><a href="javascript:;" title="">北海市</a></li>
+											<li><a href="javascript:;" title="">白山市</a></li>
+											<li><a href="javascript:;" title="">保定市</a></li>
+											<li><a href="javascript:;" title="">亳州市</a></li>
+											<li><a href="javascript:;" title="">包头市</a></li>
+											<li><a href="javascript:;" title="">白银市</a></li>
+											<li><a href="javascript:;" title="">巴彦淖尔市</a></li>
+											<li><a href="javascript:;" title="">百色市</a></li>
+											<li><a href="javascript:;" title="">巴中市</a></li>
+											<li><a href="javascript:;" title="">宝鸡市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>C</span>
+								<li class="lb">
+									<div id="C">
+										<ul>
+											<li><a href="javascript:;" title="">重庆 </a></li>
+											<li><a href="javascript:;" title="">昌吉州</a></li>
+											<li><a href="javascript:;" title="">朝阳市</a></li>
+											<li><a href="javascript:;" title="">长春市</a></li>
+											<li><a href="javascript:;" title="">郴州市</a></li>
+											<li><a href="javascript:;" title="">昌江县</a></li>
+											<li><a href="javascript:;" title="">澄迈县</a></li>
+											<li><a href="javascript:;" title="">昌都地区</a></li>
+											<li><a href="javascript:;" title="">崇左市</a></li>
+											<li><a href="javascript:;" title="">滁州市</a></li>
+											<li><a href="javascript:;" title="">潮州市</a></li>
+											<li><a href="javascript:;" title="">长治市</a></li>
+											<li><a href="javascript:;" title="">承德市</a></li>
+											<li><a href="javascript:;" title="">池州市</a></li>
+											<li><a href="javascript:;" title="">赤峰市</a></li>
+											<li><a href="javascript:;" title="">沧州市</a></li>
+											<li><a href="javascript:;" title="">长沙市</a></li>
+											<li><a href="javascript:;" title="">楚雄州</a></li>
+											<li><a href="javascript:;" title="">常德市</a></li>
+											<li><a href="javascript:;" title="">常州市</a></li>
+											<li><a href="javascript:;" title="">成都市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>D</span>
+								<li class="lb">
+									<div id="D">
+										<ul>
+											<li><a href="javascript:;" title="">大连市</a></li>
+											<li><a href="javascript:;" title="">东莞市</a></li>
+											<li><a href="javascript:;" title="">东营市</a></li>
+											<li><a href="javascript:;" title="">德州市</a></li>
+											<li><a href="javascript:;" title="">丹东市</a></li>
+											<li><a href="javascript:;" title="">定安县</a></li>
+											<li><a href="javascript:;" title="">东方市</a></li>
+											<li><a href="javascript:;" title="">大庆市</a></li>
+											<li><a href="javascript:;" title="">定西市</a></li>
+											<li><a href="javascript:;" title="">大同市</a></li>
+											<li><a href="javascript:;" title="">迪庆州</a></li>
+											<li><a href="javascript:;" title="">大兴安岭地区</a></li>
+											<li><a href="javascript:;" title="">儋州市</a></li>
+											<li><a href="javascript:;" title="">达州市</a></li>
+											<li><a href="javascript:;" title="">大理州</a></li>
+											<li><a href="javascript:;" title="">德宏州</a></li>
+											<li><a href="javascript:;" title="">德阳市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>E</span>
+								<li class="lb">
+									<div id="E">
+										<ul>
+											<li><a href="javascript:;" title="">鄂尔多斯市</a></li>
+											<li><a href="javascript:;" title="">鄂州市</a></li>
+											<li><a href="javascript:;" title="">恩施州</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>F</span>
+								<li class="lb">
+									<div id="F">
+										<ul>
+											<li><a href="javascript:;" title="">阜新市</a></li>
+											<li><a href="javascript:;" title="">抚顺市</a></li>
+											<li><a href="javascript:;" title="">防城港市</a></li>
+											<li><a href="javascript:;" title="">阜阳市</a></li>
+											<li><a href="javascript:;" title="">佛山市</a></li>
+											<li><a href="javascript:;" title="">抚州市</a></li>
+											<li><a href="javascript:;" title="">福州市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>G</span>
+								<li class="lb">
+									<div id="G">
+										<ul>
+											<li><a href="javascript:;" title="">广州市</a></li>
+											<li><a href="javascript:;" title="">果洛州</a></li>
+											<li><a href="javascript:;" title="">甘南州</a></li>
+											<li><a href="javascript:;" title="">甘孜州</a></li>
+											<li><a href="javascript:;" title="">贵港市</a></li>
+											<li><a href="javascript:;" title="">桂林市</a></li>
+											<li><a href="javascript:;" title="">固原市</a></li>
+											<li><a href="javascript:;" title="">贵阳市</a></li>
+											<li><a href="javascript:;" title="">赣州市</a></li>
+											<li><a href="javascript:;" title="">广安市</a></li>
+											<li><a href="javascript:;" title="">广元市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>H</span>
+								<li class="lb">
+									<div id="H">
+										<ul>
+											<li><a href="javascript:;" title="">惠州市</a></li>
+											<li><a href="javascript:;" title="">菏泽市</a></li>
+											<li><a href="javascript:;" title="">合肥市</a></li>
+											<li><a href="javascript:;" title="">淮北市</a></li>
+											<li><a href="javascript:;" title="">淮南市</a></li>
+											<li><a href="javascript:;" title="">黄山市</a></li>
+											<li><a href="javascript:;" title="">河源市</a></li>
+											<li><a href="javascript:;" title="">怀化市</a></li>
+											<li><a href="javascript:;" title="">葫芦岛市</a></li>
+											<li><a href="javascript:;" title="">海西州</a></li>
+											<li><a href="javascript:;" title="">黄南州</a></li>
+											<li><a href="javascript:;" title="">哈尔滨市</a></li>
+											<li><a href="javascript:;" title="">海北州</a></li>
+											<li><a href="javascript:;" title="">邯郸市</a></li>
+											<li><a href="javascript:;" title="">海南州</a></li>
+											<li><a href="javascript:;" title="">湖州市</a></li>
+											<li><a href="javascript:;" title="">海东地区</a></li>
+											<li><a href="javascript:;" title="">哈密地区</a></li>
+											<li><a href="javascript:;" title="">和田地区</a></li>
+											<li><a href="javascript:;" title="">海口市</a></li>
+											<li><a href="javascript:;" title="">杭州市</a></li>
+											<li><a href="javascript:;" title="">鹤岗市</a></li>
+											<li><a href="javascript:;" title="">衡水市</a></li>
+											<li><a href="javascript:;" title="">汉中市</a></li>
+											<li><a href="javascript:;" title="">呼和浩特市</a></li>
+											<li><a href="javascript:;" title="">黄石市</a></li>
+											<li><a href="javascript:;" title="">黑河市</a></li>
+											<li><a href="javascript:;" title="">呼伦贝尔市</a></li>
+											<li><a href="javascript:;" title="">河池市</a></li>
+											<li><a href="javascript:;" title="">贺州市</a></li>
+											<li><a href="javascript:;" title="">衡阳市</a></li>
+											<li><a href="javascript:;" title="">红河州</a></li>
+											<li><a href="javascript:;" title="">淮安市</a></li>
+											<li><a href="javascript:;" title="">鹤壁市</a></li>
+											<li><a href="javascript:;" title="">黄冈市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>J</span>
+								<li class="lb">
+									<div id="J">
+										<ul>
+											<li><a href="javascript:;" title="">江门市</a></li>
+											<li><a href="javascript:;" title="">济源市</a></li>
+											<li><a href="javascript:;" title="">锦州市</a></li>
+											<li><a href="javascript:;" title="">嘉兴市</a></li>
+											<li><a href="javascript:;" title="">金华市</a></li>
+											<li><a href="javascript:;" title="">吉林市</a></li>
+											<li><a href="javascript:;" title="">鸡西市</a></li>
+											<li><a href="javascript:;" title="">揭阳市</a></li>
+											<li><a href="javascript:;" title="">佳木斯市</a></li>
+											<li><a href="javascript:;" title="">吉安市</a></li>
+											<li><a href="javascript:;" title="">金昌市</a></li>
+											<li><a href="javascript:;" title="">嘉峪关市</a></li>
+											<li><a href="javascript:;" title="">晋中市</a></li>
+											<li><a href="javascript:;" title="">九江市</a></li>
+											<li><a href="javascript:;" title="">晋城市</a></li>
+											<li><a href="javascript:;" title="">景德镇市</a></li>
+											<li><a href="javascript:;" title="">酒泉市</a></li>
+											<li><a href="javascript:;" title="">荆门市</a></li>
+											<li><a href="javascript:;" title="">焦作市</a></li>
+											<li><a href="javascript:;" title="">济南市</a></li>
+											<li><a href="javascript:;" title="">荆州市</a></li>
+											<li><a href="javascript:;" title="">济宁市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>K</span>
+								<li class="lb">
+									<div id="K">
+										<ul>
+											<li><a href="javascript:;" title="">昆明市</a></li>
+											<li><a href="javascript:;" title="">克孜勒苏柯尔克孜自治州</a></li>
+											<li><a href="javascript:;" title="">喀什地区</a></li>
+											<li><a href="javascript:;" title="">克拉玛依市</a></li>
+											<li><a href="javascript:;" title="">开封市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>L</span>
+								<li class="lb">
+									<div id="L">
+										<ul>
+											<li><a href="javascript:;" title="">辽阳市</a></li>
+											<li><a href="javascript:;" title="">娄底市</a></li>
+											<li><a href="javascript:;" title="">莱芜市</a></li>
+											<li><a href="javascript:;" title="">临沧市</a></li>
+											<li><a href="javascript:;" title="">聊城市</a></li>
+											<li><a href="javascript:;" title="">临沂市</a></li>
+											<li><a href="javascript:;" title="">乐东县/a></li>
+											<li><a href="javascript:;" title="">陵水县</a></li>
+											<li><a href="javascript:;" title="">临高县</a></li>
+											<li><a href="javascript:;" title="">凉山州</a></li>
+											<li><a href="javascript:;" title="">临夏州</a></li>
+											<li><a href="javascript:;" title="">柳州市</a></li>
+											<li><a href="javascript:;" title="">六盘水市</a></li>
+											<li><a href="javascript:;" title="">六安市</a></li>
+											<li><a href="javascript:;" title="">廊坊市</a></li>
+											<li><a href="javascript:;" title="">龙岩市</a></li>
+											<li><a href="javascript:;" title="">辽源市</a></li>
+											<li><a href="javascript:;" title="">拉萨市</a></li>
+											<li><a href="javascript:;" title="">兰州市</a></li>
+											<li><a href="javascript:;" title="">来宾市</a></li>
+											<li><a href="javascript:;" title="">丽水市</a></li>
+											<li><a href="javascript:;" title="">林芝地区</a></li>
+											<li><a href="javascript:;" title="">吕梁市</a></li>
+											<li><a href="javascript:;" title="">陇南市</a></li>
+											<li><a href="javascript:;" title="">临汾市</a></li>
+											<li><a href="javascript:;" title="">丽江市</a></li>
+											<li><a href="javascript:;" title="">连云港市</a></li>
+											<li><a href="javascript:;" title="">洛阳市</a></li>
+											<li><a href="javascript:;" title="">乐山市</a></li>
+											<li><a href="javascript:;" title="">泸州市</a></li>
+											<li><a href="javascript:;" title="">漯河市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>M</span>
+								<li class="lb">
+									<div id="M">
+										<ul>
+											<li><a href="javascript:;" title="">梅州市</a></li>
+											<li><a href="javascript:;" title="">马鞍山市</a></li>
+											<li><a href="javascript:;" title="">眉山市</a></li>
+											<li><a href="javascript:;" title="">牡丹江市</a></li>
+											<li><a href="javascript:;" title="">茂名市</a></li>
+											<li><a href="javascript:;" title="">绵阳市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>N</span>
+								<li class="lb">
+									<div id="N">
+										<ul>
+											<li><a href="javascript:;" title="">宁波市</a></li>
+											<li><a href="javascript:;" title="">南宁市</a></li>
+											<li><a href="javascript:;" title="">那曲地区</a></li>
+											<li><a href="javascript:;" title="">宁德市</a></li>
+											<li><a href="javascript:;" title="">南平市</a></li>
+											<li><a href="javascript:;" title="">南昌市</a></li>
+											<li><a href="javascript:;" title="">南充市</a></li>
+											<li><a href="javascript:;" title="">南京市</a></li>
+											<li><a href="javascript:;" title="">内江市</a></li>
+											<li><a href="javascript:;" title="">怒江州</a></li>
+											<li><a href="javascript:;" title="">南阳市</a></li>
+											<li><a href="javascript:;" title="">南通市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>P</span>
+								<li class="lb">
+									<div id="P">
+										<ul>
+											<li><a href="javascript:;" title="">盘锦市</a></li>
+											<li><a href="javascript:;" title="">普洱市</a></li>
+											<li><a href="javascript:;" title="">萍乡市</a></li>
+											<li><a href="javascript:;" title="">平凉市</a></li>
+											<li><a href="javascript:;" title="">莆田市</a></li>
+											<li><a href="javascript:;" title="">平顶山市</a></li>
+											<li><a href="javascript:;" title="">濮阳市</a></li>
+											<li><a href="javascript:;" title="">攀枝花市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>Q</span>
+								<li class="lb">
+									<div id="Q">
+										<ul>
+											<li><a href="javascript:;" title="">黔东南州</a></li>
+											<li><a href="javascript:;" title="">黔西南州</a></li>
+											<li><a href="javascript:;" title="">黔南州</a></li>
+											<li><a href="javascript:;" title="">曲靖市</a></li>
+											<li><a href="javascript:;" title="">琼中县</a></li>
+											<li><a href="javascript:;" title="">钦州市</a></li>
+											<li><a href="javascript:;" title="">衢州市</a></li>
+											<li><a href="javascript:;" title="">清远市</a></li>
+											<li><a href="javascript:;" title="">齐齐哈尔市</a></li>
+											<li><a href="javascript:;" title="">琼海市</a></li>
+											<li><a href="javascript:;" title="">秦皇岛市</a></li>
+											<li><a href="javascript:;" title="">七台河市</a></li>
+											<li><a href="javascript:;" title="">庆阳市</a></li>
+											<li><a href="javascript:;" title="">泉州市</a></li>
+											<li><a href="javascript:;" title="">潜江市</a></li>
+											<li><a href="javascript:;" title="">青岛市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>R</span>
+								<li class="lb">
+									<div id="R">
+										<ul>
+											<li><a href="javascript:;" title="">日照市</a></li>
+											<li><a href="javascript:;" title="">日喀则地区</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>S</span>
+								<li class="lb">
+									<div id="S">
+										<ul>
+											<li><a href="javascript:;" title="">上海</a></li>
+											<li><a href="javascript:;" title="">沈阳市</a></li>
+											<li><a href="javascript:;" title="">汕尾市</a></li>
+											<li><a href="javascript:;" title="">商丘市</a></li>
+											<li><a href="javascript:;" title="">汕头市</a></li>
+											<li><a href="javascript:;" title="">深圳市</a></li>
+											<li><a href="javascript:;" title="">韶关市</a></li>
+											<li><a href="javascript:;" title="">三沙市</a></li>
+											<li><a href="javascript:;" title="">石家庄市</a></li>
+											<li><a href="javascript:;" title="">松原市</a></li>
+											<li><a href="javascript:;" title="">神农架林区</a></li>
+											<li><a href="javascript:;" title="">三亚市</a></li>
+											<li><a href="javascript:;" title="">绍兴市</a></li>
+											<li><a href="javascript:;" title="">四平市</a></li>
+											<li><a href="javascript:;" title="">石河子市</a></li>
+											<li><a href="javascript:;" title="">宿州市</a></li>
+											<li><a href="javascript:;" title="">山南地区</a></li>
+											<li><a href="javascript:;" title="">石嘴山市</a></li>
+											<li><a href="javascript:;" title="">十堰市</a></li>
+											<li><a href="javascript:;" title="">商洛市</a></li>
+											<li><a href="javascript:;" title="">绥化市</a></li>
+											<li><a href="javascript:;" title="">上饶市</a></li>
+											<li><a href="javascript:;" title="">朔州市</a></li>
+											<li><a href="javascript:;" title="">厦门市</a></li>
+											<li><a href="javascript:;" title="">三明市</a></li>
+											<li><a href="javascript:;" title="">随州市</a></li>
+											<li><a href="javascript:;" title="">宿迁市</a></li>
+											<li><a href="javascript:;" title="">邵阳市</a></li>
+											<li><a href="javascript:;" title="">遂宁市</a></li>
+											<li><a href="javascript:;" title="">苏州市</a></li>
+											<li><a href="javascript:;" title="">三门峡市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>T</span>
+								<li class="lb">
+									<div id="T">
+										<ul>
+											<li><a href="javascript:;" title="">天津</a></li>
+											<li><a href="javascript:;" title="">塔城地区</a></li>
+											<li><a href="javascript:;" title="">泰安市</a></li>
+											<li><a href="javascript:;" title="">铜陵市</a></li>
+											<li><a href="javascript:;" title="">屯昌县</a></li>
+											<li><a href="javascript:;" title="">通化市</a></li>
+											<li><a href="javascript:;" title="">吐鲁番地区</a></li>
+											<li><a href="javascript:;" title="">铜仁市</a></li>
+											<li><a href="javascript:;" title="">天门市</a></li>
+											<li><a href="javascript:;" title="">唐山市</a></li>
+											<li><a href="javascript:;" title="">太原市</a></li>
+											<li><a href="javascript:;" title="">天水市</a></li>
+											<li><a href="javascript:;" title="">台州市</a></li>
+											<li><a href="javascript:;" title="">铁岭市</a></li>
+											<li><a href="javascript:;" title="">泰州市</a></li>
+											<li><a href="javascript:;" title="">通辽市</a></li>
+											<li><a href="javascript:;" title="">图木舒克市</a></li>
+											<li><a href="javascript:;" title="">铜川市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>W</span>
+								<li class="lb">
+									<div id="W">
+										<ul>
+											<li><a href="javascript:;" title="">芜湖市</a></li>
+											<li><a href="javascript:;" title="">潍坊市</a></li>
+											<li><a href="javascript:;" title="">威海市</a></li>
+											<li><a href="javascript:;" title="">五指山市</a></li>
+											<li><a href="javascript:;" title="">文昌市</a></li>
+											<li><a href="javascript:;" title="">温州市</a></li>
+											<li><a href="javascript:;" title="">万宁市</a></li>
+											<li><a href="javascript:;" title="">梧州市</a></li>
+											<li><a href="javascript:;" title="">乌鲁木齐市</a></li>
+											<li><a href="javascript:;" title="">吴忠市</a></li>
+											<li><a href="javascript:;" title="">乌兰察布市</a></li>
+											<li><a href="javascript:;" title="">乌海市</a></li>
+											<li><a href="javascript:;" title="">五家渠市</a></li>
+											<li><a href="javascript:;" title="">武汉市</a></li>
+											<li><a href="javascript:;" title="">武威市</a></li>
+											<li><a href="javascript:;" title="">文山州</a></li>
+											<li><a href="javascript:;" title="">无锡市</a></li>
+											<li><a href="javascript:;" title="">渭南市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>X</span>
+								<li class="lb">
+									<div id="X">
+										<ul>
+											<li><a href="javascript:;" title="">信阳市</a></li>
+											<li><a href="javascript:;" title="">湘西州</a></li>
+											<li><a href="javascript:;" title="">西宁市</a></li>
+											<li><a href="javascript:;" title="">邢台市</a></li>
+											<li><a href="javascript:;" title="">仙桃市</a></li>
+											<li><a href="javascript:;" title="">襄阳市</a></li>
+											<li><a href="javascript:;" title="">宣城市</a></li>
+											<li><a href="javascript:;" title="">忻州市</a></li>
+											<li><a href="javascript:;" title="">兴安盟</a></li>
+											<li><a href="javascript:;" title="">新余市</a></li>
+											<li><a href="javascript:;" title="">锡林郭勒盟</a></li>
+											<li><a href="javascript:;" title="">湘潭市</a></li>
+											<li><a href="javascript:;" title="">西双版纳州</a></li>
+											<li><a href="javascript:;" title="">徐州市</a></li>
+											<li><a href="javascript:;" title="">孝感市</a></li>
+											<li><a href="javascript:;" title="">西安市</a></li>
+											<li><a href="javascript:;" title="">新乡市</a></li>
+											<li><a href="javascript:;" title="">咸宁市</a></li>
+											<li><a href="javascript:;" title="">咸阳市</a></li>
+											<li><a href="javascript:;" title="">许昌市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>Y</span>
+								<li class="lb">
+									<div id="Y">
+										<ul>
+											<li><a href="javascript:;" title="">伊犁州</a></li>
+											<li><a href="javascript:;" title="">营口市</a></li>
+											<li><a href="javascript:;" title="">玉溪市</a></li>
+											<li><a href="javascript:;" title="">烟台市</a></li>
+											<li><a href="javascript:;" title="">永州市</a></li>
+											<li><a href="javascript:;" title="">益阳市</a></li>
+											<li><a href="javascript:;" title="">延边州</a></li>
+											<li><a href="javascript:;" title="">玉林市</a></li>
+											<li><a href="javascript:;" title="">玉树州</a></li>
+											<li><a href="javascript:;" title="">云浮市</a></li>
+											<li><a href="javascript:;" title="">伊春市</a></li>
+											<li><a href="javascript:;" title="">银川市</a></li>
+											<li><a href="javascript:;" title="">榆林市</a></li>
+											<li><a href="javascript:;" title="">宜春市</a></li>
+											<li><a href="javascript:;" title="">阳泉市</a></li>
+											<li><a href="javascript:;" title="">鹰潭市</a></li>
+											<li><a href="javascript:;" title="">扬州市</a></li>
+											<li><a href="javascript:;" title="">雅安市</a></li>
+											<li><a href="javascript:;" title="">运城市</a></li>
+											<li><a href="javascript:;" title="">盐城市</a></li>
+											<li><a href="javascript:;" title="">岳阳市</a></li>
+											<li><a href="javascript:;" title="">宜宾市</a></li>
+											<li><a href="javascript:;" title="">宜昌市</a></li>
+											<li><a href="javascript:;" title="">延安市</a></li>
+										</ul>
+									</div>
+								</li>
+								<span>Z</span>
+								<li class="lb">
+									<div id="Z">
+										<ul>
+											<li><a href="javascript:;" title="">中山市</a></li>
+											<li><a href="javascript:;" title="">珠海市</a></li>
+											<li><a href="javascript:;" title="">周口市</a></li>
+											<li><a href="javascript:;" title="">驻马店市</a></li>
+											<li><a href="javascript:;" title="">昭通市</a></li>
+											<li><a href="javascript:;" title="">张家界市</a></li>
+											<li><a href="javascript:;" title="">资阳市</a></li>
+											<li><a href="javascript:;" title="">湛江市</a></li>
+											<li><a href="javascript:;" title="">张家口市</a></li>
+											<li><a href="javascript:;" title="">遵义市</a></li>
+											<li><a href="javascript:;" title="">肇庆市</a></li>
+											<li><a href="javascript:;" title="">舟山市</a></li>
+											<li><a href="javascript:;" title="">中卫市</a></li>
+											<li><a href="javascript:;" title="">漳州市</a></li>
+											<li><a href="javascript:;" title="">张掖市</a></li>
+											<li><a href="javascript:;" title="">株洲市</a></li>
+											<li><a href="javascript:;" title="">郑州市</a></li>
+											<li><a href="javascript:;" title="">淄博市</a></li>
+											<li><a href="javascript:;" title="">枣庄市</a></li>
+											<li><a href="javascript:;" title="">自贡市</a></li>
+											<li><a href="javascript:;" title="">镇江市</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<!-- 右侧 -->
+			<div class="r">
+				<nav>
+					<ul>
+						<li>
+						<span>下午好，请</span><a href="1号店登录.html" title="">登录</a>
+						</li>
+						<li>
+							<a href="1号店注册.html" title="">注册</a>
+							</li>
+						<li>
+							<i class="iconfont icon-shoujichongzhi"></i>
+							<a href="javascript:;" title="">会员俱乐部</a>
+							</li>
+						<li>
+							<i class="iconfont icon-wodedingdan"></i>
+							<a href="javascript:;" title="">我的订单</a>
+							</li>
+						<li>
+							<i class="iconfont icon-shouji1"></i>
+							<a href="javascript:;" title="">下载APP</a>
+							</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!-- 头部 -->
+	<div class="header">
+		<!-- 居中 -->
+		<div class="center">
+			<!-- 1号店图标 -->
+			<div class="logo-1hd">
+			</div>
+			<!-- 搜索框、购物车及导航区 -->
+			<div class="search">
+				<!-- 位置 -->
+				<div class="wz">
+					<!-- 搜索框 -->
+					<div class="ss">
+						<input type="text" name="" value="" placeholder="暗影游戏本">
+						<!-- 下拉菜单 -->
+						<div class="xld">
+							<div class="l">
+								<h5><a href="javascript:;" title="">历史记录</a></h5>
+								<nav>
+									<ul>
+										<li><a href="javascript:;" title=""></a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="r">
+								<h5><a href="javascript:;" title="">热搜商品</a></h5>
+								<nav>
+									<ul>
+										<li><a href="javascript:;" title="">东方双师</a></li>
+										<li><a href="javascript:;" title="">长卷纸</a></li>
+										<li><a href="javascript:;" title="">诺优能</a></li>
+										<li><a href="javascript:;" title="">纸品</a></li>
+										<li><a href="javascript:;" title="">洗衣机小</a></li>
+										<li><a href="javascript:;" title="">小米9</a></li>
+										<li><a href="javascript:;" title="">厨房用纸</a></li>
+										<li><a href="javascript:;" title="">冰糖</a></li>
+										<li><a href="javascript:;" title="">八宝粥</a></li>
+										<li><a href="javascript:;" title="">电子猫眼</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<span><a href="javascript:;" title="" class="iconfont icon-fangdajing"></a></span>
+					</div>
+					<!-- 购物车 -->
+					<div class="gwc">
+						<i class="iconfont icon-gouwuche"></i>
+						<span><a href="javascript:;" title="">购物车</a></span>
+					</div>
+					<!-- 导航区 -->
+					<nav class="dh">
+						<ul>
+							<li><a href="javascript:;" title="">东方双师</a></li>
+							<li><a href="javascript:;" title="">实心卷纸</a></li>
+							<li><a href="javascript:;" title="">启赋</a></li>
+							<li><a href="javascript:;" title="">德宝</a></li>
+							<li><a href="javascript:;" title="">婴儿洗衣机</a></li>
+							<li><a href="javascript:;" title="">小米监控</a></li>
+							<li><a href="javascript:;" title="">小米9</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- 下拉导航区 -->
+			<div class="nav">
+				<!-- 全部类目 -->
+				<div class="list">
+					<i class="iconfont icon-gengduo-2"></i>
+					<span>全部类目</span>
+					<i class="iconfont icon-xiala"></i>
+					<!-- 下拉菜单 -->
+					<div class="xld">
+							<nav>
+								<ul>
+									<h4>全球进口</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">乳品生鲜</a></li>
+										<li><a href="javascript:;" title="">酒水饮料</a></li>
+										<li><a href="javascript:;" title="">糖果巧克力</a></li>
+										<li><a href="javascript:;" title="">咖啡冲饮</a></li>
+										<li><a href="javascript:;" title="">母婴玩具</a></li>
+										<li><a href="javascript:;" title="">家居清洁</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">饼干糕点</a></li>
+										<li><a href="javascript:;" title="">休闲零食</a></li>
+										<li><a href="javascript:;" title="">粮油调味</a></li>
+										<li><a href="javascript:;" title="">麦片冲饮</a></li>
+										<li><a href="javascript:;" title="">美妆个护</a></li>
+									</div>
+								</ul>
+							</nav>
+							<nav>
+								<ul>
+									<h4>母婴/玩具/童装</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">奶粉</a></li>
+										<li><a href="javascript:;" title="">裤尿湿巾</a></li>
+										<li><a href="javascript:;" title="">喂养用品</a></li>
+										<li><a href="javascript:;" title="">寝具服饰</a></li>
+										<li><a href="javascript:;" title="">玩具</a></li>
+										<li><a href="javascript:;" title="">童装/童鞋</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">营养辅食</a></li>
+										<li><a href="javascript:;" title="">洗护用品</a></li>
+										<li><a href="javascript:;" title="">妈妈专区</a></li>
+										<li><a href="javascript:;" title="">童车童床</a></li>
+										<li><a href="javascript:;" title="">乐器</a></li>
+									</div>
+								</ul>
+							</nav>
+							<nav>
+								<ul>
+									<h4>家居家纺/厨具/家具</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">床上用品</a></li>
+										<li><a href="javascript:;" title="">锅具水具</a></li>
+										<li><a href="javascript:;" title="">茶具餐具</a></li>
+										<li><a href="javascript:;" title="">品质家居</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">生活日用</a></li>
+										<li><a href="javascript:;" title="">厨具刀具</a></li>
+										<li><a href="javascript:;" title="">家装软饰</a></li>
+										<li><a href="javascript:;" title="">家装建材</a></li>
+									</div>
+								</ul>
+							</nav>
+							<nav>
+								<ul>
+									<h4>女装/男装/内衣/珠…</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">时尚裙装</a></li>
+										<li><a href="javascript:;" title="">女士裤子</a></li>
+										<li><a href="javascript:;" title="">型格男装</a></li>
+										<li><a href="javascript:;" title="">钟表/眼镜</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">女式上衣</a></li>
+										<li><a href="javascript:;" title="">品质内衣</a></li>
+										<li><a href="javascript:;" title="">珠宝首饰</a></li>
+									</div>
+								</ul>
+							</nav>
+							<nav>
+								<ul>
+									<h4>手机/数码/电脑办公</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">手机</a></li>
+										<li><a href="javascript:;" title="">摄影影像</a></li>
+										<li><a href="javascript:;" title="">智能设备</a></li>
+										<li><a href="javascript:;" title="">电脑整机</a></li>
+										<li><a href="javascript:;" title="">办公设备</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">手机配件</a></li>
+										<li><a href="javascript:;" title="">影音电教</a></li>
+										<li><a href="javascript:;" title="">数码配件</a></li>
+										<li><a href="javascript:;" title="">网络外设</a></li>
+									</div>
+								</ul>
+							</nav>
+							<nav>
+								<ul>
+									<h4>医药/保健滋补/成人</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">营养健康</a></li>
+										<li><a href="javascript:;" title="">传统滋补</a></li>
+										<li><a href="javascript:;" title="">家用器械</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">营养成分</a></li>
+										<li><a href="javascript:;" title="">成人用品</a></li>
+										<li><a href="javascript:;" title="">隐形眼镜</a></li>
+									</div>
+								</ul>
+							</nav>
+							<nav>
+								<ul>
+									<h4>食品/酒/生鲜</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">饮料</a></li>
+										<li><a href="javascript:;" title="">休闲零食</a></li>
+										<li><a href="javascript:;" title="">厨房调料</a></li>
+										<li><a href="javascript:;" title="">牛奶乳品</a></li>
+										<li><a href="javascript:;" title="">肉蛋海鲜</a></li>
+										<li><a href="javascript:;" title="">方便速食</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">酒类</a></li>
+										<li><a href="javascript:;" title="">粮油干货</a></li>
+										<li><a href="javascript:;" title="">饼干糕点</a></li>
+										<li><a href="javascript:;" title="">茶冲咖啡</a></li>
+										<li><a href="javascript:;" title="">新鲜蔬果</a></li>
+										<li><a href="javascript:;" title="">乳品素食</a></li>
+									</div>
+								</ul>
+							</nav>
+							<nav>
+								<ul>
+									<h4>纸巾/厨卫清洁/宠物</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">纸品湿巾</a></li>
+										<li><a href="javascript:;" title="">家庭清洁</a></li>
+										<li><a href="javascript:;" title="">驱虫除湿</a></li>
+										<li><a href="javascript:;" title="">宠物生活</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">衣物清洁</a></li>
+										<li><a href="javascript:;" title="">清洁用具</a></li>
+										<li><a href="javascript:;" title="">皮具护理</a></li>
+										<li><a href="javascript:;" title="">绿植园艺</a></li>
+									</div>
+								</ul>
+							</nav>
+							<nav>
+								<ul>
+									<h4>美妆/个人清洁</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">美发护发</a></li>
+										<li><a href="javascript:;" title="">沐浴清洁</a></li>
+										<li><a href="javascript:;" title="">面部护理</a></li>
+										<li><a href="javascript:;" title="">身体护理</a></li>
+										<li><a href="javascript:;" title="">美容工具</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">女性护理</a></li>
+										<li><a href="javascript:;" title="">口腔护理</a></li>
+										<li><a href="javascript:;" title="">缤纷彩妆</a></li>
+										<li><a href="javascript:;" title="">男士护理</a></li>
+									</div>
+								</ul>
+							</nav>
+							<nav>
+								<ul>
+									<h4>鞋靴/箱包/运动户外</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">时尚女鞋</a></li>
+										<li><a href="javascript:;" title="">奢侈大牌</a></li>
+										<li><a href="javascript:;" title="">品质男鞋</a></li>
+										<li><a href="javascript:;" title="">运动鞋服</a></li>
+										<li><a href="javascript:;" title="">户外装备</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">潮流女包</a></li>
+										<li><a href="javascript:;" title="">功能箱包</a></li>
+										<li><a href="javascript:;" title="">精品男包</a></li>
+										<li><a href="javascript:;" title="">健身器材</a></li>
+									</div>
+								</ul>
+							</nav>
+							<nav>
+								<ul>
+									<h4>家用电器/汽车用品</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">厨房小电</a></li>
+										<li><a href="javascript:;" title="">个护健康</a></li>
+										<li><a href="javascript:;" title="">厨卫大电</a></li>
+										<li><a href="javascript:;" title="">洗衣机</a></li>
+										<li><a href="javascript:;" title="">汽车装饰</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">生活电器</a></li>
+										<li><a href="javascript:;" title="">电视空调</a></li>
+										<li><a href="javascript:;" title="">冰箱</a></li>
+										<li><a href="javascript:;" title="">维修保养</a></li>
+										<li><a href="javascript:;" title="">车载产品</a></li>
+									</div>
+								</ul>
+							</nav>
+							<nav>
+								<ul>
+									<h4>图书</h4>
+									<div class="l">
+										<li><a href="javascript:;" title="">少儿</a></li>
+										<li><a href="javascript:;" title="">文艺</a></li>
+										<li><a href="javascript:;" title="">人文社科</a></li>
+										<li><a href="javascript:;" title="">科技</a></li>
+										<li><a href="javascript:;" title="">音像</a></li>
+									</div>
+									<div class="r">
+										<li><a href="javascript:;" title="">教育</a></li>
+										<li><a href="javascript:;" title="">经管励志</a></li>
+										<li><a href="javascript:;" title="">生活</a></li>
+										<li><a href="javascript:;" title="">刊/原版</a></li>
+									</div>
+								</ul>
+							</nav>
+
+					</div>
+				</div>
+				<!-- 右侧导航区 -->
+				<div class="r-nav">
+					<nav>
+						<ul>
+							<li><a href="javascript:;" title="">抢金币</a></li>
+							<li><a href="javascript:;" title="">金币签到</a></li>
+							<li><a href="javascript:;" title="">充值</a></li>
+							<li><a href="javascript:;" title="">超级单品</a></li>
+							<li><a href="javascript:;" title="">超级品牌</a></li>
+							<li><a href="javascript:;" title="">超级品类</a></li>
+							<li><a href="javascript:;" title="">领劵中心</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 商品介绍 -->
+	<div class="spjs">
+		<div class="center">
+			<div class="nav">
+				<nav>
+					<ul>
+						<li><a href="javascript:;" title="">服饰内衣</a><span class="iconfont icon-angle-right"></span></li>
+						<li><a href="javascript:;" title="">服饰配件</a><span class="iconfont icon-angle-right"></span></li>
+						<li><a href="javascript:;" title="">鸭舌帽</a><span class="iconfont icon-angle-right"></span></li>
+						<li><a href="javascript:;" title="">蓝中鸟（LanZhongNiao）</a><span class="iconfont icon-angle-right"></span></li>
+						<li><a href="javascript:;" title="">帽子男士夏季光版牛仔棒球帽透气防晒帽时尚潮人鸭舌帽色</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- 左部 -->
+			<div class="l">
+				<div id="zqs">
+					<!-- 展示区 -->
+				<div class="zsq">
+				</div>
+				<!-- 样式种类 -->
+				<div class="item">
+					<ul>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs1.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt1.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs2.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt2.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs3.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt3.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs4.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt4.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs5.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt5.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<div id="fs">
+					<!-- 展示区 -->
+				<div class="zsq">
+				</div>
+				<!-- 样式种类 -->
+				<div class="item">
+					<ul>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs1.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/fsdt1.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs2.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt2.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs3.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt3.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs4.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt4.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs5.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt5.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<div id="hs">
+					<!-- 展示区 -->
+				<div class="zsq">
+				</div>
+				<!-- 样式种类 -->
+				<div class="item">
+					<ul>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs1.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/hsdt1.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs2.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt2.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs3.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt3.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs4.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt4.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs5.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt5.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<div id="jhs">
+					<!-- 展示区 -->
+				<div class="zsq">
+				</div>
+				<!-- 样式种类 -->
+				<div class="item">
+					<ul>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs1.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/jhsdt1.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs2.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt2.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs3.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt3.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs4.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt4.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs5.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt5.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<div id="jh">
+					<!-- 展示区 -->
+				<div class="zsq">
+				</div>
+				<!-- 样式种类 -->
+				<div class="item">
+					<ul>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs1.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/jhdt1.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs2.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt2.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs3.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt3.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs4.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt4.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs5.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt5.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<div id="kfs">
+					<!-- 展示区 -->
+				<div class="zsq">
+				</div>
+				<!-- 样式种类 -->
+				<div class="item">
+					<ul>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs1.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/kfsdt1.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs2.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt2.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs3.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt3.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs4.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt4.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs5.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt5.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<div id="kqs">
+					<!-- 展示区 -->
+				<div class="zsq">
+				</div>
+				<!-- 样式种类 -->
+				<div class="item">
+					<ul>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs1.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/kqsdt1.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs2.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt2.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs3.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt3.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs4.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt4.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs5.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt5.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<div id="dhs">
+					<!-- 展示区 -->
+				<div class="zsq">
+				</div>
+				<!-- 样式种类 -->
+				<div class="item">
+					<ul>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs1.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/dhsdt1.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs2.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt2.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs3.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt3.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs4.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt4.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs5.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt5.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<div id="qhs">
+					<!-- 展示区 -->
+				<div class="zsq">
+				</div>
+				<!-- 样式种类 -->
+				<div class="item">
+					<ul>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs1.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/qhsdt1.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs2.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt2.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs3.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt3.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs4.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt4.jpg" alt="">
+							</div>
+						</li>
+						<!-- 项目 -->
+						<li>
+							<img src="../img/1号店详情/zqs5.jpg" alt="">
+							<!-- 二级 -->
+							<div class="ej">
+								<img src="../img/1号店详情/zqsdt5.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+			</div>
+
+			<!-- 中部 -->
+			<div class="main">
+				<h3>帽子男士夏季光版牛仔棒球帽透气防晒帽时尚潮人鸭舌帽色鸭嘴帽 藏青色 可调节(55-60cm)</h3>
+				<!-- 价格 、好评-->
+				<div class="p-h">
+					<div class="price">
+						<span>价格</span>
+						<span>&yen;48</span>
+					</div>
+					<div class="hp">
+						<p>好评率<span>100%</span>[评论<span>0</span>条]</p>
+					</div>
+				</div>
+				<!-- 分类 -->
+				<div class="classfly">
+					<h4>选择颜色:</h4>
+					<ul>
+						<li>
+						<a href="#zqs" title=""><img src="../img/1号店详情/zq1.jpg" alt=""><span>藏青色</span></a>
+						</li>
+						<li>
+						<a href="#fs" title=""><img src="../img/1号店详情/fs1.jpg" alt="">
+						<span>粉色</span></a>
+						</li>
+						<li>
+						<a href="#hs" title=""><img src="../img/1号店详情/hs1.jpg" alt="">
+						<span>黑色</span></a>
+						</li>
+						<li>
+						<a href="#jhs" title=""><img src="../img/1号店详情/jhs1.jpg" alt="">
+						<span>姜黄色</span></a>
+						</li>
+						<li>
+						<a href="#jh" title=""><img src="../img/1号店详情/jh1.jpg" alt="">
+						<span>酒红色</span></a>
+						</li>
+						<li>
+						<a href="#kfs" title=""><img src="../img/1号店详情/kfs1.jpg" alt="">
+						<span>咖啡色</span></a>
+						</li>
+						<li>
+						<a href="#kqs" title=""><img src="../img/1号店详情/kqs1.jpg" alt="">
+						<span>卡其色</span></a>
+						</li>
+						<li>
+						<a href="#dhs" title=""><img src="../img/1号店详情/dhs1.jpg" alt="">
+						<span>大红色</span></a>
+						</li>
+						<li>
+						<a href="#qhs" title=""><img src="../img/1号店详情/qhs1.jpg" alt="">
+						<span>青灰色</span></a>
+						</li>
+					</ul>
+					<h4>选择尺码:</h4>
+					<p>可调节(55-60cm)</p>
+				</div>
+				<!-- 送货至 -->
+				<div class="shz">
+					<h4>送货至</h4>
+						<select name="">
+						<option value="">上海静安区城区</option>
+						<option value="">上海静安区城区</option>
+						<option value="">上海静安区城区</option>
+						</select>
+					<p>有货，店铺单笔订单不满59元，收运费8元</p>
+					<p>由 衣莱堡男装专营店 负责发货, 并提供售后服务.</p>
+				</div>
+				<!-- 加入购物车 -->
+				<div class="jgwc">
+					<input type="number" min="0" name="" value="" placeholder="1">
+					<!-- 购物车 -->
+					<div class="gwc">
+						<i class="iconfont icon-gouwuche"></i>
+						<span>加入购物车</span>
+					</div>
+					<a href="javascript:;" title="">降价通知</a>
+				</div>
+			</div>
+			<!-- 右部 -->
+			<div class="r">
+				<!-- 换一批 -->
+				<div class="hyp">
+					<span>看了还看</span>
+					<i></i>
+					<span>换一批</span>
+				</div>
+				<div class="list">
+					<ul>
+						<li>
+							<div class="img img1">
+								
+							</div>
+							<p>帽子男夏天中老男人鸭的手机放到数据库</p>
+							<span>&yen;9.0</span>
+						</li>
+						<li>
+							<div class="img img2">
+								
+							</div>
+							<p>酒店快餐厅厨师工作帽的手机放到数据库</p>
+							<span>&yen;79.0</span>
+						</li>
+						<li>
+							<div class="img img3">
+								
+							</div>
+							<p>Mindinte Star广告帽子机放到数据库</p>
+							<span>&yen;4.5</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<div class="footer">
+		<div class="center">
+			<!-- 正品保障、满86包邮、售后无忧、准时送达 -->
+			<div class="zmsz">
+				<ul>
+					<li>
+						<div class="img">
+						</div>
+						<div class="hp">
+							<h4>正品保障</h4>
+							<p>正品行货 放心选购</p>
+						</div>
+					</li>
+					<li>
+						<div class="img img2">
+						</div>
+						<div class="hp">
+							<h4>满86包邮</h4>
+							<p>满86元 免运费</p>
+						</div>
+					</li>
+					<li>
+						<div class="img img3">
+						</div>
+						<div class="hp">
+							<h4>售后无忧</h4>
+							<p>7天无理由退货</p>
+						</div>
+					</li>
+					<li>
+						<div class="img img4">
+						</div>
+						<div class="hp">
+							<h4>准时送达</h4>
+							<p>收货时间由你做主</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 新手入门、支付方式、配送服务、售后保障 -->
+			<div class="xzps">
+				<div class="xs">
+					<nav>
+						<ul>
+							<h4>新手入门</h4>
+							<li><a href="javascript:;" title="">购物流程</a></li>
+							<li><a href="javascript:;" title="">会员制度</a></li>
+							<li><a href="javascript:;" title="">订单查询</a></li>
+							<li><a href="javascript:;" title="">服务协议及隐私说明</a></li>
+							<li><a href="javascript:;" title="">网站地图</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="xs zf">
+					<nav>
+						<ul>
+							<h4>支付方式</h4>
+							<li><a href="javascript:;" title="">货到付款</a></li>
+							<li><a href="javascript:;" title="">网上支付</a></li>
+							<li><a href="javascript:;" title="">礼品卡支付</a></li>
+							<li><a href="javascript:;" title="">其它支付</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="xs ps">
+					<nav>
+						<ul>
+							<h4>配送服务</h4>
+							<li><a href="javascript:;" title="">配送进度查询</a></li>
+							<li><a href="javascript:;" title="">商品验货与签收</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="xs sh">
+					<nav>
+						<ul>
+							<h4>售后保障</h4>
+							<li><a href="javascript:;" title="">退换货政策</a></li>
+							<li><a href="javascript:;" title="">发票制度</a></li>
+							<li><a href="javascript:;" title="">订单查询</a></li>
+							<li><a href="javascript:;" title="">帮助中心</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="APP">
+					<h4>APP更优惠</h4>
+					<div class="pic">
+						
+					</div>
+				</div>
+				<div class="APP wx">
+					<h4>加微信查订单</h4>
+					<div class="pic pic2">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Copyright -->
+		<div class="copy">
+			<nav>
+				<ul>
+					<li><a href="javascript:;" title="">沪ICP备16050468号</a></li>
+					<li><a href="javascript:;" title="">经营证照</a></li>
+					<li><a href="javascript:;" title="">沪互联网药品信息服务资格证(沪)-经营性-2017-0006</a></li>
+					<li><a href="javascript:;" title="">违法和不良信息举报电话：0527-88100253</a></li>
+					<li><a href="javascript:;" title="">沪B2-20170039</a></li>
+					<li><a href="javascript:;" title="">沪公网安备 31010502002939号</a></li>
+					<li><a href="javascript:;" title="">友情链接</a></li>
+					<li><a href="javascript:;" title="">出版物经营许可证</a></li>
+					<li><a href="javascript:;" title="">增值电信业务经营许可证</a></li>
+				</ul>
+			</nav>
+			<p>Copyright© 1号店网上超市 2007-2019，All Rights Reserved</p>
+			<div class="logo">
+				<div class="pic"></div>
+				<div class="pic pic2"></div>
+				<div class="pic pic3"></div>
+				<div class="pic pic4"></div>
+				<div class="pic pic5"></div>
+				<div class="gh"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

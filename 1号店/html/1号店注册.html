@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>zhuce</title>
+	<link rel="stylesheet" href="../css/demo-font/iconfont.css">
+	<style type="text/css" media="screen">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		ol,ul{
+			list-style: none;
+		}
+		/*头部*/
+		.header{
+			width: 100%;
+			background: #FBFBFB;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+			box-shadow: 0 1px .5px rgba(0,0,0,1);
+
+		}
+		/*居中*/
+		.header .center{
+			width: 1190px;
+			height: 80px;
+			margin: 0 auto;
+			/*overflow: hidden;*/
+		}
+		/*1号店logo*/
+		.header .logo{
+			float: left;
+			width: 144px;
+			height: 35px;
+			background: url(../img/1号店注册/注册1号店.png) no-repeat -76px -24px;
+			margin-top: 22px; 
+		}
+		/*右侧登录、帮助中心*/
+		.header .yc{
+			float: right;
+			margin-top: 22px
+		}
+		.header .yc .dl{
+			float: left;
+			margin-right: 30px;
+		}
+		.header .yc .dl span{
+			font-size: 14px;
+			color:rgba(0,0,0,.4);
+			margin-right: 10px;
+		}
+		.header .yc a{
+			font-size: 12px;
+			color: #0065CB;
+		}
+		.header .yc a:hover{
+			color:rgba(255,0,0,.6)
+		}
+		.header .yc .help{
+			width: 99px;
+			float: left;
+			position: relative;
+		}
+		.header .yc .xq{
+			float: left;
+			width: 20px;
+			height: 20px;
+			background: url(../img/1号店注册/注册1号店.png) no-repeat -1179px -17px;
+			margin-right: 5px;
+			margin-top: 2px;
+		}
+		.header .yc span{
+			font-size: 14px
+		}
+		.header .yc i{
+			font-size: 2px;
+			color: rgba(0,0,0,.5);
+			border:.5px solid rgba(0,0,0,.1);
+			
+		}
+		.header .yc .help .xl{
+			width: 99px;
+			position: absolute;
+			top: 20px;
+			left: 0;
+			border: 1px solid rgba(0,0,0,.5); 
+			border-top: none;
+			background: rgba(255,255,255,8);
+			z-index: 3;
+			display: none;
+		}
+		.header .yc .help span a{
+			color: rgba(0,0,0,.9);
+		}
+		.header .yc .help:hover i,.header .yc .help:hover span a{
+			color:rgba(255,0,0,.6);
+		}
+		.header .yc .help:hover .xl{
+			display: block;
+		}
+		.header .yc .help .xl li{
+			padding: 5px 0;
+			padding-left: 15px;
+			border-bottom:1px solid rgba(0,0,0,.2);
+
+		}
+		/*主部*/
+		.mainbody{
+			width: 100%;
+			background: #FBFBFB;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+			box-shadow: 0 1px .5px rgba(0,0,0,1);
+		}
+		/*居中*/
+		.mainbody .center{
+			width: 1190px;
+			height: 533px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.mainbody form{
+			width: 400px;
+			margin:0 auto;
+		}
+		.mainbody h2{
+			font-weight: 500;
+			font-size: 24px;
+			font-family: "微软雅黑";
+			margin-top: 30px;
+			margin-bottom: 20px;
+			letter-spacing: 2px;
+			text-align: center;
+		}
+		.mainbody input:not([type="submit"]){
+			width: 328px;
+			height: 50px;
+			outline: none;
+			text-indent: 1.5em;
+			font-size: 16px;
+			border:none;
+			border:.5px solid rgba(0,0,0,.1);
+			border-radius: 5px;
+			background: #FBFBFB;
+			margin-bottom: 10px;
+		}
+		.mainbody input:not([type="submit"]):hover{
+			box-shadow: inset 0 0 4px 2px rgba(232,0,0,.7);
+		}
+		.mainbody input:not([type="submit"]):focus{
+			background-color: rgba(213,0,0,.2);
+		}
+		.mainbody input:not([type="submit"]):focus::placeholder{
+			color: transparent;
+		}
+		.mainbody input::placeholder{
+			color: rgba(212,22,23,.9);
+		}
+		.mainbody form span{
+			visibility: hidden;
+		}
+		/*短信码验证*/
+		.mainbody input:nth-of-type(3){
+			width: 192px;
+			margin-right: 10px;
+		}
+		/*获取验证码*/
+		.mainbody input:nth-of-type(4){
+			width: 120px;
+			height: 50px;
+			background: #56555E;
+			outline: none;
+			color: rgba(255,255,255,.85);
+			cursor: pointer;
+		}
+		.mainbody input:nth-of-type(4):hover{
+			background:rgba(0,0,0,.6);
+			color: rgba(255,255,255,.97);
+			box-shadow: 0 2px 4px 1px rgba(0,0,0,.6);
+		}
+		/*设置密码*/
+		.mainbody input:nth-of-type(5){
+			background: url(../img/1号店登录图标/1号店登录_MarkMan_08.png) no-repeat 90% center;
+		}
+		/*确认密码*/
+		.mainbody input:nth-of-type(6){
+			background: url(../img/1号店登录图标/1号店登录_MarkMan_08.png) no-repeat 95% center;
+		}
+		/*同意协议并注册*/
+		.mainbody input:last-of-type{
+			width: 328px;
+			height: 50px;
+			background: #FE3B3B;
+			outline: none;
+			color: rgba(255,255,255,.85);
+			font-size: 16px;
+			letter-spacing: 2px;
+			cursor: pointer;
+		}
+		.mainbody input:last-of-type:hover{
+			background: rgba(232,34,65,.7);
+			color: rgba(255,255,255,.97);
+			font-size: 16.2px;
+			box-shadow: 0 2px 4px 1px rgba(0,0,0,.6);
+		}
+		.mainbody p{
+			font-size: 12px;
+			margin: 25px 0 18px 15px;
+		}
+		.mainbody p a{
+			color: #0065CB;
+		}
+		.mainbody p a:hover{
+			color: rgba(255,0,0,.6);
+		}
+		/*尾部*/
+		.footer{
+			width: 100%;
+			background: #FBFBFB;
+		}
+		/*居中*/
+		.footer .center{
+			width: 1190px;
+			height: 60px;
+			margin: 0 auto;
+			overflow: hidden;
+			font-size: 10px;
+		}
+		.footer .center .jz{
+			width: 330px;
+			margin: 0 auto;
+
+		}
+		.footer .center ul{
+
+			width: 295px;
+			margin: 10px auto;
+		}
+		.footer .center ul:after{
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+			overflow: hidden;
+		}
+		.footer .center ul li{
+			float: left;
+		}
+		.footer .center ul li:hover{
+			color: rgba(255,0,0,.9);
+		}
+		.footer .center ul li a{
+			color: rgba(0,0,0,.9);
+		}
+		.footer .center ul li a:hover{
+			color: rgba(255,0,0,.9);
+		}
+		.footer .center ul li span{
+			margin: 0 6px;
+		}
+		.footer .center p{
+			
+		}
+	</style>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="header">
+		<!-- 居中 -->
+		<div class="center">
+			<!-- 1号店logo -->
+			<div class="logo">
+				
+			</div>
+			<!-- 右侧登录、帮助中心 -->
+			<div class="yc">
+				<div class="dl">
+					<span>您好，欢迎光临1号店！</span>
+					<a href="1号店登录.html" title="">请登录</a>
+				</div>
+				<div class="help">
+					<div class="xq">
+					</div>
+					<span><a href="javascript:;" title="">帮助中心</a></span>
+					<i class="iconfont icon-triangle-down"></i>
+					<div class="xl">
+						<nav>
+							<ul>
+								<li><a href="javascript:;" title="">包裹跟踪</a></li>
+								<li><a href="javascript:;" title="">常见问题</a></li>
+								<li><a href="javascript:;" title="">在线退换货</a>
+								</li><li><a href="javascript:;" title="">在线投诉</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 主部 -->
+	<div class="mainbody">
+		<!-- 居中 -->
+		<div class="center">
+			<h2>1号店注册</h2>
+			<form action="1号店注册_submit" method="get" accept-charset="utf-8">
+			<input type="text" name="" value="" placeholder="用户名" required="">
+			<input type="tel" name="" value="" placeholder="手机号" required="">
+			<input type="text" name="" value="" placeholder="短信码验证" required="">
+			<input type="submit" name="" value="获取验证码">
+			<input type="password" name="" value="" placeholder="设置密码" required="">
+			<input type="password" name="" value="" placeholder="确认密码" required="">
+			<p>点击注册，表示您同意1号店<a href="javascript:;" title="">《服务协议及隐私声明》</a></p>
+			<input type="submit" name="" value="同意协议并注册">
+			</form>
+
+		</div>
+	</div>
+	<!-- 尾部 -->
+	<div class="footer">
+		<!-- 居中 -->
+		<div class="center">
+			<div class="jz">
+			<ul>
+				<li>
+				<a href="javascript:;" title="">沪ICP备16050468号</a><span>|</span>
+				</li>
+				<li>沪B2-20170039<span>|</span></li>
+				<li>
+				<a href="javascript:;" title="">营业执照</a>
+				</li>
+			</ul>
+			<p>Copyright&copy; 1号店超市2007-2018，AllRights Reserved</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
